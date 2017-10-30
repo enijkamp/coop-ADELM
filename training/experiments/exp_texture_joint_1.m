@@ -1,7 +1,9 @@
 function [] = exp_texture_joint_1()
 
-% experiment
 exp_num = 1;
+
+% init mitch nets
+
 % descriptor
 Gammas = 0.00005;
 Deltas = [0.2 0.3 0.4];

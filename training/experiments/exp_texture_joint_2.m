@@ -1,11 +1,13 @@
 function [] = exp_texture_joint_2()
 
-% experiment
 exp_num = 2;
+
+% fix init nets
+
 % descriptor
 Gammas = 0.00005;
 Deltas = 0.3;
-Ts = 20;
+Ts = 10;
 % generator
 Delta2 = 0.3;
 Gamma2 = 0.00005;

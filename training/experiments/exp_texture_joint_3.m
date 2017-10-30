@@ -1,7 +1,9 @@
 function [] = exp_texture_joint_3()
 
-% experiment
 exp_num = 3;
+
+% increase T=20
+
 % descriptor
 Gammas = 0.00005;
 Deltas = 0.3;
