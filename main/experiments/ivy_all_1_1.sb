@@ -11,4 +11,4 @@
 #ibrun in verbose mode will give binding detail
 
 module load matlab
-matlab -nodisplay -nosplash -r "ivy_all_1_1(24)"
+matlab -nodisplay -nosplash -r "ivy_all_1_1(24, 'comet1')"

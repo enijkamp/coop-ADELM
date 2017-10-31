@@ -1,4 +1,4 @@
-function [] = ivy_all_1_1(no_workers)
+function [] = ivy_all_1_1(no_workers, pool_name_comet)
 
 %% setup
 addpath(genpath('../../main/'));
@@ -20,7 +20,7 @@ end
 
 % pool with no timeout to keep paths
 if(config.no_workers > 2)
-    pool = parpool('comet1', config.no_workers, 'IdleTimeout', Inf);
+    pool = parpool(pool_name_comet, config.no_workers, 'IdleTimeout', Inf);
 elseif(config.no_workers > 1)
     delete(gcp('nocreate'));
     pool = parpool('local', config.no_workers, 'IdleTimeout', Inf);
