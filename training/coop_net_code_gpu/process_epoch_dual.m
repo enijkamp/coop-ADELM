@@ -1,4 +1,4 @@
-function  [net1,net2, gen_mats,syn_mats, z] = process_epoch_dual(opts, epoch, net1, net2, config)
+function  [net1,net2,gen_mats,syn_mats,z,loss] = process_epoch_dual(opts, epoch, net1, net2, config)
 % -------------------------------------------------------------------------
 
 if config.use_gpu
@@ -23,7 +23,8 @@ for t = 1:config.batchSize:size(imdb,4)
     batchEnd = min(t+config.batchSize-1, size(imdb,4)) ;
     batch = train_order(batchStart : batchEnd) ;
     im = imdb(:,:,:,batch);   
-    % Step 1: Inference Network 2 -- generate Z
+    
+    %% Step 1: Inference Network 2 -- generate Z
     z = randn([config.z_sz, config.num_syn], 'single');
     if config.use_gpu
         z = gpuArray(z);
@@ -66,7 +67,7 @@ for t = 1:config.batchSize:size(imdb,4)
         end
     end
     
-    %step 2 update generator mats by descriptor net
+    %% Step 2: update generator mats by descriptor net
     % synthesize image according to current weights 
     if config.use_gpu
         syn_mats = langevin_dynamics_gpu(config, net1, syn_mats);
@@ -79,7 +80,7 @@ for t = 1:config.batchSize:size(imdb,4)
         end
     end
 
-    %step 3 learning net1
+    %% Step 3: learning net1
     if config.use_gpu
         dydz1 = gpuArray(zeros(config.dydz_sz1, 'single'));
         im = gpuArray(im);
@@ -92,6 +93,7 @@ for t = 1:config.batchSize:size(imdb,4)
     else
         dydz1 = repmat(dydz1,1,1,1,size(im,4));
     end
+    
     res1 = [];
     res1 = vl_simplenn(net1, im, dydz1, res1, ...
         'accumulate', 0, ...
@@ -108,8 +110,8 @@ for t = 1:config.batchSize:size(imdb,4)
     else
         dydz_syn = repmat(dydz_syn,1,1,1,config.num_syn);
     end
-    res_syn = [];
     
+    res_syn = [];
     res_syn = vl_simplenn(net1, syn_mats, dydz_syn, res_syn, ...
         'accumulate', 0, ...
         'disableDropout', 0, ...
@@ -119,7 +121,7 @@ for t = 1:config.batchSize:size(imdb,4)
         'cudnn', opts.cudnn);
 
     % gather and accumulate gradients across labs
-    [net1, ~] = accumulate_gradients1(opts, config.Gamma(epoch) ,size(im,4), net1, res1, res_syn, config);
+    [net1, ~, loss] = accumulate_gradients1(opts, config.Gamma(epoch), size(im,4), net1, res1, res_syn, config);
     
     clear res;
     clear res_syn;
@@ -141,7 +143,7 @@ for t = 1:config.batchSize:size(imdb,4)
     syn_mats = max(min(syn_mats+repmat(config.mean_im, 1, 1, 1, config.num_syn),255.99),0.01)/128 - 1;
 
     
-    % Step 3: Learning net2
+    %% Step 4: Learning net2
     res2 = [];
     if config.use_gpu
         res2 = vl_gan(net2, z, syn_mats, res2, ...
@@ -194,14 +196,15 @@ end
     epoch_time = toc(epoch_time) ;
     speed = config.num_syn/epoch_time;
 
-    fprintf(' %.2f s (%.1f data/s)', epoch_time, speed) ;
-    fprintf('\n') ;
+    fprintf(' %.2f s (%.1f data/s)\n', epoch_time, speed) ;
 end
 
 % -------------------------------------------------------------------------
-function [net,res] = accumulate_gradients1(opts, lr, batchSize,net, res, res_syn, config)
+function [net,res,loss] = accumulate_gradients1(opts, lr, batchSize, net, res, res_syn, config)
 % -------------------------------------------------------------------------
 layer_sets = config.layer_sets1;
+
+loss = 0;
 
 for l = layer_sets
     for j=1:numel(res(l).dzdw)
@@ -222,7 +225,9 @@ for l = layer_sets
                 - thisDecay * net.layers{l}.weights{j} ...
                 + gradient_dzdw;
             
-            net.layers{l}.weights{j} = net.layers{l}.weights{j} + thisLR *net.layers{l}.momentum{j};
+            net.layers{l}.weights{j} = net.layers{l}.weights{j} + thisLR*net.layers{l}.momentum{j};
+            
+            loss = loss + gather(mean(abs(gradient_dzdw)));
             
             if j == 1
                 res_l = min(l+2, length(res));

@@ -130,18 +130,21 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     
     save([config.trained_folder,'config.mat'],'config');
     
-    loss = zeros(config.nIteration, 1);
+    loss1 = zeros(config.nIteration, 1);
+    loss2 = zeros(config.nIteration, 1);
     
     for epoch=1:config.nIteration
-        tic;
-        [net1_out,net2_out,gen_mats,syn_mats,z] = process_epoch_dual(opts,epoch,net1,net2,config);     
+
+        [net1_out,net2_out,gen_mats,syn_mats,z,loss2(epoch)] = process_epoch_dual(opts,epoch,net1,net2,config);     
 
         if ~fix_des, net1 = net1_out; end
         if ~fix_gen, net2 = net2_out; end
         
-        loss(epoch) = compute_loss(opts, syn_mats, net2_out, z, config);
-        save([config.trained_folder,'loss.mat'],'loss');
-        disp(['Loss: ', num2str(loss(epoch))]);
+        % loss 1: l2 distance synthesis and revision (revision should be small)
+        % loss 2: mean of gradients of descriptor (if training equals synthesis, then gradient should be 0)
+        loss1(epoch) = compute_loss(opts, syn_mats, net2_out, z, config);
+        save([config.trained_folder,'loss.mat'],'loss1','loss2');
+        fprintf('loss1 = %.4f.\nloss2 = %.4f.\n', loss1(epoch), loss2(epoch));
     end
     
     learningTime = toc(learningTime);
