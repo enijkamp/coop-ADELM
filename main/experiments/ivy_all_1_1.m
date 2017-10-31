@@ -67,12 +67,17 @@ AD_quota = config.AD_quota;
 %load config for ELM experiments. only alpha and map_str will change
 %find lower (infinite mins) and upper (single basin) bounds 
 % of magnetization strength for ADELM
+disp('# (0) find_AD_extrema');
+tic_ext = tic;
 [min_out,max_out] = find_AD_extrema(config,alpha_init);    
-
+fprintf('# (0) find_AD_extrema: %4d hours %4.2f minutes.\n',floor(toc(tic_ext)/3600), mod(toc(tic_ext)/60,60));
+    
 %%line below updated
 alphas = exp(linspace(log(min_out.alpha),log(max_out.alpha),num_exps));
 %%%%%%
 
+disp('# (1) burnin');
+tic_burn = tic;
 config.alpha = alphas(6);
 config.map_str = 'ELM_1_1_burnin.mat';
 config.nsteps = floor(nsteps/2);
@@ -80,16 +85,24 @@ config.max_AD_checks = floor(max_AD_checks/2);
 config.AD_quota = 1;
 config.AD_reps = 1;
 ELM_burnin = gen_ADELM([],config);
+fprintf('# (1) burnin: %4d hours %4.2f minutes.\n',floor(toc(tic_burn)/3600), mod(toc(tic_burn)/60,60));
+
+disp('# (2) consolidate_minima');
+tic_cons = tic;
 ELM_test = consolidate_minima(ELM_burnin);
 ELM_test.config.map_str = 'ELM_1_1_exp.mat';
 ELM_test.config.nsteps = nsteps;
 ELM_test.config.max_AD_checks = max_AD_checks;
 ELM_test.config.AD_quota = AD_quota;
 ELM_test.config.AD_reps = AD_reps;
+fprintf('# (2) consolidate_minima: %4d hours %4.2f minutes.\n',floor(toc(tic_cons)/3600), mod(toc(tic_cons)/60,60));
 
 
 %% run
+disp('# (3) gen_ADELM');
+tic_gen = tic;
 gen_ADELM(ELM_test);
+fprintf('# (3) gen_ADELM: %4d hours %4.2f minutes.\n',floor(toc(tic_gen)/3600), mod(toc(tic_gen)/60,60));
 
 
 %% pool shutdown
