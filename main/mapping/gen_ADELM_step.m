@@ -45,15 +45,35 @@ function [ELM,min_index,AD_inds] = check_membership(config,des_net,gen_net,ELM,.
     for rep = 1:config.AD_reps
         
         %%%%%%%%%%%%%%%%%%%%PARALLELIZE%%%%%%%%%%%%
-        for i = 1:min(config.max_AD_checks,length(AD_order)) 
-            AD_index = AD_order(i);
+%         for i = 1:min(config.max_AD_checks,length(AD_order)) 
+%             AD_index = AD_order(i);
+%             
+%             % AD diffusion between new and previously found minima
+%             [AD_out1,AD_out2]=gen_AD(config,des_net,gen_net,min_z,...
+%                         ELM.min_z(:,:,:,AD_index));
+%             AD_mem(i,:) = [AD_out1.mem,AD_out2.mem];
+%             AD_bars(i) = min([max(AD_out1.ens),max(AD_out2.ens)]);
+%         end
+        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+        %%%%%%%%%%%%%%%%%%%%PARALLEL%%%%%%%%%%%%%%%%%%
+        gen_AD_par = min(config.max_AD_checks,length(AD_order));
+        tocs = zeros(gen_AD_par, 1);
+        tstart_parfor = tic;
+        parfor i = 1:min(config.max_AD_checks,length(AD_order))
+            tstart = tic;
             
+            AD_index = AD_order(i);
             % AD diffusion between new and previously found minima
             [AD_out1,AD_out2]=gen_AD(config,des_net,gen_net,min_z,...
                         ELM.min_z(:,:,:,AD_index));
             AD_mem(i,:) = [AD_out1.mem,AD_out2.mem];
             AD_bars(i) = min([max(AD_out1.ens),max(AD_out2.ens)]);
+            
+            tocs(i) = toc(tstart);
         end
+        toc_parfor = toc(tstart_parfor);
+        disp(['check_membership -> par = ' num2str(gen_AD_par) ', parfor toc = ' num2str(toc_parfor) ', max toc = ' num2str(max(tocs))]);
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         
         %check if successful diffusion quota for membership is reached

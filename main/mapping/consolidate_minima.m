@@ -8,7 +8,42 @@ function [ELM_out,sorted_inds] = consolidate_minima(ELM)
     pair_ij = get_pair_ij(ELM);
     
     %%%%%%%%%%%%%%%%%%%%%PARALLELIZE THIS%%%%%%%%%
-    for ind = 1:size(pair_ij,1)
+%     for ind = 1:size(pair_ij,1)
+%         ij = pair_ij(ind,:);
+%         disp([ij(1),ij(2),ind,size(pair_ij,1)]);
+%         mem_ij = [0,0];
+%         for k = 1:ELM.config.consolidate_reps
+%             [AD_out1,AD_out2]=gen_AD(ELM.config,ELM.config.des_net,...
+%                     ELM.config.gen_net,ELM.min_z(:,:,:,ij(1)),ELM.min_z(:,:,:,ij(2)));
+%             mem_ij = mem_ij+[AD_out1.mem,AD_out2.mem];
+%             if max(mem_ij) >= ELM.config.consolidate_quota
+%                 disp('*');
+%                 disp(ij);
+%                 if mem_ij(1) == mem_ij(2)
+%                     [~,ord] = sort([ELM.min_ens(ij(1)),ELM.min_ens(ij(2))]);
+%                     sorted_inds(end+1) = ij(ord(2));
+%                 else
+%                     [~,ord] = sort(mem_ij);
+%                     sorted_inds(end+1) = ij(ord(2));
+%                 end
+%                 disp(sorted_inds(end));
+%                 break;
+%             end   
+%         end
+%     end
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    %%%%%%%%%%%%%%%%%%%%%PARALLEL%%%%%%%%%
+    consolidate_minima_par = size(pair_ij,1);
+    tocs = zeros(consolidate_minima_par, 1);
+    tstart_parfor = tic;
+    
+    sorted_inds_par = {}; % changed (en)
+    parfor ind = 1:size(pair_ij,1)
+        sorted_inds = [];
+        
+        tstart = tic;
+        
         ij = pair_ij(ind,:);
         disp([ij(1),ij(2),ind,size(pair_ij,1)]);
         mem_ij = [0,0];
@@ -30,8 +65,23 @@ function [ELM_out,sorted_inds] = consolidate_minima(ELM)
                 break;
             end   
         end
+        
+        tocs(ind) = toc(tstart);
+        sorted_inds_par{ind} = sorted_inds;
+    end
+    toc_parfor = toc(tstart_parfor);
+    disp(['consolidate_minima -> par = ' num2str(consolidate_minima_par) ', parfor toc = ' num2str(toc_parfor) ', max toc = ' num2str(max(tocs))]);
+    
+    sorted_inds = [];
+    for ind = 1:size(pair_ij,1)
+        sorted_inds_lab = sorted_inds_par{ind};
+        for j = 1:length(sorted_inds_lab)
+            sorted_inds(end+1) = sorted_inds_lab(j);
+        end
     end
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    disp(sorted_inds);
     
     sorted_inds = unique(sorted_inds);
     new_min_z = ELM.min_z(:,:,:,setdiff(1:num_mins,sorted_inds));
