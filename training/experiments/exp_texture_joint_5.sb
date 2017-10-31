@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name="joint_5"
-#SBATCH --output="exp_texture_joint_5.%j.%N.out"
+#SBATCH --job-name="joint_5_k80"
+#SBATCH --output="exp_texture_joint_5_k80.%j.%N.out"
 #SBATCH --partition=gpu-shared
 #SBATCH --ntasks-per-node=6
 #SBATCH --export=ALL
