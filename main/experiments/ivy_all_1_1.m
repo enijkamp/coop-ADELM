@@ -30,7 +30,7 @@ end
 addpath(genpath('../../matconvnet-1.0-beta16/'));
 vl_setupnn();
 if(config.no_workers > 2)
-    vl_compilenn();
+    %vl_compilenn();
 end
 
 % set matconvnet for each worker
