@@ -1,22 +1,25 @@
 function config = gen_ADELM_config(ELM_str,net_file)
     % location of Coop nets
     if nargin<1 || isempty(ELM_str)
-        config.ELM_str = 'ivy/128/'; 
+        config.ELM_str = 'ivy/all/'; 
     else
         config.ELM_str = ELM_str;
     end
     % name of net file
-    if nargin<2 || isempty(net_file) 
-        config.net_file = 'nets.mat'; 
+    if nargin<2 || isempty(net_file)
+        config.net_file = 'nets1_1.mat'; 
     else
         config.net_file = net_file;
     end
+    
+    %number of CPU-cores
+    config.no_workers = 24; % 2
     
     %name of file for results
     config.map_str = 'ELM.mat'; 
     
     %MH parameters
-    config.refsig = sqrt(0.3);
+    config.refsig = 1;
     config.MH_eps = 0.05; %step size
     config.MH_type = 'RW'; % 'RW' (random walk) or 'CW' (component-wise/gibbs)
 
@@ -33,12 +36,12 @@ function config = gen_ADELM_config(ELM_str,net_file)
     config.min_no_improve = 30; % consecutive failed iters to stop search
 
     %attraction diffusion
-    config.AD_temp = 20; % AD temperature parameter
-    config.alpha = 1280; % AD magnetization strength
+    config.AD_temp = 1; % AD temperature parameter
+    config.alpha = 1000000; % AD magnetization strength
     %4700
     config.max_AD_iter = 5000;  % max iters for AD trial
     config.AD_no_improve = 40; % consecutive iters to stop search
-    config.dist_res = .35; % distance from target for successful AD search
+    config.dist_res = 1; % distance from target for successful AD search
     config.max_AD_checks = 10; % number of minima for AD trials
     config.AD_reps = 3; % number of AD attempts for each min 
     config.AD_quota = 1; % number of successful trials needed for membership
@@ -62,27 +65,27 @@ function config = gen_ADELM_config(ELM_str,net_file)
     config.max_bar_checks = 15; % number of checks in barrier search
         
     % data location
-    config.data_path = '/Users/mitch/Dropbox/coop ADELM/data/';
+    config.data_path = '../../data/';
     % location of Co-op Nets
-    config.net_path = '/Users/mitch/Dropbox/coop ADELM/nets/';
+    config.net_path = '../../nets/';
     % folder for ELM results
-    config.ELM_folder = '/Users/mitch/Dropbox/coop ADELM/maps/';
+    config.ELM_folder = '../../maps/';
     % folder for images in generator space
-    config.im_folder = '/Users/mitch/Dropbox/coop ADELM/ims/';
+    config.im_folder = '../../ims/';
     % folder for ELM Trees
-    config.tree_folder = '/Users/mitch/Dropbox/coop ADELM/trees/';
+    config.tree_folder = '../../trees/';
 
     % create results directory
-    if ~exist('/Users/mitch/Dropbox/coop ADELM/maps/', 'dir')
-        mkdir('/Users/mitch/Dropbox/coop ADELM/maps/')
+    if ~exist('../../maps/', 'dir')
+        mkdir('../../maps/')
     end
 
-    if ~exist('/Users/mitch/Dropbox/coop ADELM/ims/', 'dir')
-        mkdir('/Users/mitch/Dropbox/coop ADELM/ims/')
+    if ~exist('../../ims/', 'dir')
+        mkdir('../../ims/')
     end
     
-    if ~exist('/Users/mitch/Dropbox/coop ADELM/trees/', 'dir')
-        mkdir('/Users/mitch/Dropbox/coop ADELM/trees/')
+    if ~exist('../../trees/', 'dir')
+        mkdir('../../trees/')
     end
     
     %%%read in networks%%%
@@ -101,7 +104,7 @@ function config = gen_ADELM_config(ELM_str,net_file)
         config.des_net = net_wkspc.net1;
         config.gen_net = net_wkspc.net2;
         config.mean_im = config.des_net.mean_im;
-        config.z_sz = [1,1,15];
-        config.im_sz = [32,32,3];
+        config.z_sz = [1,1,30];
+        config.im_sz = [64,64,3];
     end
 end
