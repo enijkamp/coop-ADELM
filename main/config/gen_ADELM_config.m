@@ -13,7 +13,7 @@ function config = gen_ADELM_config(ELM_str,net_file)
     end
     
     %number of CPU-cores
-    config.no_workers = 24; % 2
+    config.no_workers = 2;
     
     %name of file for results
     config.map_str = 'ELM.mat'; 

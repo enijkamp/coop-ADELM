@@ -81,7 +81,7 @@ function [ELM_out,sorted_inds] = consolidate_minima(ELM)
     end
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
-    disp(sorted_inds);
+    %disp(sorted_inds);
     
     sorted_inds = unique(sorted_inds);
     new_min_z = ELM.min_z(:,:,:,setdiff(1:num_mins,sorted_inds));

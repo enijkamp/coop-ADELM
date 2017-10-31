@@ -1,20 +1,47 @@
-function [] = ivy_all_1_1()
+function [] = ivy_all_1_1(no_workers)
 
 %% setup
+addpath(genpath('../../main/'));
 exp_time = tic;
 rng(123);
 
-addpath(genpath('../../matconvnet-1.0-beta16/'));
-addpath(genpath('../../main/'));
-vl_setupnn();
-vl_compilenn();
 
-
-%% config
+%% load config
 %set up config
 file_str = 'ivy/all/';
 net_str = 'nets1_1.mat';
 config = gen_ADELM_config(file_str,net_str);
+
+
+%% pool init
+if nargin > 0
+    config.no_workers = no_workers;
+end
+
+% pool with no timeout to keep paths
+if(config.no_workers > 2)
+    pool = parpool('comet1', config.no_workers, 'IdleTimeout', Inf);
+elseif(config.no_workers > 1)
+    delete(gcp('nocreate'));
+    pool = parpool('local', config.no_workers, 'IdleTimeout', Inf);
+end
+
+% set paths
+addpath(genpath('../../matconvnet-1.0-beta16/'));
+vl_setupnn();
+if(config.no_workers > 2)
+    vl_compilenn();
+end
+
+% set matconvnet for each worker
+if(config.no_workers > 1)
+    parfor i = 1:config.no_workers
+        vl_setupnn();
+    end
+end
+
+
+%% config override
 
 %ELM params
 config.nsteps = 1000;
@@ -62,26 +89,15 @@ ELM_test.config.AD_reps = AD_reps;
 
 
 %% run
-% pool with no timeout to keep paths
-%pool = gcp('nocreate');
-%delete(pool);
-if(config.no_workers > 1)
-    pool = parpool('pool1', config.no_workers, 'IdleTimeout', Inf);
-end
-
-% set path for each worker
-parfor i = 1:config.no_workers
-    vl_setupnn();
-end
-
 gen_ADELM(ELM_test);
 
 
-%% shutdown
+%% pool shutdown
 if(config.no_workers > 1)
     delete(pool);
 end
 
+%% done
 exp_time = toc(exp_time);
 fprintf('Total Experiment Time: %4d hours %4.2f minutes.\n',floor(exp_time/3600), mod(exp_time/60,60));
 
