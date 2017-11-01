@@ -8,7 +8,7 @@ function [] = exp_texture_joint_11()
 
 exp_num = 11;
 
-% (9) increase T=20 (comet p100)
+% (9) benchmark - increase T=20 (comet p100 cudnn)
 
 % descriptor
 Gamma = 0.00005;
@@ -16,7 +16,7 @@ Deltas = 0.3;
 Ts = 20;
 % generator
 Delta2 = 0.3;
-Gammas2 = [0.0002 0.0001 0.00005];
+Gammas2 = 0.0002; %[0.0002 0.0001 0.00005];
 
 % config
 img_name = 'ivy';
