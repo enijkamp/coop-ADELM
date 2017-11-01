@@ -227,7 +227,7 @@ for l = layer_sets
             
             net.layers{l}.weights{j} = net.layers{l}.weights{j} + thisLR*net.layers{l}.momentum{j};
             
-            loss = loss + gather(mean(abs(gradient_dzdw)));
+            loss = loss + gather(mean(abs(gradient_dzdw(:))));
             
             if j == 1
                 res_l = min(l+2, length(res));
