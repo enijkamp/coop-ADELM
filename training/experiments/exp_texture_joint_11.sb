@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --job-name="joint_10"
-#SBATCH --output="exp_texture_joint_10.%j.%N.out"
+#SBATCH --job-name="joint_11"
+#SBATCH --output="exp_texture_joint_11.%j.%N.out"
 #SBATCH --partition=gpu-shared
 #SBATCH --ntasks-per-node=6
 #SBATCH --export=ALL
-#SBATCH --gres=gpu:k80:1
+#SBATCH --gres=gpu:p100:1
 #SBATCH -t 24:00:00
 #SBATCH -A cla173
 
@@ -15,4 +15,4 @@ export LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LIBRARY_PATH
 
 module load matlab
-matlab -nodisplay -nosplash -nojvm -r "exp_texture_joint_10()"
+matlab -nodisplay -nosplash -nojvm -r "exp_texture_joint_11()"

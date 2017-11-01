@@ -1,4 +1,4 @@
-function [] = exp_texture_joint_10()
+function [] = exp_texture_joint_11()
 
 % export CPATH=/home/enijkamp/cudnn-3.0/include/
 % export LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH
@@ -6,9 +6,9 @@ function [] = exp_texture_joint_10()
 
 % sudo CPATH=/home/enijkamp/cudnn-3.0/include/ LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LIBRARY_PATH /usr/local/MATLAB/R2017a/bin/matlab
 
-exp_num = 10;
+exp_num = 11;
 
-% (9) increase T=20 (comet k80)
+% (9) increase T=20 (comet p100)
 
 % descriptor
 Gamma = 0.00005;
