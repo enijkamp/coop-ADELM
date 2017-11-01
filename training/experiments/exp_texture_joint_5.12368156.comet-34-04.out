@@ -1,0 +1,125 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+[Warning: Name is nonexistent or not a directory:
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/mex] 
+[> In path (line 109)
+  In addpath (line 88)
+  In vl_setupnn (line 13)
+  In setup_convnet (line 10)
+  In exp_texture_joint_5 (line 27)] 
+[Warning: Setting the 'MW_NVCC_PATH' environment variable to
+'/usr/local/cuda-8.0/bin/nvcc'] 
+[> In vl_compilenn>activate_nvcc (line 600)
+  In vl_compilenn (line 253)
+  In setup_convnet (line 22)
+  In exp_texture_joint_5 (line 27)] 
+[Warning: NVCC not found in the command line path or the one found does not
+matches '/usr/local/cuda-8.0/bin/nvcc'.] 
+[> In vl_compilenn>activate_nvcc (line 609)
+  In vl_compilenn (line 253)
+  In setup_convnet (line 22)
+  In exp_texture_joint_5 (line 27)] 
+Location of NVCC (/usr/local/cuda-8.0/bin) added to your command search PATH.
+vl_compilenn:	CUDA: MEX config file: '/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/config/mex_CUDA_glnxa64.xml'
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'g++'.
+In file included from /home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_libjpeg.cpp:14:0:
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_helpers.hpp:35:2: warning: #warning "SSSE3 instruction set not enabled. Using slower image conversion routines." [-Wcpp]
+ #warning "SSSE3 instruction set not enabled. Using slower image conversion routines."
+  ^
+
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+MEX completed successfully.
+Building with 'nvcc'.
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+############################# run 1 / 1 #############################
+{Error using vl_nnconvt
+gemm<>:  [cublas error] [cublas:cublasSgemm (CUBLAS_STATUS_EXECUTION_FAILED)]
+
+Error in vl_gan (line 52)
+            res(i+1).x = vl_nnconvt(res(i).x, l.weights{1}, l.weights{2}, ...
+
+Error in learn_dual_net (line 43)
+        res = vl_gan(net2, gpuArray(z));
+
+Error in exp_texture_joint_5 (line 71)
+            learn_dual_net(config, net1_init.net1, net2_init.net2);
+} 
+>> 
