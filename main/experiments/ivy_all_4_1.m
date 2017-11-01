@@ -59,7 +59,7 @@ config.max_consolidate_checks = 5;
 config.consolidate_reps = 5;
 config.consolidate_quota = 1;
 
-alpha_init = 1000000;
+alpha_init = [1000000,1000000];
 nsteps = config.nsteps;
 max_AD_checks = config.max_AD_checks;
 AD_reps = config.AD_reps;
