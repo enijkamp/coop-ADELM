@@ -65,9 +65,9 @@ function config = gen_ADELM_config(ELM_str,net_file,exp_str)
     config.max_bar_checks = 15; % number of checks in barrier search
         
     % data location
-    config.data_path = ['../../data/' exp_str];
+    config.data_path = '../../data/';
     % location of Co-op Nets
-    config.net_path = ['../../nets/' exp_str];
+    config.net_path = '../../nets/';
     % folder for ELM results
     config.ELM_folder = ['../../maps/' exp_str];
     % folder for images in generator space
