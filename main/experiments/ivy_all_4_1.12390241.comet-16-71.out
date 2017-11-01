@@ -19202,3 +19202,34 @@ Finding local min
 ----
 Checking minimum membership
 get_AD_order -> par = 8, parfor toc = 0.68668, max toc = 0.21793
+check_membership -> par = 8, parfor toc = 21.4439, max toc = 20.388
+successful diffusion to: 2 
+min sorted to basin 2
+22.13 seconds 
+----
+
+ELM Step 633 of 1000
+----
+Finding local min
+2.25 seconds 
+----
+Checking minimum membership
+get_AD_order -> par = 8, parfor toc = 0.6687, max toc = 0.22675
+check_membership -> par = 8, parfor toc = 29.9445, max toc = 28.903
+successful diffusion to: 1 
+min sorted to basin 1
+30.61 seconds 
+----
+
+ELM Step 634 of 1000
+----
+Finding local min
+0.92 seconds 
+----
+Checking minimum membership
+get_AD_order -> par = 8, parfor toc = 0.69856, max toc = 0.21983
+check_membership -> par = 8, parfor toc = 25.8642, max toc = 24.885
+successful diffusion to: 7 
+min sorted to basin 7
+26.56 seconds 
+----
