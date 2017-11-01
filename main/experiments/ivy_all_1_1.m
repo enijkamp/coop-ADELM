@@ -90,6 +90,8 @@ fprintf('# (1) burnin: %4d hours %4.2f minutes.\n',floor(toc(tic_burn)/3600), mo
 disp('# (2) consolidate_minima');
 tic_cons = tic;
 ELM_test = consolidate_minima(ELM_burnin);
+ELM_test.config.min_out = min_out;
+ELM_test.config.max_out = max_out;
 ELM_test.config.map_str = 'ELM_1_1_exp.mat';
 ELM_test.config.nsteps = nsteps;
 ELM_test.config.max_AD_checks = max_AD_checks;
