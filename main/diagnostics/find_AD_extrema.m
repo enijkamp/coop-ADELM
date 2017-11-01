@@ -46,7 +46,7 @@ function out = get_extreme_alpha(config,factor,dir,nsteps)
     cont = sgn;
     while cont == sgn
         if sgn == 0; config.alpha = config.alpha*(factor^dir);
-        else, config.alpha = config.alpha/(factor^dir); end      
+        else config.alpha = config.alpha/(factor^dir); end      
         ELM_test = gen_ADELM([],config);
         count = 1; 
         if dir == -1, goal = 2; end
@@ -63,7 +63,7 @@ function out = get_extreme_alpha(config,factor,dir,nsteps)
     end
     
     if sgn == 1, out.alpha = out.alpha_list(end-1);
-    else, out.alpha = out.alpha_list(end); end
+    else out.alpha = out.alpha_list(end); end
 end
 
     

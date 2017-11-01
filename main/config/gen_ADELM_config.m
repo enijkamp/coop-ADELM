@@ -1,4 +1,4 @@
-function config = gen_ADELM_config(ELM_str,net_file,exp_str)
+function config = gen_ADELM_config(ELM_str,net_file)
     % location of Coop nets
     if nargin<1 || isempty(ELM_str)
         config.ELM_str = 'ivy/all/'; 
@@ -69,11 +69,11 @@ function config = gen_ADELM_config(ELM_str,net_file,exp_str)
     % location of Co-op Nets
     config.net_path = '../../nets/';
     % folder for ELM results
-    config.ELM_folder = ['../../maps/' exp_str];
+    config.ELM_folder = '../../maps/';
     % folder for images in generator space
-    config.im_folder = ['../../ims/' exp_str];
+    config.im_folder = ['../../ims/' config.ELM_str];
     % folder for ELM Trees
-    config.tree_folder = ['../../trees/' exp_str];
+    config.tree_folder = '../../trees/';
 
     % create results directory
     if ~exist(config.ELM_folder, 'dir')

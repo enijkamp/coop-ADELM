@@ -8,10 +8,9 @@ rng(123);
 
 %% load config
 %set up config
-exp_str = 'ivy_all_1_1/';
-file_str = 'ivy/all/';
-net_str = 'nets4_1.mat';
-config = gen_ADELM_config(file_str,net_str,exp_str);
+file_str = 'ivy/all/4_1/';
+net_str = 'nets.mat';
+config = gen_ADELM_config(file_str,net_str);
 
 
 %% pool init
@@ -93,7 +92,7 @@ tic_cons = tic;
 ELM_test = consolidate_minima(ELM_burnin);
 ELM_test.config.min_out = min_out;
 ELM_test.config.max_out = max_out;
-ELM_test.config.map_str = 'ELM_1_1_exp.mat';
+ELM_test.config.map_str = 'ELM_4_1_exp.mat';
 ELM_test.config.nsteps = nsteps;
 ELM_test.config.max_AD_checks = max_AD_checks;
 ELM_test.config.AD_quota = AD_quota;
