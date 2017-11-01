@@ -10,7 +10,7 @@ if use_gpu
     % gpu
     cd(fullfile('../../matconvnet-1.0-beta16-gpu/', 'matlab'));
     cuda_root = '/usr/local/cuda-8.0'; 
-    cudnn_root = '/home/enijkamp/cudnn-6.0'; 
+    cudnn_root = '/home/enijkamp/cudnn-3.0'; 
     
     vl_setupnn();
     

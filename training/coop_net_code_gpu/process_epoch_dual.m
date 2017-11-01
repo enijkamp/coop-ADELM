@@ -204,7 +204,7 @@ function [net,res,loss] = accumulate_gradients1(opts, lr, batchSize, net, res, r
 % -------------------------------------------------------------------------
 layer_sets = config.layer_sets1;
 
-loss = 0;
+loss = [];
 
 for l = layer_sets
     for j=1:numel(res(l).dzdw)
@@ -227,7 +227,7 @@ for l = layer_sets
             
             net.layers{l}.weights{j} = net.layers{l}.weights{j} + thisLR*net.layers{l}.momentum{j};
             
-            loss = loss + gather(mean(abs(gradient_dzdw(:))));
+            loss = [loss, gather(mean(abs(gradient_dzdw(:))))];
             
             if j == 1
                 res_l = min(l+2, length(res));
@@ -237,6 +237,7 @@ for l = layer_sets
         end
     end
 end
+loss = mean(loss);
 end
  
 
