@@ -73,7 +73,8 @@ tic_ext = tic;
 fprintf('# (0) find_AD_extrema: %4d hours %4.2f minutes.\n',floor(toc(tic_ext)/3600), mod(toc(tic_ext)/60,60));
     
 %%line below updated
-alphas = exp(linspace(log(min_out.alpha),log(max_out.alpha),num_exps));
+config.num_exps = 10;
+alphas = exp(linspace(log(min_out.alpha),log(max_out.alpha),config.num_exps));
 %%%%%%
 
 disp('# (1) burnin');

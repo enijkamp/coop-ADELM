@@ -1,4 +1,8 @@
-function [] = setup_convnet(use_gpu, do_compile)
+function [] = setup_convnet(use_gpu, do_compile, use_cudnn)
+
+if nargin < 3
+    use_cudnn = 0;
+end
 
 current_dir = pwd();
 
@@ -6,20 +10,21 @@ if use_gpu
     % gpu
     cd(fullfile('../../matconvnet-1.0-beta16-gpu/', 'matlab'));
     cuda_root = '/usr/local/cuda-8.0'; 
+    cudnn_root = '/home/enijkamp/cudnn-6.0'; 
     
     vl_setupnn();
     
-    if ispc
-        cuda_method = 'nvcc';
-    else
-        cuda_method = 'mex';
-    end
-    
     if do_compile
-        if isempty(cuda_root)
-            vl_compilenn('EnableGPU', true, 'CudaMethod', 'nvcc');
+        if use_cudnn
+            vl_compilenn('EnableGPU', true, ...
+                'CudaRoot', cuda_root, ...
+                'CudaMethod', 'nvcc', ...
+                'enableCudnn', true, ...
+                'cudnnRoot', cudnn_root);
         else
-            vl_compilenn('EnableGPU', true, 'CudaRoot', cuda_root, 'CudaMethod', cuda_method);
+            vl_compilenn('EnableGPU', true, ...
+                'CudaRoot', cuda_root, ...
+                'CudaMethod', 'nvcc');
         end
     end
 else
