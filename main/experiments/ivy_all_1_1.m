@@ -8,9 +8,10 @@ rng(123);
 
 %% load config
 %set up config
+exp_str = 'ivy_all_1_1/';
 file_str = 'ivy/all/';
 net_str = 'nets1_1.mat';
-config = gen_ADELM_config(file_str,net_str);
+config = gen_ADELM_config(file_str,net_str,exp_str);
 
 
 %% pool init
