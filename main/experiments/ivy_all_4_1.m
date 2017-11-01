@@ -79,7 +79,7 @@ alphas = exp(linspace(log(min_out.alpha),log(max_out.alpha),num_exps));
 disp('# (1) burnin');
 tic_burn = tic;
 config.alpha = alphas(6);
-config.map_str = 'ELM_1_1_burnin.mat';
+config.map_str = 'ELM_4_1_burnin.mat';
 config.nsteps = floor(nsteps/2);
 config.max_AD_checks = floor(max_AD_checks/2);
 config.AD_quota = 1;
