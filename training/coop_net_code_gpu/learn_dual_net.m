@@ -148,6 +148,8 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     end
     
     learningTime = toc(learningTime);
+    save([config.trained_folder,'time.mat'],'learningTime');
+    
     hrs = floor(learningTime / 3600);
     learningTime = mod(learningTime, 3600);
     mins = floor(learningTime / 60);
