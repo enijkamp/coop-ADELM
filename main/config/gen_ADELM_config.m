@@ -7,7 +7,7 @@ function config = gen_ADELM_config(ELM_str,net_file)
     end
     % name of net file
     if nargin<2 || isempty(net_file)
-        config.net_file = 'nets1_1.mat'; 
+        config.net_file = 'nets.mat'; 
     else
         config.net_file = net_file;
     end
@@ -76,16 +76,16 @@ function config = gen_ADELM_config(ELM_str,net_file)
     config.tree_folder = '../../trees/';
 
     % create results directory
-    if ~exist(config.ELM_folder, 'dir')
-        mkdir(config.ELM_folder)
+    if ~exist([config.ELM_folder ELM_str], 'dir')
+        mkdir([config.ELM_folder ELM_str])
     end
 
     if ~exist(config.im_folder, 'dir')
         mkdir(config.im_folder)
     end
     
-    if ~exist(config.tree_folder, 'dir')
-        mkdir(config.tree_folder)
+    if ~exist([config.tree_folder ELM_str], 'dir')
+        mkdir([config.tree_folder ELM_str])
     end
     
     %%%read in networks%%%
