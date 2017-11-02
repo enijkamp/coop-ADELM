@@ -16,7 +16,7 @@ epoch_time = tic;
 
 for t = 1:config.batchSize:size(imdb,4)
     batchNum = batchNum+1;
-    fprintf('Epoch %d of %d, Batch %d of %d \n', epoch,config.nIteration,batchNum, ceil(size(imdb,4)/config.batchSize));
+    fprintf('Epoch %d of %d, Batch %d of %d \n', epoch,config.nIteration,batchNum,ceil(size(imdb,4)/config.batchSize));
     batchTime = tic;
 
     batchStart = t;
@@ -56,14 +56,13 @@ for t = 1:config.batchSize:size(imdb,4)
     
     % store synthesis from generator
     if config.use_gpu
-        gen_mats = gather(syn_mats);
         if mod(epoch,10) == 0 || epoch == config.nIteration
             for i = 1:config.num_syn
                 imwrite((gen_mats(:,:,:,i)+config.mean_im)/256,[config.gen_im_folder,'gen_im',num2str(i),'.png']);
             end
         end
         % per epoch
-        if t == 1
+        if mod(t,10) == 0
             imwrite((gen_mats(:,:,:,1)+config.mean_im)/256,[config.gen_im_folder,'gen_im_epoch',num2str(epoch),'.png']);
         end
     else
@@ -139,7 +138,7 @@ for t = 1:config.batchSize:size(imdb,4)
             end
         end
         % per epoch
-        if t == 1
+        if mod(t,10) == 0
             imwrite((syn_mats(:,:,:,1)+config.mean_im)/256,[config.syn_im_folder,'syn_im_epoch',num2str(epoch),'.png']);
         end
     else
@@ -186,26 +185,27 @@ for t = 1:config.batchSize:size(imdb,4)
 end
 
 
-    if config.use_gpu
-        net1 = vl_simplenn_move(net1, 'cpu') ;
-        net2 = vl_simplenn_move(net2, 'cpu') ;
-    end
-    
-    if config.use_gpu
-        if mod(epoch,10) == 0 || epoch == config.nIteration
-            save([config.trained_folder,'des_net.mat'],'net1');
-            save([config.trained_folder,'gen_net.mat'],'net2');
-        end
-    else
+if config.use_gpu
+    net1 = vl_simplenn_move(net1, 'cpu') ;
+    net2 = vl_simplenn_move(net2, 'cpu') ;
+end
+
+if config.use_gpu
+    if mod(epoch,10) == 0 || epoch == config.nIteration
         save([config.trained_folder,'des_net.mat'],'net1');
         save([config.trained_folder,'gen_net.mat'],'net2');
     end
-    
-    % print learning statistics
-    epoch_time = toc(epoch_time) ;
-    speed = config.num_syn/epoch_time;
+else
+    save([config.trained_folder,'des_net.mat'],'net1');
+    save([config.trained_folder,'gen_net.mat'],'net2');
+end
 
-    fprintf(' %.2f s (%.1f data/s)\n', epoch_time, speed) ;
+% print learning statistics
+epoch_time = toc(epoch_time) ;
+speed = config.num_syn/epoch_time ;
+
+fprintf(' %.2f s (%.1f data/s)\n', epoch_time, speed) ;
+
 end
 
 % -------------------------------------------------------------------------

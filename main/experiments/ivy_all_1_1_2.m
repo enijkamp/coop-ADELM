@@ -1,7 +1,7 @@
 function [] = ivy_all_1_1_2(no_workers, pool_name_comet)
 
 %% exp
-% (1_1_2): refine (1_1) with new alpha values
+% (1_1_2): refine (1_1) with alpha=280000
 exp_id = '1_1_2';
 
 %% setup
@@ -87,8 +87,8 @@ fprintf('# (1) burnin: %4d hours %4.2f minutes.\n',floor(toc(tic_burn)/3600), mo
 disp('# (2) consolidate_minima');
 tic_cons = tic;
 ELM_test = consolidate_minima(ELM_burnin);
-ELM_test.config.min_out = min_out;
-ELM_test.config.max_out = max_out;
+%ELM_test.config.min_out = min_out;
+%ELM_test.config.max_out = max_out;
 ELM_test.config.map_str = ['ELM_' exp_id '_exp.mat'];
 ELM_test.config.nsteps = nsteps;
 ELM_test.config.max_AD_checks = max_AD_checks;

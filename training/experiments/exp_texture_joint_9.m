@@ -8,7 +8,7 @@ function [] = exp_texture_joint_9()
 
 exp_num = 9;
 
-% (5) gamma2 base (comet)
+% (5) gamma2 base (cudnn desktop)
 
 % descriptor
 Gamma = 0.00005;
