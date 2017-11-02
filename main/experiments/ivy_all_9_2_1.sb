@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name="all_9_2_1"
+#SBATCH --job-name="9_2_1"
 #SBATCH --output="ivy_all_9_2_1.%j.%N.out"
 #SBATCH --partition=compute
 #SBATCH --nodes=1
