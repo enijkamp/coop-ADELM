@@ -13,7 +13,7 @@ exp_num = 9;
 % descriptor
 Gamma = 0.00005;
 Deltas = 0.3;
-Ts = [10 20];
+Ts = 10;
 % generator
 Delta2 = 0.3;
 Gammas2 = [0.0002 0.0001 0.00005];

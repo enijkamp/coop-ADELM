@@ -54,12 +54,17 @@ for t = 1:config.batchSize:size(imdb,4)
         gen_mats = syn_mats;
     end
     
+    % store synthesis from generator
     if config.use_gpu
+        gen_mats = gather(syn_mats);
         if mod(epoch,10) == 0 || epoch == config.nIteration
-            gen_mats = gather(syn_mats);
             for i = 1:config.num_syn
                 imwrite((gen_mats(:,:,:,i)+config.mean_im)/256,[config.gen_im_folder,'gen_im',num2str(i),'.png']);
             end
+        end
+        % per epoch
+        if t == 1
+            imwrite((gen_mats(:,:,:,1)+config.mean_im)/256,[config.gen_im_folder,'gen_im_epoch',num2str(epoch),'.png']);
         end
     else
         for i = 1:config.num_syn
@@ -127,11 +132,15 @@ for t = 1:config.batchSize:size(imdb,4)
     clear res_syn;
         
     if config.use_gpu
+        syn_mats = gather(syn_mats);
         if mod(epoch,10) == 0 || epoch == config.nIteration
-            gen_mats = gather(syn_mats);
             for k = 1:config.num_syn
-                imwrite((gen_mats(:,:,:,k)+config.mean_im)/256,[config.syn_im_folder,'syn_im',num2str(k),'.png']);
+                imwrite((syn_mats(:,:,:,k)+config.mean_im)/256,[config.syn_im_folder,'syn_im',num2str(k),'.png']);
             end
+        end
+        % per epoch
+        if t == 1
+            imwrite((syn_mats(:,:,:,1)+config.mean_im)/256,[config.gen_im_folder,'syn_im_epoch',num2str(epoch),'.png']);
         end
     else
         for k = 1:config.num_syn
