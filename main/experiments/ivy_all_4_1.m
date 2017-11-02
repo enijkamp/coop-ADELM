@@ -7,10 +7,9 @@ rng(123);
 
 
 %% load config
-%set up config
-file_str = 'ivy/all/4_1/';
-net_str = 'nets.mat';
-config = gen_ADELM_config(file_str,net_str);
+in_file_str = 'ivy/all/4_1/';
+out_file_str = 'ivy/all/4_1/';
+config = gen_ADELM_config(in_file_str,out_file_str);
 
 
 %% pool init

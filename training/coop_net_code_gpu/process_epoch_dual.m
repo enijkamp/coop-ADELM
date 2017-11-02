@@ -140,7 +140,7 @@ for t = 1:config.batchSize:size(imdb,4)
         end
         % per epoch
         if t == 1
-            imwrite((syn_mats(:,:,:,1)+config.mean_im)/256,[config.gen_im_folder,'syn_im_epoch',num2str(epoch),'.png']);
+            imwrite((syn_mats(:,:,:,1)+config.mean_im)/256,[config.syn_im_folder,'syn_im_epoch',num2str(epoch),'.png']);
         end
     else
         for k = 1:config.num_syn
