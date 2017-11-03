@@ -1,0 +1,94 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+[Warning: Setting the 'MW_NVCC_PATH' environment variable to
+'/usr/local/cuda-8.0/bin/nvcc'] 
+[> In vl_compilenn>activate_nvcc (line 600)
+  In vl_compilenn (line 253)
+  In setup_convnet (line 19)
+  In exp_texture_joint_11 (line 34)] 
+vl_compilenn:	CUDA: MEX config file: '/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/config/mex_CUDA_glnxa64.xml'
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+In file included from /home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_libjpeg.cpp:14:0:
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_helpers.hpp:35:2: warning: #warning "SSSE3 instruction set not enabled. Using slower image conversion routines." [-Wcpp]
+ #warning "SSSE3 instruction set not enabled. Using slower image conversion routines."
+  ^
+
+MEX completed successfully.
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+############################# run 1 / 1 #############################
+  CUDADevice with properties:
+
+                      Name: 'Tesla P100-PCIE-16GB'
+                     Index: 1
+         ComputeCapability: '6.0'
+            SupportsDouble: 1
+             DriverVersion: 8
+            ToolkitVersion: 7.5000
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 1.7067e+10
+           AvailableMemory: 1.6682e+10
+       MultiprocessorCount: 56
+              ClockRateKHz: 405000
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 0
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+            DeviceSelected: 1
+
+367.48
+/opt/matlab/2016b/sys/opengl/lib/glnxa64:/opt/matlab/2016b/sys/os/glnxa64:/opt/matlab/2016b/bin/glnxa64:/opt/matlab/2016b/extern/lib/glnxa64:/opt/matlab/2016b/runtime/glnxa64:/opt/matlab/2016b/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/opt/matlab/2016b/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/enijkamp/cudnn-3.0/lib64:/usr/local/cuda-8.0/lib64:/opt/gnu/gcc/lib64:/opt/gnu/gmp/lib:/opt/gnu/mpfr/lib:/opt/gnu/mpc/lib:/opt/gnu/lib:/opt/gnu/lib64:/opt/mvapich2/intel/ib/lib:/opt/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/opt/sdsc/lib
+{Error using vl_nnconvt
+gemm<>:  [cublas error] [cublas:cublasSgemm (CUBLAS_STATUS_EXECUTION_FAILED)]
+
+Error in vl_gan (line 52)
+            res(i+1).x = vl_nnconvt(res(i).x, l.weights{1}, l.weights{2}, ...
+
+Error in learn_dual_net (line 53)
+        res = vl_gan(net2, gpuArray(z));
+
+Error in exp_texture_joint_11 (line 78)
+            learn_dual_net(config, net1_init.net1, net2_init.net2);
+} 
+>> 

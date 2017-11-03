@@ -1,0 +1,35 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+Starting parallel pool (parpool) using the 'comet4' profile ... connected to 24 workers.
+# (1) burnin
+
+ELM Step 1 of 500
+----
+Finding local min
+5.04 seconds 
+----
+Checking minimum membership
+get_AD_order -> par = 1, parfor toc = 0.79095, max toc = 0.4481
+check_membership -> par = 1, parfor toc = 24.0397, max toc = 23.5314
+new min found (ID 2)
+24.85 seconds 
+----
+{Error using save
+Cannot create 'ELM_9_2_1_burnin.mat' because '../../maps/ivy/all/9_2' does not
+exist.
+
+Error in gen_ADELM (line 36)
+        save([config.ELM_folder,config.ELM_str,config.map_str],'ELM');
+
+Error in ivy_all_9_2_1 (line 84)
+ELM_burnin = gen_ADELM([],config);
+} 
+>> 

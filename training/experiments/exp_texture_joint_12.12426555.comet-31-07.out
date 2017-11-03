@@ -1,0 +1,53 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+[Warning: Setting the 'MW_NVCC_PATH' environment variable to
+'/usr/local/cuda-8.0/bin/nvcc'] 
+[> In vl_compilenn>activate_nvcc (line 600)
+  In vl_compilenn (line 253)
+  In setup_convnet (line 25)
+  In exp_texture_joint_12 (line 34)] 
+[Warning: NVCC not found in the command line path or the one found does not
+matches '/usr/local/cuda-8.0/bin/nvcc'.] 
+[> In vl_compilenn>activate_nvcc (line 609)
+  In vl_compilenn (line 253)
+  In setup_convnet (line 25)
+  In exp_texture_joint_12 (line 34)] 
+Location of NVCC (/usr/local/cuda-8.0/bin) added to your command search PATH.
+vl_compilenn:	CUDA: MEX config file: '/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/config/mex_CUDA_glnxa64.xml'
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+{Error using mex
+The command '/opt/gnu/gcc/bin/g++' exited with a return value '0'
+
+Error in vl_compilenn>mex_compile (line 438)
+mex(mopts{:}) ;
+
+Error in vl_compilenn (line 400)
+    mex_compile(opts, srcs{i}, toobj(bld_dir,srcs{i}), flags.mexcc) ;
+
+Error in setup_convnet (line 25)
+            vl_compilenn('EnableGPU', true, ...
+
+Error in exp_texture_joint_12 (line 34)
+setup_convnet(use_gpu, compile_convnet, compile_cudnn);
+} 
+>> 

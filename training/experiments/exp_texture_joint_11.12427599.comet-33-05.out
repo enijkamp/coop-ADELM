@@ -1,0 +1,136 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016b (9.1.0.441655) 64-bit (glnxa64)
+                             September 7, 2016
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+[Warning: Setting the 'MW_NVCC_PATH' environment variable to
+'/usr/local/cuda-8.0/bin/nvcc'] 
+[> In vl_compilenn>activate_nvcc (line 600)
+  In vl_compilenn (line 253)
+  In setup_convnet (line 19)
+  In exp_texture_joint_11 (line 34)] 
+
+------------------------------------------------------------------------
+       Segmentation violation detected at Thu Nov  2 23:21:21 2017
+------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding      : Disabled - No sandbox or build area path
+  Crash Mode          : continue (default)
+  Current Graphics Driver: Unknown software 
+  Current Visual      : None
+  Default Encoding    : ISO-8859-15
+  Deployed            : false
+  GNU C Library       : 2.12 stable
+  Host Name           : comet-33-05.sdsc.edu
+  MATLAB Architecture : glnxa64
+  MATLAB Entitlement ID: 3164272
+  MATLAB Root         : /opt/matlab/2016b
+  MATLAB Version      : 9.1.0.441655 (R2016b)
+  OpenGL              : software
+  Operating System    : Linux 2.6.32-696.10.3.el6.x86_64 #1 SMP Tue Sep 26 18:14:22 UTC 2017 x86_64
+  Processor ID        : x86 Family 6 Model 79 Stepping 1, GenuineIntel
+  Window System       : No active display
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 0000000000000000  RBX = 0000000100000000
+  RCX = 00000036932182a0  RDX = 0000000000000000
+  RSP = 00002ab7dbffa400  RBP = 00002ab7dbffa4b0
+  RSI = 00002ab7dbff9ff0  RDI = 0000000000000000
+
+   R8 = 00002ab7e24c7818   R9 = 000000000001b879
+  R10 = 00002ab817401a20  R11 = 000000000b468dba
+  R12 = 00002ab7ecef4988  R13 = 0000000000000001
+  R14 = 0000000000000000  R15 = 0000000000000001
+
+  RIP = 00002ab800ed8cdc  EFL = 0000000000010202
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00002ab800ed8cdc          /opt/matlab/2016b/bin/glnxa64/libmwgpu.so+08363228
+[  1] 0x00002ab800ebeb0a          /opt/matlab/2016b/bin/glnxa64/libmwgpu.so+08256266
+[  2] 0x00002ab800ebc873          /opt/matlab/2016b/bin/glnxa64/libmwgpu.so+08247411
+[  3] 0x00002ab800ebca86          /opt/matlab/2016b/bin/glnxa64/libmwgpu.so+08247942
+[  4] 0x00002ab8009221eb          /opt/matlab/2016b/bin/glnxa64/libmwgpu.so+02372075
+[  5] 0x00002ab7c812dcfe /opt/matlab/2016b/bin/glnxa64/libmwm_dispatcher.so+00437502
+[  6] 0x00002ab7c8114878 /opt/matlab/2016b/bin/glnxa64/libmwm_dispatcher.so+00333944 _ZN13Mfh_MATLAB_fn11dispatch_fhEiPP11mxArray_tagiS2_+00000616
+[  7] 0x00002ab7ca9b69b4        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+12614068
+[  8] 0x00002ab7ca9b6a50        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+12614224
+[  9] 0x00002ab7ca795306        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10380038
+[ 10] 0x00002ab7ca815bf1        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10906609
+[ 11] 0x00002ab7c8aa789f /opt/matlab/2016b/bin/glnxa64/libmwm_interpreter.so+02517151 inFullFevalFcn+00000159
+[ 12] 0x00002ab7c812dcfe /opt/matlab/2016b/bin/glnxa64/libmwm_dispatcher.so+00437502
+[ 13] 0x00002ab7c8114878 /opt/matlab/2016b/bin/glnxa64/libmwm_dispatcher.so+00333944 _ZN13Mfh_MATLAB_fn11dispatch_fhEiPP11mxArray_tagiS2_+00000616
+[ 14] 0x00002ab7ca8d1847        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+11675719
+[ 15] 0x00002ab7ca8d1aab        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+11676331
+[ 16] 0x00002ab7ca937461        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+12092513
+[ 17] 0x00002ab7ca25d930        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+04909360
+[ 18] 0x00002ab7ca25fc3c        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+04918332
+[ 19] 0x00002ab7ca25c410        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+04903952
+[ 20] 0x00002ab7ca257855        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+04884565
+[ 21] 0x00002ab7ca257b69        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+04885353
+[ 22] 0x00002ab7ca25c20d        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+04903437
+[ 23] 0x00002ab7ca25c2e2        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+04903650
+[ 24] 0x00002ab7ca353688        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+05916296
+[ 25] 0x00002ab7ca355b2f        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+05925679
+[ 26] 0x00002ab7ca7d410e        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10637582
+[ 27] 0x00002ab7ca79beab        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10407595
+[ 28] 0x00002ab7ca79bfb3        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10407859
+[ 29] 0x00002ab7ca79e0d9        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10416345
+[ 30] 0x00002ab7ca816bbe        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10910654
+[ 31] 0x00002ab7ca817072        /opt/matlab/2016b/bin/glnxa64/libmwm_lxe.so+10911858
+[ 32] 0x00002ab7c8a95941 /opt/matlab/2016b/bin/glnxa64/libmwm_interpreter.so+02443585 _Z51inEvalCmdWithLocalReturnInDesiredWSAndPublishEventsRKSbIDsSt11char_traitsIDsESaIDsEEPibbP15inWorkSpace_tag+00000065
+[ 33] 0x00002ab7c76cefc1          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00696257 _ZNK3iqm18InternalEvalPlugin24inEvalCmdWithLocalReturnERKSbIDsSt11char_traitsIDsESaIDsEEP15inWorkSpace_tag+00000097
+[ 34] 0x00002ab7c76d09db          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00702939 _ZN3iqm18InternalEvalPlugin7executeEP15inWorkSpace_tagRN5boost10shared_ptrIN14cmddistributor17IIPCompletedEventEEE+00000123
+[ 35] 0x00002ab7c7e596cd          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00624333
+[ 36] 0x00002ab7c76c3a0a          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00649738
+[ 37] 0x00002ab7c76afeb2          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00569010
+[ 38] 0x00002ab7c8e5d05a       /opt/matlab/2016b/bin/glnxa64/libmwbridge.so+00159834
+[ 39] 0x00002ab7c8e5d617       /opt/matlab/2016b/bin/glnxa64/libmwbridge.so+00161303
+[ 40] 0x00002ab7c8e64519       /opt/matlab/2016b/bin/glnxa64/libmwbridge.so+00189721
+[ 41] 0x00002ab7c8e64614       /opt/matlab/2016b/bin/glnxa64/libmwbridge.so+00189972
+[ 42] 0x00002ab7c8e64fa9       /opt/matlab/2016b/bin/glnxa64/libmwbridge.so+00192425 _Z8mnParserv+00000617
+[ 43] 0x00002ab7c7e44243          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00537155
+[ 44] 0x00002ab7c7e461ce          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00545230
+[ 45] 0x00002ab7c7e46849          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00546889 _ZN5boost6detail17task_shared_stateINS_3_bi6bind_tIvPFvRKNS_8functionIFvvEEEENS2_5list1INS2_5valueIS6_EEEEEEvE6do_runEv+00000025
+[ 46] 0x00002ab7c7e45236          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00541238
+[ 47] 0x00002ab7c76f7b49          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00863049
+[ 48] 0x00002ab7c76e451c          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00783644 _ZN5boost6detail8function21function_obj_invoker0ISt8functionIFNS_3anyEvEES4_E6invokeERNS1_15function_bufferE+00000028
+[ 49] 0x00002ab7c76e41fc          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00782844 _ZN3iqm18PackagedTaskPlugin7executeEP15inWorkSpace_tagRN5boost10shared_ptrIN14cmddistributor17IIPCompletedEventEEE+00000428
+[ 50] 0x00002ab7c76c3a0a          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00649738
+[ 51] 0x00002ab7c76af690          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00566928
+[ 52] 0x00002ab7c76b2048          /opt/matlab/2016b/bin/glnxa64/libmwiqm.so+00577608
+[ 53] 0x00002ab7b379e40a     /opt/matlab/2016b/bin/glnxa64/libmwservices.so+02634762
+[ 54] 0x00002ab7b379f9af     /opt/matlab/2016b/bin/glnxa64/libmwservices.so+02640303
+[ 55] 0x00002ab7b37a00e6     /opt/matlab/2016b/bin/glnxa64/libmwservices.so+02642150 _Z25svWS_ProcessPendingEventsiib+00000102
+[ 56] 0x00002ab7c7e448c6          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00538822
+[ 57] 0x00002ab7c7e44c42          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00539714
+[ 58] 0x00002ab7c7e328d6          /opt/matlab/2016b/bin/glnxa64/libmwmcr.so+00465110
+[ 59] 0x0000003693007aa1                             /lib64/libpthread.so.0+00031393
+[ 60] 0x00000036928e8bcd                                   /lib64/libc.so.6+00953293 clone+00000109
+[ 61] 0x0000000000000000                                   <unknown-module>+00000000
+
+
+If this problem is reproducible, please submit a Service Request via:
+    http://www.mathworks.com/support/contact_us/
+
+A technical support engineer might contact you with further information.
+
+Thank you for your help.** This crash report has been saved to disk as /home/enijkamp/matlab_crash_dump.112705-1 **
+
+
+
+MATLAB is exiting because of fatal error
+/var/spool/slurmd/job12427599/slurm_script: line 24: 112705 Killed                  matlab -nodisplay -nosplash -nojvm -r "exp_texture_joint_11()"
