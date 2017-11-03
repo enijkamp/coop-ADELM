@@ -74,6 +74,8 @@ function config = gen_ADELM_config(in_file_str,out_file_str,net_file)
     config.im_folder = ['../../ims/' out_file_str];
     % folder for ELM Trees
     config.tree_folder = '../../trees/';
+    
+%% TODO make folder names consistent (en)
 
     % create results directory
     if ~exist([config.ELM_folder out_file_str], 'dir')
