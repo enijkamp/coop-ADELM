@@ -21,7 +21,8 @@ for t = 1:config.T
         - config.Delta * config.Delta / 2 /config.refsig / config.refsig * syn_mat;
     
     % part3: white noise N(0, 1)
-    syn_mat = syn_mat + config.Delta * gpuArray(randn(size(syn_mat), 'single'));
+    %syn_mat = syn_mat + config.Delta * gpuArray(randn(size(syn_mat), 'single'));
+    syn_mat = syn_mat + config.Delta * gpuArray.randn(size(syn_mat), 'single');
     clear res;
 end
 

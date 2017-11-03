@@ -10,6 +10,10 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     global use_gpu;
     use_gpu = config.use_gpu;
     
+    if use_gpu
+        parallel.gpu.rng(0, 'Philox4x32-10');
+    end
+    
     % generator net2
     if nargin < 3 || isempty(net2)
         net2 = frame_gan_params();

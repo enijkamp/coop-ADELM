@@ -34,24 +34,64 @@ exp_num = 20;
 % (20): fix gamma2, increase gamma1
 
 % result:
-%   1   -> ...
+%   none of them work, degenerate into green uniform
+
+% %% config
+% nIteration = 500;
+% batchSize = 50;
+% num_syn = 120;
+% substract_mean = false;
+% 
+% % descriptor
+% Deltas = 0.3;
+% Gammas = [0.1 0.05 0.01];
+% Decay = linspace(1.0, 0.001, nIteration);
+% Ts = 10;
+% 
+% % generator
+% Delta2 = 0.3; % unused
+% Gammas2 = [0.01 0.001 0.0001];
+% Decay2 = linspace(1.0, 0.001, nIteration);
+% 
+% % image
+% img_name = 'ivy';
+% img_size = 'all';
+% 
+% %% setup
+% rng(123);
+% use_gpu = 1;
+% compile_convnet = 1;
+% compile_cudnn = 1;
+
+%% (3)
+
+% (20): logspace decay
+
+% result:
+%   ...
 
 %% config
-nIteration = 500;
+nIteration = 100;
 batchSize = 50;
 num_syn = 120;
 substract_mean = false;
+rate_list = logspace(-2, -4, 80)*100;
 
 % descriptor
-Deltas = 0.3;
-Gammas = [0.1 0.05 0.01];
-Decay = linspace(1.0, 0.001, nIteration);
 Ts = 10;
+Deltas = [0.3 0.005];
+Gammas = [0.1 0.06 0.04 0.02 0.01];
+Decay = repmat(rate_list, max(1,floor(nIteration/length(rate_list))),1);
+Decay = reshape(Decay, 1, []);
+Decay(end:nIteration) = Decay(end);
+
 
 % generator
 Delta2 = 0.3; % unused
-Gammas2 = [0.01 0.001 0.0001];
-Decay2 = linspace(1.0, 0.001, nIteration);
+Gammas2 = [0.001 0.0001 0.00001 0.000001];
+Decay2 = repmat(rate_list, max(1,floor(nIteration/length(rate_list))),1);
+Decay2 = reshape(Decay2, 1, []);
+Decay2(end:nIteration) = Decay2(end);
 
 % image
 img_name = 'ivy';
