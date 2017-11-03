@@ -1,14 +1,2 @@
-#!/bin/bash
-#SBATCH --job-name="joint_5"
-#SBATCH --output="exp_texture_joint_5.%j.%N.out"
-#SBATCH --partition=gpu-shared
-#SBATCH --ntasks-per-node=6
-#SBATCH --export=ALL
-#SBATCH --gres=gpu:k80:1
-#SBATCH -t 24:00:00
-#SBATCH -A cla173
-
-#ibrun in verbose mode will give binding detail
-
-module load matlab
-matlab -nodisplay -nosplash -nojvm -r "exp_texture_joint_5()"
+!nvcc -O3 -DNDEBUG -c mexGPUExample.cu -Xcompiler -fPIC -I/MATLAB_ROOT/extern/include -I/MATLAB_ROOT/toolbox/distcomp/gpu/extern/include;
+mex mexGPUExample.o -L/usr/local/cuda-6.0/lib64 -L/MATLAB_ROOT/bin/glnxa64 -lcudart -lcufft -lmwgpu

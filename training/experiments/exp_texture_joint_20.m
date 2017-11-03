@@ -109,7 +109,7 @@ disp(gpuDevice());
 
 %% run
 num = 1;
-total = length(Deltas) * length(Gammas2) * length(Ts);
+total = length(Deltas) * length(Gammas) * length(Gammas2) * length(Ts);
 for Delta = Deltas
     for Gamma = Gammas
         for Gamma2 = Gammas2
