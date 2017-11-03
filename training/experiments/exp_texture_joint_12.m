@@ -16,7 +16,7 @@ Deltas = 0.3;
 Ts = 20;
 % generator
 Delta2 = 0.3;
-Gammas2 = 0.0002; %[0.0002 0.0001 0.00005];
+Gammas2 = 0.0001;
 
 % config
 img_name = 'ivy';
@@ -55,7 +55,7 @@ for Delta = Deltas
             config.use_gpu = use_gpu;
             
             % config
-            config.nIteration = 400;
+            config.nIteration = 200;
             config.batchSize = 50;
 
             % sampling parameters
