@@ -25,7 +25,7 @@ for i = 1:10
     exp_time = tic;
 
     %load complete ELM experiment
-    load([config.ELM_folder,file_str,'ELM_exp',...
+    load([config.ELM_folder,out_file_str,'ELM_exp',...
             num2str(i),'.mat']);
         
     %adjust config
@@ -38,8 +38,8 @@ for i = 1:10
     bar_mat = get_barrier_mat_quick(ELM);
     
     %save results
-    if ~exist([ELM.config.tree_folder,file_str],'dir') mkdir([ELM.config.tree_folder,file_str]); end
-    save([ELM.config.tree_folder,file_str,'/bar_mat',num2str(i),'.mat'],'bar_mat');
+    if ~exist([ELM.config.tree_folder,out_file_str],'dir') mkdir([ELM.config.tree_folder,out_file_str]); end
+    save([ELM.config.tree_folder,out_file_str,'/bar_mat',num2str(i),'.mat'],'bar_mat');
     
     % time
     exp_time = toc(exp_time);
