@@ -13,6 +13,7 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     if use_gpu
         disp(gpuDevice());
         disp(parallel.internal.gpu.CUDADriverVersion);
+        disp(getenv('LD_LIBRARY_PATH'));
     end
     
     if use_gpu

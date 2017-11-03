@@ -8,8 +8,6 @@
 #SBATCH -t 00:10:00
 #SBATCH -A cla173
 
-#ibrun in verbose mode will give binding detail
-
 # cuda8
 export CUDA_HOME=/usr/local/cuda-8.0
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:$LD_LIBRARY_PATH
@@ -20,5 +18,6 @@ export CPATH=/home/enijkamp/cudnn-3.0/include/
 export LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LIBRARY_PATH
 
+# matlab
 module load matlab
 matlab -nodisplay -nosplash -nojvm -r "exp_texture_joint_11()"
