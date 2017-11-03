@@ -11,6 +11,11 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     use_gpu = config.use_gpu;
     
     if use_gpu
+        disp(gpuDevice());
+        disp(parallel.internal.gpu.CUDADriverVersion);
+    end
+    
+    if use_gpu
         parallel.gpu.rng(0, 'Philox4x32-10');
     end
     

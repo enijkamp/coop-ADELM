@@ -32,7 +32,6 @@ compile_cudnn = 1;
 % setup
 setup_path();
 setup_convnet(use_gpu, compile_convnet, compile_cudnn);
-disp(gpuDevice());
 
 % load nets
 net1_init = load('../nets/ivy/all/des_net', 'net1');
