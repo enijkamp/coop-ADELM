@@ -43,7 +43,7 @@ function barrier_mat = get_barrier_mat_quick(ELM)
 %                 disp(min_bar);
 %             end
 %         end
-%         barrier_mat(ij(1),ij(2)) = min_bar;
+%         barrier_mat(ij(1),ij(2)) = max([ELM.min_ens(ij(1)),ELM.min_ens(ij(2)),min_bar]);
 %         barrier_mat(ij(2),ij(1)) = barrier_mat(ij(1),ij(2));
 %     end
 %     %%%%%%%%%%%%%%%%%%%%%%%%
@@ -81,9 +81,11 @@ function barrier_mat = get_barrier_mat_quick(ELM)
             end
         end
         % requires sequential access for parfor
-        %barrier_mat(ij(1),ij(2)) = min_bar;
+        %barrier_mat(ij(1),ij(2)) = max([ELM.min_ens(ij(1)),ELM.min_ens(ij(2)),min_bar]);
         %barrier_mat(ij(2),ij(1)) = barrier_mat(ij(1),ij(2));
-        barrier_mat_seq(rep, :) = [ij(1), ij(2), min_bar];
+        
+        min_bar_adjusted = max([ELM.min_ens(ij(1)),ELM.min_ens(ij(2)),min_bar]);
+        barrier_mat_seq(rep, :) = [ij(1), ij(2), min_bar_adjusted];
         
         tocs(rep) = toc(tstart);
     end

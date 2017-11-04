@@ -60,7 +60,7 @@ function AD_out = AD_check(config,des_net,gen_net,z,z_target)
     z_path(:,:,:,1) = z;
     iter = 0;
     no_improve_counter = 0;
-    % diffuse in altered landscape until until chain reaches target
+    % diffuse in altered landscape until chain reaches target
     % OR cannot further approach target for AD_no_improve consecutive sweeps
     while iter < config.max_AD_iter && no_improve_counter < config.AD_no_improve ...
                                 && curr_dist > config.dist_res
