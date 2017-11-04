@@ -1,7 +1,7 @@
 function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex,prop)
     if nargin < 3, title_str = ''; end
-    if nargin < 4, num_ex = 10; end
-    if nargin < 5, prop = 0.125; end
+    if nargin < 4, num_ex = 0; end
+    if nargin < 5, prop = 0.03; end
     %nodes = permute_children(nodes);
     min_viz_ord = get_viz_order(nodes);
     viz_mat_x = [];
@@ -21,7 +21,7 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
     end
     
     figure(1);
-    set(gcf, 'Position', [10, 10, 1000, 800]);
+    set(gcf, 'Position', [10, 10, 1000, 600]);
     
     plot(viz_mat_x(1,:),viz_mat_y(1,:),'k');
     hold on;
@@ -34,13 +34,19 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
     end
     en_marg = (nodes{end}.energy-min_e);
     axis([0,length(min_viz_ord)+1,min_e-en_marg*prop*1.3,nodes{end}.energy+en_marg*prop/3]);
+    % ticks
     xticks(1:length(min_viz_ord));
     xticklabels(string(1:length(min_viz_ord)));
-    xlabel('Minima Index');
-    ylabel('Energy');
+    ax = gca;
+    ax.XAxis.FontSize = 6;
+    ax.YAxis.FontSize = 12;
+    % axis
+    xlabel('Minima Index','FontSize',14);
+    ylabel('Energy','FontSize',14);
+    
     title(title_str);  
     if nargin > 1 
-%         min_ims = ELM.min_ims;
+        min_ims = ELM.min_ims;
 %         for i = 1:size(min_ims,3)
 %             diff = min_e-en_marg*.3*prop-(min_e-en_marg*prop);
 %             inds = find(ismember(ELM.min_ID_path,min_viz_ord(i)));
@@ -59,11 +65,33 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
 %             %text([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)],num2str(sum(ELM.min_ID_path==min_viz_ord(i))));
 %             colormap('Gray');
 %         end
+        for i = 1:size(min_ims,4)
+            diff = min_e-en_marg*.3*prop-(min_e-en_marg*prop);
+            inds = find(ismember(ELM.min_ID_path,min_viz_ord(i)));
+            pperm = randperm(length(inds));
+            inds = inds(pperm(1:min(num_ex,length(inds))));
+            ens = ELM.min_en_path(inds);
+            [~,ord]=sort(ens);
+%             for j = 1:num_ex
+%                 if length(ord)> num_ex-j
+%                     temp_ind = num_ex-j+1;
+%                     imagesc([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-(j-1)*diff, min_e-en_marg*prop-(j-1)*diff],ELM.min_locs(:,:,inds(ord(temp_ind))));
+%                 end
+%             end
+
+%             imagesc([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)], ...
+%                             double(ELM.min_ims(:,:,:,min_viz_ord(i)))/256 );
+
+            imagesc([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)], ...
+                            double(ELM.min_ims(:,:,:,min_viz_ord(i)))/256 );
+                        
+            %text([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)],num2str(sum(ELM.min_ID_path==min_viz_ord(i))));
+        end
         %set(gca,'dataAspectRatio',[7/8,  diff, 1]);
-        ylim([-10.8*10^6,-8*10^6]);
-%        line([-1000,1000],[min_e-en_marg*(.3*prop)-diff*(num_ex), min_e-en_marg*prop-diff*num_ex],'LineStyle','--','Color',[0,0,0],'LineWidth',1.5);
+        ylim([-10.9*10^6,-8*10^6]);
+        %line([-1000,1000],[min_e-en_marg*(.3*prop)-diff*(num_ex), min_e-en_marg*prop-diff*num_ex],'LineStyle','--','Color',[0,0,0],'LineWidth',1.5);
     end
-    set(gca,'FontSize',15);
+    %set(gca,'FontSize',12);
     hold off;
 end
 
