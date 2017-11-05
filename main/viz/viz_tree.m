@@ -20,7 +20,7 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
         end
     end
     
-    figure(1);
+    figure();
     set(gcf, 'Position', [10, 10, 1000, 600]);
     
     plot(viz_mat_x(1,:),viz_mat_y(1,:),'k');
@@ -39,10 +39,10 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
     xticklabels(string(1:length(min_viz_ord)));
     ax = gca;
     ax.XAxis.FontSize = 6;
-    ax.YAxis.FontSize = 12;
+    ax.YAxis.FontSize = 10;
     % axis
-    xlabel('Minima Index','FontSize',14);
-    ylabel('Energy','FontSize',14);
+    xlabel('Minima Index','FontSize',11);
+    ylabel('Energy','FontSize',11);
     
     title(title_str);  
     if nargin > 1 
@@ -88,7 +88,7 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
             %text([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)],num2str(sum(ELM.min_ID_path==min_viz_ord(i))));
         end
         %set(gca,'dataAspectRatio',[7/8,  diff, 1]);
-        ylim([-10.9*10^6,-8*10^6]);
+        ylim([min_e-en_marg*prop-diff*(num_ex+2.25),-8*10^6]);
         %line([-1000,1000],[min_e-en_marg*(.3*prop)-diff*(num_ex), min_e-en_marg*prop-diff*num_ex],'LineStyle','--','Color',[0,0,0],'LineWidth',1.5);
     end
     %set(gca,'FontSize',12);

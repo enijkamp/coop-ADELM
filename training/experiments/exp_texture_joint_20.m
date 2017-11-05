@@ -68,7 +68,26 @@ exp_num = 20;
 % (20): logspace decay
 
 % result:
-%   ...
+% 1-3 solid green
+% 4 gray
+% 5-7 solid green
+% 8 gray-green pattern
+% 9-11 solid green
+% 12 gray-green pattern
+% 13-15 solid green
+% 16 gray-green pattern
+% 17-19 solid green
+% 20 gray-green pattern
+% 21-23 solid black
+% 24 gray
+% 25-27 solid black
+% 28 gray
+% 29-31 black
+% 32 gray
+% 33-35 black
+% 36 gray
+% 37-39 black
+% 40 gray
 
 %% config
 nIteration = 100;
