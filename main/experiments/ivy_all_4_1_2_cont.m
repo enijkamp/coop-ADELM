@@ -12,7 +12,7 @@ rng(123);
 
 %% load config
 out_file_str = ['ivy/all/' exp_id '/'];
-ELM_test = load('../../maps/ivy/all/4_1/ELM_4_1_2_exp.mat');
+ELM_test = load('../../maps/ivy/all/4_1/ELM_4_1_2_exp.mat').ELM;
 ELM_test.ELM_str = out_file_str;
 ELM_test.config.map_str = ['ELM_' exp_id '_exp.mat'];
 ELM_test.config.nsteps = 5000;
