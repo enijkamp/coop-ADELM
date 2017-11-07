@@ -8,12 +8,15 @@ img_name = 'ivy';
 img_size = 'all';
 patch_size = 64;
 
-% setup
-use_gpu = false;
-compile_convnet = false;
+% cudnn 5 minutes / 11.26 seconds
+% nocudnn 
 
-% setup convnet
-setup_convnet(use_gpu, compile_convnet);
+% matconvnet
+use_gpu = true;
+compile_convnet = true;
+use_cudnn = false;
+
+setup_convnet(use_gpu, compile_convnet, use_cudnn);
 
 % prep
 prefix = ['test/' num2str(img_size) '/'];
@@ -23,8 +26,8 @@ config = prep_dirs(config, prefix);
 
 % config
 config.use_gpu = use_gpu;
-config.nIteration = 10;
-config.num_syn = 2;
+config.nIteration = 50;
+config.num_syn = 120;
 config.Gamma = ones(1,100) * config.Gamma;
 config.Gamma2 = ones(1,100) * config.Gamma2;
 
