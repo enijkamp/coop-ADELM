@@ -1,7 +1,8 @@
-function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex,prop)
+function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex,prop,offset)
     if nargin < 3, title_str = ''; end
     if nargin < 4, num_ex = 0; end
     if nargin < 5, prop = 0.03; end
+    if nargin < 6, offset = 0; end
     %nodes = permute_children(nodes);
     min_viz_ord = get_viz_order(nodes);
     viz_mat_x = [];
@@ -32,6 +33,7 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
     for i = 1:length(min_viz_ord)
         min_e = min([min_e,nodes{i}.energy]);
     end
+
     en_marg = (nodes{end}.energy-min_e);
     axis([0,length(min_viz_ord)+1,min_e-en_marg*prop*1.3,nodes{end}.energy+en_marg*prop/3]);
     % ticks
@@ -82,7 +84,7 @@ function [min_viz_ord,viz_mat_x,viz_mat_y] = viz_tree(nodes,ELM,title_str,num_ex
 %             imagesc([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)], ...
 %                             double(ELM.min_ims(:,:,:,min_viz_ord(i)))/256 );
 
-            imagesc([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)], ...
+            imagesc([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25)+offset, min_e-en_marg*prop-diff*(num_ex+1.25)+offset], ...
                             double(ELM.min_ims(:,:,:,min_viz_ord(i)))/256 );
                         
             %text([i-7/16, i+7/16], [min_e-en_marg*(.3*prop)-diff*(num_ex+1.25), min_e-en_marg*prop-diff*(num_ex+1.25)],num2str(sum(ELM.min_ID_path==min_viz_ord(i))));

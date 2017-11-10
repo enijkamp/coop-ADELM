@@ -1,10 +1,20 @@
 function [] = experiment_learn_ivy_all()
 
-% gpuArray(randn(...)) -> 11 minutes?
-% gpuArray.randn(...)  -> 11 minutes
-% without cuDNN -> 55 minutes
-
 exp_id = 2;
+
+%% prep
+restoredefaultpath();
+rng(123);
+parallel.gpu.rng(0, 'Philox4x32-10');
+
+%% verify
+disp(gpuDevice());
+disp(parallel.internal.gpu.CUDADriverVersion);
+disp(getenv('LD_LIBRARY_PATH'));
+dev = gpuDevice();
+assert(strcmp(dev.Name, 'TITAN X (Pascal)'));
+assert(dev.ToolkitVersion == 8);
+assert(contains(getenv('LD_LIBRARY_PATH'), 'cudnn-3.0'));
 
 %% config
 category = ['ivy_' num2str(exp_id)];
@@ -34,10 +44,6 @@ config.cap2 = 8;
 config.interp_type = 'both';
 config.n_pairs = 8;
 config.n_parsamp = 8;
-
-
-% gpu
-parallel.gpu.rng(0, 'Philox4x32-10');
 
 %% run
 learn_dualNets_config(category, exp_type, config);

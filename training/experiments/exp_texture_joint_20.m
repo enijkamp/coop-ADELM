@@ -136,17 +136,19 @@ for Delta = Deltas
                 % log
                 disp(['### run ' num2str(num) ' / ' num2str(total) ' ###']);
 
-                % images
-                prefix = [img_name '/' num2str(img_size) '_' num2str(exp_num) '_' num2str(num) '/'];
-                [config, net1] = train_coop_config();
-                config = prep_dirs(config, prefix);
-                config = load_images(config);
-                config.use_gpu = use_gpu;
-
                 % config
+                prefix = [img_name '/'  num2str(exp_num) '_' num2str(num) '/'];
+                [config] = train_coop_config();
+                
+                % override
                 config.nIteration = nIteration;
                 config.batchSize = batchSize;
                 config.substract_mean = substract_mean;
+                
+                % load
+                config = prep_dirs(config, prefix);
+                config = load_images(config);
+                config.use_gpu = use_gpu;
 
                 % sampling parameters
                 config.num_syn = num_syn;
@@ -174,3 +176,9 @@ for Delta = Deltas
     end
 end
 end
+
+function root = setup_path()
+root = '../../';
+addpath([root 'training/coop_net_code_gpu']);
+end
+
