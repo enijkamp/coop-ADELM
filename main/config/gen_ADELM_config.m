@@ -1,7 +1,7 @@
 function config = gen_ADELM_config(in_file_str,out_file_str,net_file)
     % location of Coop nets
     if nargin<1 || isempty(in_file_str)
-        config.ELM_str = 'ivy/all/'; 
+        config.ELM_str = 'ivy/all/';
     else
         config.ELM_str = in_file_str;
     end
@@ -11,6 +11,11 @@ function config = gen_ADELM_config(in_file_str,out_file_str,net_file)
     else
         config.net_file = net_file;
     end
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TODO remove
+    config.ELM_str = 'abc';
+    in_file_str = '';
+    out_file_str = '';
     
     %number of CPU-cores
     config.no_workers = 2;

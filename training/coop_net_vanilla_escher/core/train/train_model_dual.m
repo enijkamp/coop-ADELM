@@ -1,10 +1,5 @@
 function [net1, net2, config] = train_model_dual(config, net1, net2, imdb, getBatch, layer)
 
-rate_list = logspace(-2, -4, 80)*100;
-learningRate_array = repmat(rate_list , max(1,floor(config.nIteration / length(rate_list))),1); %logspace(-2, -4, 60) ones(1,60, 'single')
-learningRate_array = reshape(learningRate_array, 1, []);
-
-
 opts.batchSize = config.batch_size ;
 opts.numSubBatches = 1 ;
 opts.train = [] ;
@@ -22,7 +17,6 @@ opts.cudnn = true ;
 opts.weightDecay = 0.0001 ; %0.0001
 opts.momentum = 0.5;
 opts.memoryMapFile = fullfile(config.working_folder, 'matconvnet.bin') ;
-opts.learningRate = reshape(learningRate_array, 1, []);
 
 if isempty(opts.train), opts.train = find(imdb.images.set==1) ; end
 if isempty(opts.val), opts.val = find(imdb.images.set==2) ; end
@@ -67,10 +61,9 @@ else
     for epoch=1:opts.numEpochs
         fprintf('Iteration %d / %d\n', epoch, opts.numEpochs);
         
-        learningRate = opts.learningRate(min(epoch, numel(opts.learningRate)));
         train = opts.train;
         
-        [net1, net2, config, syn_mats, z_mats] = process_epoch_dual(opts, config, getBatch, epoch, train, learningRate, imdb, net1, net2);
+        [net1, net2, config, syn_mats, z_mats] = process_epoch_dual(opts, config, getBatch, epoch, train, imdb, net1, net2);
         loss = compute_loss(opts, syn_mats, net2, z_mats);
 
         

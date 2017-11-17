@@ -1,4 +1,4 @@
-function  [net1, net2, config, syn_mats, z_mats] = process_epoch_dual(opts, config, getBatch, epoch, subset, learningRate, imdb, net1, net2)
+function  [net1, net2, config, syn_mats, z_mats] = process_epoch_dual(opts, config, getBatch, epoch, subset, imdb, net1, net2)
 % -------------------------------------------------------------------------
 
 % move CNN to GPU as needed
@@ -97,9 +97,9 @@ for t=1:opts.batchSize:numel(subset)
         numDone = numDone + numel(batch) ;
     end
     
-    net1 = accumulate_gradients1(opts, learningRate * config.Gamma1, batchSize, net1, res1, res_syn, config);
-    net2 = accumulate_gradients2(opts, learningRate * config.Gamma2, batchSize, net2, res2, config);
-   
+    net1 = accumulate_gradients1(opts, config.Gammas1(epoch), batchSize, net1, res1, res_syn, config);
+    net2 = accumulate_gradients2(opts, config.Gammas2(epoch), batchSize, net2, res2, config);
+    
     fprintf('max inferred z is %.2f, min inferred z is %.2f, and std is %.2f\n', max(z(:)), min(z(:)), config.real_ref)
     
     % print learning statistics
@@ -145,7 +145,7 @@ for l = layer_sets
             
             max_val = max(abs(gradient_dzdw(:)));
             
-            if max_val > config.cap2;
+            if max_val > config.cap2
                 gradient_dzdw = gradient_dzdw / max_val * config.cap2;
             end
   
