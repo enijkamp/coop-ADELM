@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=6
 #SBATCH --export=ALL
 #SBATCH --gres=gpu:p100:1
-#SBATCH -t 00:05:00
+#SBATCH -t 05:00:00
 #SBATCH -A cla173
 
 #ibrun in verbose mode will give binding detail

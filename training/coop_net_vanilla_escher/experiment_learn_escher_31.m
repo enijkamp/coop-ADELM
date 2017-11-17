@@ -1,6 +1,6 @@
 function [] = experiment_learn_escher_31()
 
-% (31): (30) lower gamma2 decay
+% (31): (30) more samples
 %
 % result: ?
 
@@ -8,7 +8,7 @@ exp_id = 31;
 
 %% prep
 restoredefaultpath();
-Setup();
+%Setup();
 rng(123);
 parallel.gpu.rng(0, 'Philox4x32-10');
 
@@ -41,8 +41,10 @@ config = frame_config('escher', 'em', exp_type, [num2str(exp_id) '_' num2str(num
 
 %% override
 config.nIteration = 200; %120;
-config.nTileRow = 16;
-config.nTileCol = 16;
+%config.nTileRow = 16;
+%config.nTileCol = 16;
+config.nTileRow = 32;
+config.nTileCol = 32;
 config.batch_size = 100;
 
 % parameters for net 1 (descriptor)
