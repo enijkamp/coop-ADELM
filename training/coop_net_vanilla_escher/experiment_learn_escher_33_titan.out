@@ -1,0 +1,1276 @@
+[Warning: Setting the 'MW_NVCC_PATH' environment variable to '/usr/local/cuda-8.0/bin/nvcc'] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vl_compilenn>activate_nvcc', '/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m', 600)" style="font-weight:bold">vl_compilenn>activate_nvcc</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m',600,0)">line 600</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vl_compilenn', '/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m', 253)" style="font-weight:bold">vl_compilenn</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m',253,0)">line 253</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Setup', '/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/Setup.m', 11)" style="font-weight:bold">Setup</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/Setup.m',11,0)">line 11</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('experiment_learn_escher_31_titan', '/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/experiment_learn_escher_31_titan.m', 12)" style="font-weight:bold">experiment_learn_escher_31_titan</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/experiment_learn_escher_31_titan.m',12,0)">line 12</a>)] 
+[Warning: NVCC not found in the command line path or the one found does not matches '/usr/local/cuda-8.0/bin/nvcc'.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vl_compilenn>activate_nvcc', '/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m', 609)" style="font-weight:bold">vl_compilenn>activate_nvcc</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m',609,0)">line 609</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('vl_compilenn', '/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m', 253)" style="font-weight:bold">vl_compilenn</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/vl_compilenn.m',253,0)">line 253</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Setup', '/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/Setup.m', 11)" style="font-weight:bold">Setup</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/Setup.m',11,0)">line 11</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('experiment_learn_escher_31_titan', '/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/experiment_learn_escher_31_titan.m', 12)" style="font-weight:bold">experiment_learn_escher_31_titan</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_escher/experiment_learn_escher_31_titan.m',12,0)">line 12</a>)] 
+Location of NVCC (/usr/local/cuda-8.0/bin) added to your command search PATH.
+vl_compilenn:	CUDA: MEX config file: '/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/src/config/mex_CUDA_glnxa64.xml'
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+In file included from /home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_libjpeg.cpp:14:0:
+/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_helpers.hpp:35:2: warning: #warning "SSSE3 instruction set not enabled. Using slower image conversion routines." [-Wcpp]
+ #warning "SSSE3 instruction set not enabled. Using slower image conversion routines."
+  ^
+
+MEX completed successfully.
+/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+
+/home/enijkamp/Dropbox/coop ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+  <a href="matlab:helpPopup parallel.gpu.CUDADevice" style="font-weight:bold">CUDADevice</a> with properties:
+
+                      Name: 'TITAN X (Pascal)'
+                     Index: 1
+         ComputeCapability: '6.1'
+            SupportsDouble: 1
+             DriverVersion: 9
+            ToolkitVersion: 8
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 1.2774e+10
+           AvailableMemory: 1.2118e+10
+       MultiprocessorCount: 28
+              ClockRateKHz: 1531000
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 1
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+            DeviceSelected: 1
+
+384.90
+/usr/local/MATLAB/R2017a/sys/opengl/lib/glnxa64:/usr/local/MATLAB/R2017a/sys/os/glnxa64:/usr/local/MATLAB/R2017a/bin/glnxa64:/usr/local/MATLAB/R2017a/extern/lib/glnxa64:/usr/local/MATLAB/R2017a/runtime/glnxa64:/usr/local/MATLAB/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/usr/local/MATLAB/R2017a/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/enijkamp/cudnn-3.0/lib64:
+### 1/1 ###
+Learning category: escher
+read and process images 1 / 1000
+read and process images 2 / 1000
+read and process images 3 / 1000
+read and process images 4 / 1000
+read and process images 5 / 1000
+read and process images 6 / 1000
+read and process images 7 / 1000
+read and process images 8 / 1000
+read and process images 9 / 1000
+read and process images 10 / 1000
+read and process images 11 / 1000
+read and process images 12 / 1000
+read and process images 13 / 1000
+read and process images 14 / 1000
+read and process images 15 / 1000
+read and process images 16 / 1000
+read and process images 17 / 1000
+read and process images 18 / 1000
+read and process images 19 / 1000
+read and process images 20 / 1000
+read and process images 21 / 1000
+read and process images 22 / 1000
+read and process images 23 / 1000
+read and process images 24 / 1000
+read and process images 25 / 1000
+read and process images 26 / 1000
+read and process images 27 / 1000
+read and process images 28 / 1000
+read and process images 29 / 1000
+read and process images 30 / 1000
+read and process images 31 / 1000
+read and process images 32 / 1000
+read and process images 33 / 1000
+read and process images 34 / 1000
+read and process images 35 / 1000
+read and process images 36 / 1000
+read and process images 37 / 1000
+read and process images 38 / 1000
+read and process images 39 / 1000
+read and process images 40 / 1000
+read and process images 41 / 1000
+read and process images 42 / 1000
+read and process images 43 / 1000
+read and process images 44 / 1000
+read and process images 45 / 1000
+read and process images 46 / 1000
+read and process images 47 / 1000
+read and process images 48 / 1000
+read and process images 49 / 1000
+read and process images 50 / 1000
+read and process images 51 / 1000
+read and process images 52 / 1000
+read and process images 53 / 1000
+read and process images 54 / 1000
+read and process images 55 / 1000
+read and process images 56 / 1000
+read and process images 57 / 1000
+read and process images 58 / 1000
+read and process images 59 / 1000
+read and process images 60 / 1000
+read and process images 61 / 1000
+read and process images 62 / 1000
+read and process images 63 / 1000
+read and process images 64 / 1000
+read and process images 65 / 1000
+read and process images 66 / 1000
+read and process images 67 / 1000
+read and process images 68 / 1000
+read and process images 69 / 1000
+read and process images 70 / 1000
+read and process images 71 / 1000
+read and process images 72 / 1000
+read and process images 73 / 1000
+read and process images 74 / 1000
+read and process images 75 / 1000
+read and process images 76 / 1000
+read and process images 77 / 1000
+read and process images 78 / 1000
+read and process images 79 / 1000
+read and process images 80 / 1000
+read and process images 81 / 1000
+read and process images 82 / 1000
+read and process images 83 / 1000
+read and process images 84 / 1000
+read and process images 85 / 1000
+read and process images 86 / 1000
+read and process images 87 / 1000
+read and process images 88 / 1000
+read and process images 89 / 1000
+read and process images 90 / 1000
+read and process images 91 / 1000
+read and process images 92 / 1000
+read and process images 93 / 1000
+read and process images 94 / 1000
+read and process images 95 / 1000
+read and process images 96 / 1000
+read and process images 97 / 1000
+read and process images 98 / 1000
+read and process images 99 / 1000
+read and process images 100 / 1000
+read and process images 101 / 1000
+read and process images 102 / 1000
+read and process images 103 / 1000
+read and process images 104 / 1000
+read and process images 105 / 1000
+read and process images 106 / 1000
+read and process images 107 / 1000
+read and process images 108 / 1000
+read and process images 109 / 1000
+read and process images 110 / 1000
+read and process images 111 / 1000
+read and process images 112 / 1000
+read and process images 113 / 1000
+read and process images 114 / 1000
+read and process images 115 / 1000
+read and process images 116 / 1000
+read and process images 117 / 1000
+read and process images 118 / 1000
+read and process images 119 / 1000
+read and process images 120 / 1000
+read and process images 121 / 1000
+read and process images 122 / 1000
+read and process images 123 / 1000
+read and process images 124 / 1000
+read and process images 125 / 1000
+read and process images 126 / 1000
+read and process images 127 / 1000
+read and process images 128 / 1000
+read and process images 129 / 1000
+read and process images 130 / 1000
+read and process images 131 / 1000
+read and process images 132 / 1000
+read and process images 133 / 1000
+read and process images 134 / 1000
+read and process images 135 / 1000
+read and process images 136 / 1000
+read and process images 137 / 1000
+read and process images 138 / 1000
+read and process images 139 / 1000
+read and process images 140 / 1000
+read and process images 141 / 1000
+read and process images 142 / 1000
+read and process images 143 / 1000
+read and process images 144 / 1000
+read and process images 145 / 1000
+read and process images 146 / 1000
+read and process images 147 / 1000
+read and process images 148 / 1000
+read and process images 149 / 1000
+read and process images 150 / 1000
+read and process images 151 / 1000
+read and process images 152 / 1000
+read and process images 153 / 1000
+read and process images 154 / 1000
+read and process images 155 / 1000
+read and process images 156 / 1000
+read and process images 157 / 1000
+read and process images 158 / 1000
+read and process images 159 / 1000
+read and process images 160 / 1000
+read and process images 161 / 1000
+read and process images 162 / 1000
+read and process images 163 / 1000
+read and process images 164 / 1000
+read and process images 165 / 1000
+read and process images 166 / 1000
+read and process images 167 / 1000
+read and process images 168 / 1000
+read and process images 169 / 1000
+read and process images 170 / 1000
+read and process images 171 / 1000
+read and process images 172 / 1000
+read and process images 173 / 1000
+read and process images 174 / 1000
+read and process images 175 / 1000
+read and process images 176 / 1000
+read and process images 177 / 1000
+read and process images 178 / 1000
+read and process images 179 / 1000
+read and process images 180 / 1000
+read and process images 181 / 1000
+read and process images 182 / 1000
+read and process images 183 / 1000
+read and process images 184 / 1000
+read and process images 185 / 1000
+read and process images 186 / 1000
+read and process images 187 / 1000
+read and process images 188 / 1000
+read and process images 189 / 1000
+read and process images 190 / 1000
+read and process images 191 / 1000
+read and process images 192 / 1000
+read and process images 193 / 1000
+read and process images 194 / 1000
+read and process images 195 / 1000
+read and process images 196 / 1000
+read and process images 197 / 1000
+read and process images 198 / 1000
+read and process images 199 / 1000
+read and process images 200 / 1000
+read and process images 201 / 1000
+read and process images 202 / 1000
+read and process images 203 / 1000
+read and process images 204 / 1000
+read and process images 205 / 1000
+read and process images 206 / 1000
+read and process images 207 / 1000
+read and process images 208 / 1000
+read and process images 209 / 1000
+read and process images 210 / 1000
+read and process images 211 / 1000
+read and process images 212 / 1000
+read and process images 213 / 1000
+read and process images 214 / 1000
+read and process images 215 / 1000
+read and process images 216 / 1000
+read and process images 217 / 1000
+read and process images 218 / 1000
+read and process images 219 / 1000
+read and process images 220 / 1000
+read and process images 221 / 1000
+read and process images 222 / 1000
+read and process images 223 / 1000
+read and process images 224 / 1000
+read and process images 225 / 1000
+read and process images 226 / 1000
+read and process images 227 / 1000
+read and process images 228 / 1000
+read and process images 229 / 1000
+read and process images 230 / 1000
+read and process images 231 / 1000
+read and process images 232 / 1000
+read and process images 233 / 1000
+read and process images 234 / 1000
+read and process images 235 / 1000
+read and process images 236 / 1000
+read and process images 237 / 1000
+read and process images 238 / 1000
+read and process images 239 / 1000
+read and process images 240 / 1000
+read and process images 241 / 1000
+read and process images 242 / 1000
+read and process images 243 / 1000
+read and process images 244 / 1000
+read and process images 245 / 1000
+read and process images 246 / 1000
+read and process images 247 / 1000
+read and process images 248 / 1000
+read and process images 249 / 1000
+read and process images 250 / 1000
+read and process images 251 / 1000
+read and process images 252 / 1000
+read and process images 253 / 1000
+read and process images 254 / 1000
+read and process images 255 / 1000
+read and process images 256 / 1000
+read and process images 257 / 1000
+read and process images 258 / 1000
+read and process images 259 / 1000
+read and process images 260 / 1000
+read and process images 261 / 1000
+read and process images 262 / 1000
+read and process images 263 / 1000
+read and process images 264 / 1000
+read and process images 265 / 1000
+read and process images 266 / 1000
+read and process images 267 / 1000
+read and process images 268 / 1000
+read and process images 269 / 1000
+read and process images 270 / 1000
+read and process images 271 / 1000
+read and process images 272 / 1000
+read and process images 273 / 1000
+read and process images 274 / 1000
+read and process images 275 / 1000
+read and process images 276 / 1000
+read and process images 277 / 1000
+read and process images 278 / 1000
+read and process images 279 / 1000
+read and process images 280 / 1000
+read and process images 281 / 1000
+read and process images 282 / 1000
+read and process images 283 / 1000
+read and process images 284 / 1000
+read and process images 285 / 1000
+read and process images 286 / 1000
+read and process images 287 / 1000
+read and process images 288 / 1000
+read and process images 289 / 1000
+read and process images 290 / 1000
+read and process images 291 / 1000
+read and process images 292 / 1000
+read and process images 293 / 1000
+read and process images 294 / 1000
+read and process images 295 / 1000
+read and process images 296 / 1000
+read and process images 297 / 1000
+read and process images 298 / 1000
+read and process images 299 / 1000
+read and process images 300 / 1000
+read and process images 301 / 1000
+read and process images 302 / 1000
+read and process images 303 / 1000
+read and process images 304 / 1000
+read and process images 305 / 1000
+read and process images 306 / 1000
+read and process images 307 / 1000
+read and process images 308 / 1000
+read and process images 309 / 1000
+read and process images 310 / 1000
+read and process images 311 / 1000
+read and process images 312 / 1000
+read and process images 313 / 1000
+read and process images 314 / 1000
+read and process images 315 / 1000
+read and process images 316 / 1000
+read and process images 317 / 1000
+read and process images 318 / 1000
+read and process images 319 / 1000
+read and process images 320 / 1000
+read and process images 321 / 1000
+read and process images 322 / 1000
+read and process images 323 / 1000
+read and process images 324 / 1000
+read and process images 325 / 1000
+read and process images 326 / 1000
+read and process images 327 / 1000
+read and process images 328 / 1000
+read and process images 329 / 1000
+read and process images 330 / 1000
+read and process images 331 / 1000
+read and process images 332 / 1000
+read and process images 333 / 1000
+read and process images 334 / 1000
+read and process images 335 / 1000
+read and process images 336 / 1000
+read and process images 337 / 1000
+read and process images 338 / 1000
+read and process images 339 / 1000
+read and process images 340 / 1000
+read and process images 341 / 1000
+read and process images 342 / 1000
+read and process images 343 / 1000
+read and process images 344 / 1000
+read and process images 345 / 1000
+read and process images 346 / 1000
+read and process images 347 / 1000
+read and process images 348 / 1000
+read and process images 349 / 1000
+read and process images 350 / 1000
+read and process images 351 / 1000
+read and process images 352 / 1000
+read and process images 353 / 1000
+read and process images 354 / 1000
+read and process images 355 / 1000
+read and process images 356 / 1000
+read and process images 357 / 1000
+read and process images 358 / 1000
+read and process images 359 / 1000
+read and process images 360 / 1000
+read and process images 361 / 1000
+read and process images 362 / 1000
+read and process images 363 / 1000
+read and process images 364 / 1000
+read and process images 365 / 1000
+read and process images 366 / 1000
+read and process images 367 / 1000
+read and process images 368 / 1000
+read and process images 369 / 1000
+read and process images 370 / 1000
+read and process images 371 / 1000
+read and process images 372 / 1000
+read and process images 373 / 1000
+read and process images 374 / 1000
+read and process images 375 / 1000
+read and process images 376 / 1000
+read and process images 377 / 1000
+read and process images 378 / 1000
+read and process images 379 / 1000
+read and process images 380 / 1000
+read and process images 381 / 1000
+read and process images 382 / 1000
+read and process images 383 / 1000
+read and process images 384 / 1000
+read and process images 385 / 1000
+read and process images 386 / 1000
+read and process images 387 / 1000
+read and process images 388 / 1000
+read and process images 389 / 1000
+read and process images 390 / 1000
+read and process images 391 / 1000
+read and process images 392 / 1000
+read and process images 393 / 1000
+read and process images 394 / 1000
+read and process images 395 / 1000
+read and process images 396 / 1000
+read and process images 397 / 1000
+read and process images 398 / 1000
+read and process images 399 / 1000
+read and process images 400 / 1000
+read and process images 401 / 1000
+read and process images 402 / 1000
+read and process images 403 / 1000
+read and process images 404 / 1000
+read and process images 405 / 1000
+read and process images 406 / 1000
+read and process images 407 / 1000
+read and process images 408 / 1000
+read and process images 409 / 1000
+read and process images 410 / 1000
+read and process images 411 / 1000
+read and process images 412 / 1000
+read and process images 413 / 1000
+read and process images 414 / 1000
+read and process images 415 / 1000
+read and process images 416 / 1000
+read and process images 417 / 1000
+read and process images 418 / 1000
+read and process images 419 / 1000
+read and process images 420 / 1000
+read and process images 421 / 1000
+read and process images 422 / 1000
+read and process images 423 / 1000
+read and process images 424 / 1000
+read and process images 425 / 1000
+read and process images 426 / 1000
+read and process images 427 / 1000
+read and process images 428 / 1000
+read and process images 429 / 1000
+read and process images 430 / 1000
+read and process images 431 / 1000
+read and process images 432 / 1000
+read and process images 433 / 1000
+read and process images 434 / 1000
+read and process images 435 / 1000
+read and process images 436 / 1000
+read and process images 437 / 1000
+read and process images 438 / 1000
+read and process images 439 / 1000
+read and process images 440 / 1000
+read and process images 441 / 1000
+read and process images 442 / 1000
+read and process images 443 / 1000
+read and process images 444 / 1000
+read and process images 445 / 1000
+read and process images 446 / 1000
+read and process images 447 / 1000
+read and process images 448 / 1000
+read and process images 449 / 1000
+read and process images 450 / 1000
+read and process images 451 / 1000
+read and process images 452 / 1000
+read and process images 453 / 1000
+read and process images 454 / 1000
+read and process images 455 / 1000
+read and process images 456 / 1000
+read and process images 457 / 1000
+read and process images 458 / 1000
+read and process images 459 / 1000
+read and process images 460 / 1000
+read and process images 461 / 1000
+read and process images 462 / 1000
+read and process images 463 / 1000
+read and process images 464 / 1000
+read and process images 465 / 1000
+read and process images 466 / 1000
+read and process images 467 / 1000
+read and process images 468 / 1000
+read and process images 469 / 1000
+read and process images 470 / 1000
+read and process images 471 / 1000
+read and process images 472 / 1000
+read and process images 473 / 1000
+read and process images 474 / 1000
+read and process images 475 / 1000
+read and process images 476 / 1000
+read and process images 477 / 1000
+read and process images 478 / 1000
+read and process images 479 / 1000
+read and process images 480 / 1000
+read and process images 481 / 1000
+read and process images 482 / 1000
+read and process images 483 / 1000
+read and process images 484 / 1000
+read and process images 485 / 1000
+read and process images 486 / 1000
+read and process images 487 / 1000
+read and process images 488 / 1000
+read and process images 489 / 1000
+read and process images 490 / 1000
+read and process images 491 / 1000
+read and process images 492 / 1000
+read and process images 493 / 1000
+read and process images 494 / 1000
+read and process images 495 / 1000
+read and process images 496 / 1000
+read and process images 497 / 1000
+read and process images 498 / 1000
+read and process images 499 / 1000
+read and process images 500 / 1000
+read and process images 501 / 1000
+read and process images 502 / 1000
+read and process images 503 / 1000
+read and process images 504 / 1000
+read and process images 505 / 1000
+read and process images 506 / 1000
+read and process images 507 / 1000
+read and process images 508 / 1000
+read and process images 509 / 1000
+read and process images 510 / 1000
+read and process images 511 / 1000
+read and process images 512 / 1000
+read and process images 513 / 1000
+read and process images 514 / 1000
+read and process images 515 / 1000
+read and process images 516 / 1000
+read and process images 517 / 1000
+read and process images 518 / 1000
+read and process images 519 / 1000
+read and process images 520 / 1000
+read and process images 521 / 1000
+read and process images 522 / 1000
+read and process images 523 / 1000
+read and process images 524 / 1000
+read and process images 525 / 1000
+read and process images 526 / 1000
+read and process images 527 / 1000
+read and process images 528 / 1000
+read and process images 529 / 1000
+read and process images 530 / 1000
+read and process images 531 / 1000
+read and process images 532 / 1000
+read and process images 533 / 1000
+read and process images 534 / 1000
+read and process images 535 / 1000
+read and process images 536 / 1000
+read and process images 537 / 1000
+read and process images 538 / 1000
+read and process images 539 / 1000
+read and process images 540 / 1000
+read and process images 541 / 1000
+read and process images 542 / 1000
+read and process images 543 / 1000
+read and process images 544 / 1000
+read and process images 545 / 1000
+read and process images 546 / 1000
+read and process images 547 / 1000
+read and process images 548 / 1000
+read and process images 549 / 1000
+read and process images 550 / 1000
+read and process images 551 / 1000
+read and process images 552 / 1000
+read and process images 553 / 1000
+read and process images 554 / 1000
+read and process images 555 / 1000
+read and process images 556 / 1000
+read and process images 557 / 1000
+read and process images 558 / 1000
+read and process images 559 / 1000
+read and process images 560 / 1000
+read and process images 561 / 1000
+read and process images 562 / 1000
+read and process images 563 / 1000
+read and process images 564 / 1000
+read and process images 565 / 1000
+read and process images 566 / 1000
+read and process images 567 / 1000
+read and process images 568 / 1000
+read and process images 569 / 1000
+read and process images 570 / 1000
+read and process images 571 / 1000
+read and process images 572 / 1000
+read and process images 573 / 1000
+read and process images 574 / 1000
+read and process images 575 / 1000
+read and process images 576 / 1000
+read and process images 577 / 1000
+read and process images 578 / 1000
+read and process images 579 / 1000
+read and process images 580 / 1000
+read and process images 581 / 1000
+read and process images 582 / 1000
+read and process images 583 / 1000
+read and process images 584 / 1000
+read and process images 585 / 1000
+read and process images 586 / 1000
+read and process images 587 / 1000
+read and process images 588 / 1000
+read and process images 589 / 1000
+read and process images 590 / 1000
+read and process images 591 / 1000
+read and process images 592 / 1000
+read and process images 593 / 1000
+read and process images 594 / 1000
+read and process images 595 / 1000
+read and process images 596 / 1000
+read and process images 597 / 1000
+read and process images 598 / 1000
+read and process images 599 / 1000
+read and process images 600 / 1000
+read and process images 601 / 1000
+read and process images 602 / 1000
+read and process images 603 / 1000
+read and process images 604 / 1000
+read and process images 605 / 1000
+read and process images 606 / 1000
+read and process images 607 / 1000
+read and process images 608 / 1000
+read and process images 609 / 1000
+read and process images 610 / 1000
+read and process images 611 / 1000
+read and process images 612 / 1000
+read and process images 613 / 1000
+read and process images 614 / 1000
+read and process images 615 / 1000
+read and process images 616 / 1000
+read and process images 617 / 1000
+read and process images 618 / 1000
+read and process images 619 / 1000
+read and process images 620 / 1000
+read and process images 621 / 1000
+read and process images 622 / 1000
+read and process images 623 / 1000
+read and process images 624 / 1000
+read and process images 625 / 1000
+read and process images 626 / 1000
+read and process images 627 / 1000
+read and process images 628 / 1000
+read and process images 629 / 1000
+read and process images 630 / 1000
+read and process images 631 / 1000
+read and process images 632 / 1000
+read and process images 633 / 1000
+read and process images 634 / 1000
+read and process images 635 / 1000
+read and process images 636 / 1000
+read and process images 637 / 1000
+read and process images 638 / 1000
+read and process images 639 / 1000
+read and process images 640 / 1000
+read and process images 641 / 1000
+read and process images 642 / 1000
+read and process images 643 / 1000
+read and process images 644 / 1000
+read and process images 645 / 1000
+read and process images 646 / 1000
+read and process images 647 / 1000
+read and process images 648 / 1000
+read and process images 649 / 1000
+read and process images 650 / 1000
+read and process images 651 / 1000
+read and process images 652 / 1000
+read and process images 653 / 1000
+read and process images 654 / 1000
+read and process images 655 / 1000
+read and process images 656 / 1000
+read and process images 657 / 1000
+read and process images 658 / 1000
+read and process images 659 / 1000
+read and process images 660 / 1000
+read and process images 661 / 1000
+read and process images 662 / 1000
+read and process images 663 / 1000
+read and process images 664 / 1000
+read and process images 665 / 1000
+read and process images 666 / 1000
+read and process images 667 / 1000
+read and process images 668 / 1000
+read and process images 669 / 1000
+read and process images 670 / 1000
+read and process images 671 / 1000
+read and process images 672 / 1000
+read and process images 673 / 1000
+read and process images 674 / 1000
+read and process images 675 / 1000
+read and process images 676 / 1000
+read and process images 677 / 1000
+read and process images 678 / 1000
+read and process images 679 / 1000
+read and process images 680 / 1000
+read and process images 681 / 1000
+read and process images 682 / 1000
+read and process images 683 / 1000
+read and process images 684 / 1000
+read and process images 685 / 1000
+read and process images 686 / 1000
+read and process images 687 / 1000
+read and process images 688 / 1000
+read and process images 689 / 1000
+read and process images 690 / 1000
+read and process images 691 / 1000
+read and process images 692 / 1000
+read and process images 693 / 1000
+read and process images 694 / 1000
+read and process images 695 / 1000
+read and process images 696 / 1000
+read and process images 697 / 1000
+read and process images 698 / 1000
+read and process images 699 / 1000
+read and process images 700 / 1000
+read and process images 701 / 1000
+read and process images 702 / 1000
+read and process images 703 / 1000
+read and process images 704 / 1000
+read and process images 705 / 1000
+read and process images 706 / 1000
+read and process images 707 / 1000
+read and process images 708 / 1000
+read and process images 709 / 1000
+read and process images 710 / 1000
+read and process images 711 / 1000
+read and process images 712 / 1000
+read and process images 713 / 1000
+read and process images 714 / 1000
+read and process images 715 / 1000
+read and process images 716 / 1000
+read and process images 717 / 1000
+read and process images 718 / 1000
+read and process images 719 / 1000
+read and process images 720 / 1000
+read and process images 721 / 1000
+read and process images 722 / 1000
+read and process images 723 / 1000
+read and process images 724 / 1000
+read and process images 725 / 1000
+read and process images 726 / 1000
+read and process images 727 / 1000
+read and process images 728 / 1000
+read and process images 729 / 1000
+read and process images 730 / 1000
+read and process images 731 / 1000
+read and process images 732 / 1000
+read and process images 733 / 1000
+read and process images 734 / 1000
+read and process images 735 / 1000
+read and process images 736 / 1000
+read and process images 737 / 1000
+read and process images 738 / 1000
+read and process images 739 / 1000
+read and process images 740 / 1000
+read and process images 741 / 1000
+read and process images 742 / 1000
+read and process images 743 / 1000
+read and process images 744 / 1000
+read and process images 745 / 1000
+read and process images 746 / 1000
+read and process images 747 / 1000
+read and process images 748 / 1000
+read and process images 749 / 1000
+read and process images 750 / 1000
+read and process images 751 / 1000
+read and process images 752 / 1000
+read and process images 753 / 1000
+read and process images 754 / 1000
+read and process images 755 / 1000
+read and process images 756 / 1000
+read and process images 757 / 1000
+read and process images 758 / 1000
+read and process images 759 / 1000
+read and process images 760 / 1000
+read and process images 761 / 1000
+read and process images 762 / 1000
+read and process images 763 / 1000
+read and process images 764 / 1000
+read and process images 765 / 1000
+read and process images 766 / 1000
+read and process images 767 / 1000
+read and process images 768 / 1000
+read and process images 769 / 1000
+read and process images 770 / 1000
+read and process images 771 / 1000
+read and process images 772 / 1000
+read and process images 773 / 1000
+read and process images 774 / 1000
+read and process images 775 / 1000
+read and process images 776 / 1000
+read and process images 777 / 1000
+read and process images 778 / 1000
+read and process images 779 / 1000
+read and process images 780 / 1000
+read and process images 781 / 1000
+read and process images 782 / 1000
+read and process images 783 / 1000
+read and process images 784 / 1000
+read and process images 785 / 1000
+read and process images 786 / 1000
+read and process images 787 / 1000
+read and process images 788 / 1000
+read and process images 789 / 1000
+read and process images 790 / 1000
+read and process images 791 / 1000
+read and process images 792 / 1000
+read and process images 793 / 1000
+read and process images 794 / 1000
+read and process images 795 / 1000
+read and process images 796 / 1000
+read and process images 797 / 1000
+read and process images 798 / 1000
+read and process images 799 / 1000
+read and process images 800 / 1000
+read and process images 801 / 1000
+read and process images 802 / 1000
+read and process images 803 / 1000
+read and process images 804 / 1000
+read and process images 805 / 1000
+read and process images 806 / 1000
+read and process images 807 / 1000
+read and process images 808 / 1000
+read and process images 809 / 1000
+read and process images 810 / 1000
+read and process images 811 / 1000
+read and process images 812 / 1000
+read and process images 813 / 1000
+read and process images 814 / 1000
+read and process images 815 / 1000
+read and process images 816 / 1000
+read and process images 817 / 1000
+read and process images 818 / 1000
+read and process images 819 / 1000
+read and process images 820 / 1000
+read and process images 821 / 1000
+read and process images 822 / 1000
+read and process images 823 / 1000
+read and process images 824 / 1000
+read and process images 825 / 1000
+read and process images 826 / 1000
+read and process images 827 / 1000
+read and process images 828 / 1000
+read and process images 829 / 1000
+read and process images 830 / 1000
+read and process images 831 / 1000
+read and process images 832 / 1000
+read and process images 833 / 1000
+read and process images 834 / 1000
+read and process images 835 / 1000
+read and process images 836 / 1000
+read and process images 837 / 1000
+read and process images 838 / 1000
+read and process images 839 / 1000
+read and process images 840 / 1000
+read and process images 841 / 1000
+read and process images 842 / 1000
+read and process images 843 / 1000
+read and process images 844 / 1000
+read and process images 845 / 1000
+read and process images 846 / 1000
+read and process images 847 / 1000
+read and process images 848 / 1000
+read and process images 849 / 1000
+read and process images 850 / 1000
+read and process images 851 / 1000
+read and process images 852 / 1000
+read and process images 853 / 1000
+read and process images 854 / 1000
+read and process images 855 / 1000
+read and process images 856 / 1000
+read and process images 857 / 1000
+read and process images 858 / 1000
+read and process images 859 / 1000
+read and process images 860 / 1000
+read and process images 861 / 1000
+read and process images 862 / 1000
+read and process images 863 / 1000
+read and process images 864 / 1000
+read and process images 865 / 1000
+read and process images 866 / 1000
+read and process images 867 / 1000
+read and process images 868 / 1000
+read and process images 869 / 1000
+read and process images 870 / 1000
+read and process images 871 / 1000
+read and process images 872 / 1000
+read and process images 873 / 1000
+read and process images 874 / 1000
+read and process images 875 / 1000
+read and process images 876 / 1000
+read and process images 877 / 1000
+read and process images 878 / 1000
+read and process images 879 / 1000
+read and process images 880 / 1000
+read and process images 881 / 1000
+read and process images 882 / 1000
+read and process images 883 / 1000
+read and process images 884 / 1000
+read and process images 885 / 1000
+read and process images 886 / 1000
+read and process images 887 / 1000
+read and process images 888 / 1000
+read and process images 889 / 1000
+read and process images 890 / 1000
+read and process images 891 / 1000
+read and process images 892 / 1000
+read and process images 893 / 1000
+read and process images 894 / 1000
+read and process images 895 / 1000
+read and process images 896 / 1000
+read and process images 897 / 1000
+read and process images 898 / 1000
+read and process images 899 / 1000
+read and process images 900 / 1000
+read and process images 901 / 1000
+read and process images 902 / 1000
+read and process images 903 / 1000
+read and process images 904 / 1000
+read and process images 905 / 1000
+read and process images 906 / 1000
+read and process images 907 / 1000
+read and process images 908 / 1000
+read and process images 909 / 1000
+read and process images 910 / 1000
+read and process images 911 / 1000
+read and process images 912 / 1000
+read and process images 913 / 1000
+read and process images 914 / 1000
+read and process images 915 / 1000
+read and process images 916 / 1000
+read and process images 917 / 1000
+read and process images 918 / 1000
+read and process images 919 / 1000
+read and process images 920 / 1000
+read and process images 921 / 1000
+read and process images 922 / 1000
+read and process images 923 / 1000
+read and process images 924 / 1000
+read and process images 925 / 1000
+read and process images 926 / 1000
+read and process images 927 / 1000
+read and process images 928 / 1000
+read and process images 929 / 1000
+read and process images 930 / 1000
+read and process images 931 / 1000
+read and process images 932 / 1000
+read and process images 933 / 1000
+read and process images 934 / 1000
+read and process images 935 / 1000
+read and process images 936 / 1000
+read and process images 937 / 1000
+read and process images 938 / 1000
+read and process images 939 / 1000
+read and process images 940 / 1000
+read and process images 941 / 1000
+read and process images 942 / 1000
+read and process images 943 / 1000
+read and process images 944 / 1000
+read and process images 945 / 1000
+read and process images 946 / 1000
+read and process images 947 / 1000
+read and process images 948 / 1000
+read and process images 949 / 1000
+read and process images 950 / 1000
+read and process images 951 / 1000
+read and process images 952 / 1000
+read and process images 953 / 1000
+read and process images 954 / 1000
+read and process images 955 / 1000
+read and process images 956 / 1000
+read and process images 957 / 1000
+read and process images 958 / 1000
+read and process images 959 / 1000
+read and process images 960 / 1000
+read and process images 961 / 1000
+read and process images 962 / 1000
+read and process images 963 / 1000
+read and process images 964 / 1000
+read and process images 965 / 1000
+read and process images 966 / 1000
+read and process images 967 / 1000
+read and process images 968 / 1000
+read and process images 969 / 1000
+read and process images 970 / 1000
+read and process images 971 / 1000
+read and process images 972 / 1000
+read and process images 973 / 1000
+read and process images 974 / 1000
+read and process images 975 / 1000
+read and process images 976 / 1000
+read and process images 977 / 1000
+read and process images 978 / 1000
+read and process images 979 / 1000
+read and process images 980 / 1000
+read and process images 981 / 1000
+read and process images 982 / 1000
+read and process images 983 / 1000
+read and process images 984 / 1000
+read and process images 985 / 1000
+read and process images 986 / 1000
+read and process images 987 / 1000
+read and process images 988 / 1000
+read and process images 989 / 1000
+read and process images 990 / 1000
+read and process images 991 / 1000
+read and process images 992 / 1000
+read and process images 993 / 1000
+read and process images 994 / 1000
+read and process images 995 / 1000
+read and process images 996 / 1000
+read and process images 997 / 1000
+read and process images 998 / 1000
+read and process images 999 / 1000
+read and process images 1000 / 1000
+
+ans = 
+
+  <a href="matlab:helpPopup parallel.gpu.CUDADevice" style="font-weight:bold">CUDADevice</a> with properties:
+
+                      Name: 'TITAN X (Pascal)'
+                     Index: 1
+         ComputeCapability: '6.1'
+            SupportsDouble: 1
+             DriverVersion: 9
+            ToolkitVersion: 8
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 1.2774e+10
+           AvailableMemory: 1.2156e+10
+       MultiprocessorCount: 28
+              ClockRateKHz: 1531000
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 1
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+            DeviceSelected: 1
+
+Iteration 1 / 200
+training: epoch 01: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.011120, min gradient is -0.000783, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000020, min gradient is -0.000025, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000011, min gradient is -0.000010, learning rate is 0.080000
+Net2: layer bn51:max response is 0.999998, min response is -0.999991.
+max gradient is -7.891015, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 6.866060, min response is -6.152231.
+max gradient is 7.538596, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 7.358142, min response is -1.408137.
+max gradient is 0.686588, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 7.989993, min gradient is -7.672693, learning rate is 0.000500
+Net2: layer bn49:max response is 3.538815, min response is -0.694145.
+max gradient is 1.216789, min gradient is -2.308660, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.495629, min gradient is -8.000000, learning rate is 0.000500
+max inferred z is 4.05, min inferred z is -4.17, and std is 1.00
+ 4.74 s (21.1 data/s) [100/100]
+training: epoch 01: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.082211, min gradient is -0.107901, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000145, min gradient is -0.000236, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000168, min gradient is -0.000189, learning rate is 0.080000
+Net2: layer bn51:max response is 0.999998, min response is -0.999962.
+max gradient is -7.205890, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 6.845210, min response is -5.441856.
+max gradient is 8.000000, min gradient is -5.890881, learning rate is 0.000500
+Net2: layer bn50:max response is 7.836409, min response is -1.487330.
+max gradient is 6.287024, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.725630, learning rate is 0.000500
+Net2: layer bn49:max response is 3.675682, min response is -0.739087.
+max gradient is 2.556736, min gradient is -1.747211, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.814609, learning rate is 0.000500
+max inferred z is 4.18, min inferred z is -3.60, and std is 1.00
+ 4.00 s (25.0 data/s) [100/100]
+training: epoch 01: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.083944, min gradient is -0.000683, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000257, min gradient is -0.000162, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000112, min gradient is -0.000126, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -7.427151, min gradient is -8.000001, learning rate is 0.001000
+Net2: layer deconv3:max response is 15.649179, min response is -11.211101.
+max gradient is 8.000000, min gradient is -7.620587, learning rate is 0.000500
+Net2: layer bn50:max response is 9.315053, min response is -1.553513.
+max gradient is 8.000000, min gradient is -6.949780, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.508348, min gradient is -3.910667, learning rate is 0.000500
+Net2: layer bn49:max response is 4.142406, min response is -0.823558.
+max gradient is 2.110533, min gradient is -1.400667, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.798566, learning rate is 0.000500
+max inferred z is 4.24, min inferred z is -3.56, and std is 1.00
+ 3.97 s (25.2 data/s) [100/100]
+training: epoch 01: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.087559, min gradient is -0.074365, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000628, min gradient is -0.000070, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000359, min gradient is -0.000445, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -5.250994, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 28.905918, min response is -24.302883.
+max gradient is 7.344061, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 15.918290, min response is -2.332393.
+max gradient is 5.489558, min gradient is -4.820628, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.121774, min gradient is -1.806515, learning rate is 0.000500
+Net2: layer bn49:max response is 5.107516, min response is -1.008658.
+max gradient is 1.467721, min gradient is -1.153834, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.173324, learning rate is 0.000500
+max inferred z is 3.89, min inferred z is -3.93, and std is 1.00
+ 4.00 s (25.0 data/s) [100/100]
+training: epoch 01: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.081604, min gradient is -0.050617, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.001038, min gradient is -0.000105, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000628, min gradient is -0.000684, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -4.970721, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 37.479839, min response is -30.500990.
+max gradient is 8.000000, min gradient is -7.605293, learning rate is 0.000500
+Net2: layer bn50:max response is 19.184359, min response is -3.158560.
+max gradient is 4.498230, min gradient is -4.764830, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 1.111728, min gradient is -0.813855, learning rate is 0.000500
+Net2: layer bn49:max response is 6.080436, min response is -1.070952.
+max gradient is 0.828063, min gradient is -0.451099, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.030392, learning rate is 0.000500
+max inferred z is 3.94, min inferred z is -3.93, and std is 1.00
+ 3.99 s (25.1 data/s) [100/100]
+training: epoch 01: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.090538, min gradient is -0.040831, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.001568, min gradient is -0.000053, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000889, min gradient is -0.001152, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -5.360934, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 42.569256, min response is -36.276703.
+max gradient is 8.000000, min gradient is -7.870778, learning rate is 0.000500
+Net2: layer bn50:max response is 24.955093, min response is -3.634043.
+max gradient is 4.582410, min gradient is -4.340198, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.663060, min gradient is -0.716042, learning rate is 0.000500
+Net2: layer bn49:max response is 6.315547, min response is -1.339708.
+max gradient is 0.636819, min gradient is -0.399003, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 6.708757, min gradient is -4.922520, learning rate is 0.000500
+max inferred z is 3.85, min inferred z is -4.19, and std is 1.00
+ 4.00 s (25.0 data/s) [100/100]
+training: epoch 01: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.100256, min gradient is -0.036320, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.002322, min gradient is -0.000103, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.001358, min gradient is -0.001599, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -7.621994, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 43.183044, min response is -36.271084.
+max gradient is 7.831304, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 27.054806, min response is -3.877076.
+max gradient is 3.324298, min gradient is -3.193913, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.442032, min gradient is -0.396467, learning rate is 0.000500
+Net2: layer bn49:max response is 6.910513, min response is -1.432788.
+max gradient is 0.398618, min gradient is -0.308229, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 4.704492, min gradient is -3.533219, learning rate is 0.000500
+max inferred z is 4.04, min inferred z is -3.87, and std is 1.00
+ 4.04 s (24.7 data/s) [100/100]
+training: epoch 01: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.125741, min gradient is -0.027983, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.003133, min gradient is -0.000044, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.001974, min gradient is -0.002390, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -6.738930, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 49.687176, min response is -40.201691.
+max gradient is 8.000000, min gradient is -7.592513, learning rate is 0.000500
+Net2: layer bn50:max response is 31.038761, min response is -4.810237.
+max gradient is 2.471351, min gradient is -1.922855, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.368268, min gradient is -0.412742, learning rate is 0.000500
+Net2: layer bn49:max response is 7.705454, min response is -1.623231.
+max gradient is 0.324175, min gradient is -0.226097, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 3.855952, min gradient is -3.191837, learning rate is 0.000500
+max inferred z is 3.83, min inferred z is -4.18, and std is 1.00
+ 4.02 s (24.9 data/s) [100/100]
+training: epoch 01: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.168082, min gradient is -0.03
