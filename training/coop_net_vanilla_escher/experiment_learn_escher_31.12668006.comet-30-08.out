@@ -1,0 +1,2603 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.538062) 64-bit (glnxa64)
+                             February 23, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+[Warning: Setting the 'MW_NVCC_PATH' environment variable to
+'/usr/local/cuda-8.0/bin/nvcc'] 
+[> In vl_compilenn>activate_nvcc (line 600)
+  In vl_compilenn (line 253)
+  In Setup (line 11)
+  In experiment_learn_escher_31 (line 11)] 
+[Warning: NVCC not found in the command line path or the one found does not
+matches '/usr/local/cuda-8.0/bin/nvcc'.] 
+[> In vl_compilenn>activate_nvcc (line 609)
+  In vl_compilenn (line 253)
+  In Setup (line 11)
+  In experiment_learn_escher_31 (line 11)] 
+Location of NVCC (/usr/local/cuda-8.0/bin) added to your command search PATH.
+vl_compilenn:	CUDA: MEX config file: '/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/config/mex_CUDA_glnxa64.xml'
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+MEX completed successfully.
+Building with 'g++'.
+In file included from /home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_libjpeg.cpp:14:0:
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/imread_helpers.hpp:35:2: warning: #warning "SSSE3 instruction set not enabled. Using slower image conversion routines." [-Wcpp]
+ #warning "SSSE3 instruction set not enabled. Using slower image conversion routines."
+  ^
+
+MEX completed successfully.
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+
+/home/enijkamp/coop-ADELM/matconvnet-1.0-beta16-gpu/matlab/src/bits/impl/tinythread.h(654): warning: extra ";" ignored
+
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+Building with 'gcc'.
+MEX completed successfully.
+  CUDADevice with properties:
+
+                      Name: 'Tesla K80'
+                     Index: 1
+         ComputeCapability: '3.7'
+            SupportsDouble: 1
+             DriverVersion: 8
+            ToolkitVersion: 8
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 1.1996e+10
+           AvailableMemory: 1.1860e+10
+       MultiprocessorCount: 13
+              ClockRateKHz: 823500
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 0
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+            DeviceSelected: 1
+
+367.48
+/home/enijkamp/matlab2017a/sys/opengl/lib/glnxa64:/home/enijkamp/matlab2017a/sys/os/glnxa64:/home/enijkamp/matlab2017a/bin/glnxa64:/home/enijkamp/matlab2017a/extern/lib/glnxa64:/home/enijkamp/matlab2017a/runtime/glnxa64:/home/enijkamp/matlab2017a/sys/java/jre/glnxa64/jre/lib/amd64/native_threads:/home/enijkamp/matlab2017a/sys/java/jre/glnxa64/jre/lib/amd64/server:/home/enijkamp/cudnn-3.0/lib64:/opt/gnu/gcc/lib64:/opt/gnu/gmp/lib:/opt/gnu/mpfr/lib:/opt/gnu/mpc/lib:/opt/gnu/lib:/opt/gnu/lib64:/opt/mvapich2/intel/ib/lib:/opt/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/mpirt/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/ipp/../compiler/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/ipp/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/compiler/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/mkl/lib/intel64:/opt/intel/composer_xe_2013_sp1.2.144/tbb/lib/intel64/gcc4.4:/opt/sdsc/lib
+### 1/1 ###
+Learning category: escher
+read and process images 1 / 1000
+read and process images 2 / 1000
+read and process images 3 / 1000
+read and process images 4 / 1000
+read and process images 5 / 1000
+read and process images 6 / 1000
+read and process images 7 / 1000
+read and process images 8 / 1000
+read and process images 9 / 1000
+read and process images 10 / 1000
+read and process images 11 / 1000
+read and process images 12 / 1000
+read and process images 13 / 1000
+read and process images 14 / 1000
+read and process images 15 / 1000
+read and process images 16 / 1000
+read and process images 17 / 1000
+read and process images 18 / 1000
+read and process images 19 / 1000
+read and process images 20 / 1000
+read and process images 21 / 1000
+read and process images 22 / 1000
+read and process images 23 / 1000
+read and process images 24 / 1000
+read and process images 25 / 1000
+read and process images 26 / 1000
+read and process images 27 / 1000
+read and process images 28 / 1000
+read and process images 29 / 1000
+read and process images 30 / 1000
+read and process images 31 / 1000
+read and process images 32 / 1000
+read and process images 33 / 1000
+read and process images 34 / 1000
+read and process images 35 / 1000
+read and process images 36 / 1000
+read and process images 37 / 1000
+read and process images 38 / 1000
+read and process images 39 / 1000
+read and process images 40 / 1000
+read and process images 41 / 1000
+read and process images 42 / 1000
+read and process images 43 / 1000
+read and process images 44 / 1000
+read and process images 45 / 1000
+read and process images 46 / 1000
+read and process images 47 / 1000
+read and process images 48 / 1000
+read and process images 49 / 1000
+read and process images 50 / 1000
+read and process images 51 / 1000
+read and process images 52 / 1000
+read and process images 53 / 1000
+read and process images 54 / 1000
+read and process images 55 / 1000
+read and process images 56 / 1000
+read and process images 57 / 1000
+read and process images 58 / 1000
+read and process images 59 / 1000
+read and process images 60 / 1000
+read and process images 61 / 1000
+read and process images 62 / 1000
+read and process images 63 / 1000
+read and process images 64 / 1000
+read and process images 65 / 1000
+read and process images 66 / 1000
+read and process images 67 / 1000
+read and process images 68 / 1000
+read and process images 69 / 1000
+read and process images 70 / 1000
+read and process images 71 / 1000
+read and process images 72 / 1000
+read and process images 73 / 1000
+read and process images 74 / 1000
+read and process images 75 / 1000
+read and process images 76 / 1000
+read and process images 77 / 1000
+read and process images 78 / 1000
+read and process images 79 / 1000
+read and process images 80 / 1000
+read and process images 81 / 1000
+read and process images 82 / 1000
+read and process images 83 / 1000
+read and process images 84 / 1000
+read and process images 85 / 1000
+read and process images 86 / 1000
+read and process images 87 / 1000
+read and process images 88 / 1000
+read and process images 89 / 1000
+read and process images 90 / 1000
+read and process images 91 / 1000
+read and process images 92 / 1000
+read and process images 93 / 1000
+read and process images 94 / 1000
+read and process images 95 / 1000
+read and process images 96 / 1000
+read and process images 97 / 1000
+read and process images 98 / 1000
+read and process images 99 / 1000
+read and process images 100 / 1000
+read and process images 101 / 1000
+read and process images 102 / 1000
+read and process images 103 / 1000
+read and process images 104 / 1000
+read and process images 105 / 1000
+read and process images 106 / 1000
+read and process images 107 / 1000
+read and process images 108 / 1000
+read and process images 109 / 1000
+read and process images 110 / 1000
+read and process images 111 / 1000
+read and process images 112 / 1000
+read and process images 113 / 1000
+read and process images 114 / 1000
+read and process images 115 / 1000
+read and process images 116 / 1000
+read and process images 117 / 1000
+read and process images 118 / 1000
+read and process images 119 / 1000
+read and process images 120 / 1000
+read and process images 121 / 1000
+read and process images 122 / 1000
+read and process images 123 / 1000
+read and process images 124 / 1000
+read and process images 125 / 1000
+read and process images 126 / 1000
+read and process images 127 / 1000
+read and process images 128 / 1000
+read and process images 129 / 1000
+read and process images 130 / 1000
+read and process images 131 / 1000
+read and process images 132 / 1000
+read and process images 133 / 1000
+read and process images 134 / 1000
+read and process images 135 / 1000
+read and process images 136 / 1000
+read and process images 137 / 1000
+read and process images 138 / 1000
+read and process images 139 / 1000
+read and process images 140 / 1000
+read and process images 141 / 1000
+read and process images 142 / 1000
+read and process images 143 / 1000
+read and process images 144 / 1000
+read and process images 145 / 1000
+read and process images 146 / 1000
+read and process images 147 / 1000
+read and process images 148 / 1000
+read and process images 149 / 1000
+read and process images 150 / 1000
+read and process images 151 / 1000
+read and process images 152 / 1000
+read and process images 153 / 1000
+read and process images 154 / 1000
+read and process images 155 / 1000
+read and process images 156 / 1000
+read and process images 157 / 1000
+read and process images 158 / 1000
+read and process images 159 / 1000
+read and process images 160 / 1000
+read and process images 161 / 1000
+read and process images 162 / 1000
+read and process images 163 / 1000
+read and process images 164 / 1000
+read and process images 165 / 1000
+read and process images 166 / 1000
+read and process images 167 / 1000
+read and process images 168 / 1000
+read and process images 169 / 1000
+read and process images 170 / 1000
+read and process images 171 / 1000
+read and process images 172 / 1000
+read and process images 173 / 1000
+read and process images 174 / 1000
+read and process images 175 / 1000
+read and process images 176 / 1000
+read and process images 177 / 1000
+read and process images 178 / 1000
+read and process images 179 / 1000
+read and process images 180 / 1000
+read and process images 181 / 1000
+read and process images 182 / 1000
+read and process images 183 / 1000
+read and process images 184 / 1000
+read and process images 185 / 1000
+read and process images 186 / 1000
+read and process images 187 / 1000
+read and process images 188 / 1000
+read and process images 189 / 1000
+read and process images 190 / 1000
+read and process images 191 / 1000
+read and process images 192 / 1000
+read and process images 193 / 1000
+read and process images 194 / 1000
+read and process images 195 / 1000
+read and process images 196 / 1000
+read and process images 197 / 1000
+read and process images 198 / 1000
+read and process images 199 / 1000
+read and process images 200 / 1000
+read and process images 201 / 1000
+read and process images 202 / 1000
+read and process images 203 / 1000
+read and process images 204 / 1000
+read and process images 205 / 1000
+read and process images 206 / 1000
+read and process images 207 / 1000
+read and process images 208 / 1000
+read and process images 209 / 1000
+read and process images 210 / 1000
+read and process images 211 / 1000
+read and process images 212 / 1000
+read and process images 213 / 1000
+read and process images 214 / 1000
+read and process images 215 / 1000
+read and process images 216 / 1000
+read and process images 217 / 1000
+read and process images 218 / 1000
+read and process images 219 / 1000
+read and process images 220 / 1000
+read and process images 221 / 1000
+read and process images 222 / 1000
+read and process images 223 / 1000
+read and process images 224 / 1000
+read and process images 225 / 1000
+read and process images 226 / 1000
+read and process images 227 / 1000
+read and process images 228 / 1000
+read and process images 229 / 1000
+read and process images 230 / 1000
+read and process images 231 / 1000
+read and process images 232 / 1000
+read and process images 233 / 1000
+read and process images 234 / 1000
+read and process images 235 / 1000
+read and process images 236 / 1000
+read and process images 237 / 1000
+read and process images 238 / 1000
+read and process images 239 / 1000
+read and process images 240 / 1000
+read and process images 241 / 1000
+read and process images 242 / 1000
+read and process images 243 / 1000
+read and process images 244 / 1000
+read and process images 245 / 1000
+read and process images 246 / 1000
+read and process images 247 / 1000
+read and process images 248 / 1000
+read and process images 249 / 1000
+read and process images 250 / 1000
+read and process images 251 / 1000
+read and process images 252 / 1000
+read and process images 253 / 1000
+read and process images 254 / 1000
+read and process images 255 / 1000
+read and process images 256 / 1000
+read and process images 257 / 1000
+read and process images 258 / 1000
+read and process images 259 / 1000
+read and process images 260 / 1000
+read and process images 261 / 1000
+read and process images 262 / 1000
+read and process images 263 / 1000
+read and process images 264 / 1000
+read and process images 265 / 1000
+read and process images 266 / 1000
+read and process images 267 / 1000
+read and process images 268 / 1000
+read and process images 269 / 1000
+read and process images 270 / 1000
+read and process images 271 / 1000
+read and process images 272 / 1000
+read and process images 273 / 1000
+read and process images 274 / 1000
+read and process images 275 / 1000
+read and process images 276 / 1000
+read and process images 277 / 1000
+read and process images 278 / 1000
+read and process images 279 / 1000
+read and process images 280 / 1000
+read and process images 281 / 1000
+read and process images 282 / 1000
+read and process images 283 / 1000
+read and process images 284 / 1000
+read and process images 285 / 1000
+read and process images 286 / 1000
+read and process images 287 / 1000
+read and process images 288 / 1000
+read and process images 289 / 1000
+read and process images 290 / 1000
+read and process images 291 / 1000
+read and process images 292 / 1000
+read and process images 293 / 1000
+read and process images 294 / 1000
+read and process images 295 / 1000
+read and process images 296 / 1000
+read and process images 297 / 1000
+read and process images 298 / 1000
+read and process images 299 / 1000
+read and process images 300 / 1000
+read and process images 301 / 1000
+read and process images 302 / 1000
+read and process images 303 / 1000
+read and process images 304 / 1000
+read and process images 305 / 1000
+read and process images 306 / 1000
+read and process images 307 / 1000
+read and process images 308 / 1000
+read and process images 309 / 1000
+read and process images 310 / 1000
+read and process images 311 / 1000
+read and process images 312 / 1000
+read and process images 313 / 1000
+read and process images 314 / 1000
+read and process images 315 / 1000
+read and process images 316 / 1000
+read and process images 317 / 1000
+read and process images 318 / 1000
+read and process images 319 / 1000
+read and process images 320 / 1000
+read and process images 321 / 1000
+read and process images 322 / 1000
+read and process images 323 / 1000
+read and process images 324 / 1000
+read and process images 325 / 1000
+read and process images 326 / 1000
+read and process images 327 / 1000
+read and process images 328 / 1000
+read and process images 329 / 1000
+read and process images 330 / 1000
+read and process images 331 / 1000
+read and process images 332 / 1000
+read and process images 333 / 1000
+read and process images 334 / 1000
+read and process images 335 / 1000
+read and process images 336 / 1000
+read and process images 337 / 1000
+read and process images 338 / 1000
+read and process images 339 / 1000
+read and process images 340 / 1000
+read and process images 341 / 1000
+read and process images 342 / 1000
+read and process images 343 / 1000
+read and process images 344 / 1000
+read and process images 345 / 1000
+read and process images 346 / 1000
+read and process images 347 / 1000
+read and process images 348 / 1000
+read and process images 349 / 1000
+read and process images 350 / 1000
+read and process images 351 / 1000
+read and process images 352 / 1000
+read and process images 353 / 1000
+read and process images 354 / 1000
+read and process images 355 / 1000
+read and process images 356 / 1000
+read and process images 357 / 1000
+read and process images 358 / 1000
+read and process images 359 / 1000
+read and process images 360 / 1000
+read and process images 361 / 1000
+read and process images 362 / 1000
+read and process images 363 / 1000
+read and process images 364 / 1000
+read and process images 365 / 1000
+read and process images 366 / 1000
+read and process images 367 / 1000
+read and process images 368 / 1000
+read and process images 369 / 1000
+read and process images 370 / 1000
+read and process images 371 / 1000
+read and process images 372 / 1000
+read and process images 373 / 1000
+read and process images 374 / 1000
+read and process images 375 / 1000
+read and process images 376 / 1000
+read and process images 377 / 1000
+read and process images 378 / 1000
+read and process images 379 / 1000
+read and process images 380 / 1000
+read and process images 381 / 1000
+read and process images 382 / 1000
+read and process images 383 / 1000
+read and process images 384 / 1000
+read and process images 385 / 1000
+read and process images 386 / 1000
+read and process images 387 / 1000
+read and process images 388 / 1000
+read and process images 389 / 1000
+read and process images 390 / 1000
+read and process images 391 / 1000
+read and process images 392 / 1000
+read and process images 393 / 1000
+read and process images 394 / 1000
+read and process images 395 / 1000
+read and process images 396 / 1000
+read and process images 397 / 1000
+read and process images 398 / 1000
+read and process images 399 / 1000
+read and process images 400 / 1000
+read and process images 401 / 1000
+read and process images 402 / 1000
+read and process images 403 / 1000
+read and process images 404 / 1000
+read and process images 405 / 1000
+read and process images 406 / 1000
+read and process images 407 / 1000
+read and process images 408 / 1000
+read and process images 409 / 1000
+read and process images 410 / 1000
+read and process images 411 / 1000
+read and process images 412 / 1000
+read and process images 413 / 1000
+read and process images 414 / 1000
+read and process images 415 / 1000
+read and process images 416 / 1000
+read and process images 417 / 1000
+read and process images 418 / 1000
+read and process images 419 / 1000
+read and process images 420 / 1000
+read and process images 421 / 1000
+read and process images 422 / 1000
+read and process images 423 / 1000
+read and process images 424 / 1000
+read and process images 425 / 1000
+read and process images 426 / 1000
+read and process images 427 / 1000
+read and process images 428 / 1000
+read and process images 429 / 1000
+read and process images 430 / 1000
+read and process images 431 / 1000
+read and process images 432 / 1000
+read and process images 433 / 1000
+read and process images 434 / 1000
+read and process images 435 / 1000
+read and process images 436 / 1000
+read and process images 437 / 1000
+read and process images 438 / 1000
+read and process images 439 / 1000
+read and process images 440 / 1000
+read and process images 441 / 1000
+read and process images 442 / 1000
+read and process images 443 / 1000
+read and process images 444 / 1000
+read and process images 445 / 1000
+read and process images 446 / 1000
+read and process images 447 / 1000
+read and process images 448 / 1000
+read and process images 449 / 1000
+read and process images 450 / 1000
+read and process images 451 / 1000
+read and process images 452 / 1000
+read and process images 453 / 1000
+read and process images 454 / 1000
+read and process images 455 / 1000
+read and process images 456 / 1000
+read and process images 457 / 1000
+read and process images 458 / 1000
+read and process images 459 / 1000
+read and process images 460 / 1000
+read and process images 461 / 1000
+read and process images 462 / 1000
+read and process images 463 / 1000
+read and process images 464 / 1000
+read and process images 465 / 1000
+read and process images 466 / 1000
+read and process images 467 / 1000
+read and process images 468 / 1000
+read and process images 469 / 1000
+read and process images 470 / 1000
+read and process images 471 / 1000
+read and process images 472 / 1000
+read and process images 473 / 1000
+read and process images 474 / 1000
+read and process images 475 / 1000
+read and process images 476 / 1000
+read and process images 477 / 1000
+read and process images 478 / 1000
+read and process images 479 / 1000
+read and process images 480 / 1000
+read and process images 481 / 1000
+read and process images 482 / 1000
+read and process images 483 / 1000
+read and process images 484 / 1000
+read and process images 485 / 1000
+read and process images 486 / 1000
+read and process images 487 / 1000
+read and process images 488 / 1000
+read and process images 489 / 1000
+read and process images 490 / 1000
+read and process images 491 / 1000
+read and process images 492 / 1000
+read and process images 493 / 1000
+read and process images 494 / 1000
+read and process images 495 / 1000
+read and process images 496 / 1000
+read and process images 497 / 1000
+read and process images 498 / 1000
+read and process images 499 / 1000
+read and process images 500 / 1000
+read and process images 501 / 1000
+read and process images 502 / 1000
+read and process images 503 / 1000
+read and process images 504 / 1000
+read and process images 505 / 1000
+read and process images 506 / 1000
+read and process images 507 / 1000
+read and process images 508 / 1000
+read and process images 509 / 1000
+read and process images 510 / 1000
+read and process images 511 / 1000
+read and process images 512 / 1000
+read and process images 513 / 1000
+read and process images 514 / 1000
+read and process images 515 / 1000
+read and process images 516 / 1000
+read and process images 517 / 1000
+read and process images 518 / 1000
+read and process images 519 / 1000
+read and process images 520 / 1000
+read and process images 521 / 1000
+read and process images 522 / 1000
+read and process images 523 / 1000
+read and process images 524 / 1000
+read and process images 525 / 1000
+read and process images 526 / 1000
+read and process images 527 / 1000
+read and process images 528 / 1000
+read and process images 529 / 1000
+read and process images 530 / 1000
+read and process images 531 / 1000
+read and process images 532 / 1000
+read and process images 533 / 1000
+read and process images 534 / 1000
+read and process images 535 / 1000
+read and process images 536 / 1000
+read and process images 537 / 1000
+read and process images 538 / 1000
+read and process images 539 / 1000
+read and process images 540 / 1000
+read and process images 541 / 1000
+read and process images 542 / 1000
+read and process images 543 / 1000
+read and process images 544 / 1000
+read and process images 545 / 1000
+read and process images 546 / 1000
+read and process images 547 / 1000
+read and process images 548 / 1000
+read and process images 549 / 1000
+read and process images 550 / 1000
+read and process images 551 / 1000
+read and process images 552 / 1000
+read and process images 553 / 1000
+read and process images 554 / 1000
+read and process images 555 / 1000
+read and process images 556 / 1000
+read and process images 557 / 1000
+read and process images 558 / 1000
+read and process images 559 / 1000
+read and process images 560 / 1000
+read and process images 561 / 1000
+read and process images 562 / 1000
+read and process images 563 / 1000
+read and process images 564 / 1000
+read and process images 565 / 1000
+read and process images 566 / 1000
+read and process images 567 / 1000
+read and process images 568 / 1000
+read and process images 569 / 1000
+read and process images 570 / 1000
+read and process images 571 / 1000
+read and process images 572 / 1000
+read and process images 573 / 1000
+read and process images 574 / 1000
+read and process images 575 / 1000
+read and process images 576 / 1000
+read and process images 577 / 1000
+read and process images 578 / 1000
+read and process images 579 / 1000
+read and process images 580 / 1000
+read and process images 581 / 1000
+read and process images 582 / 1000
+read and process images 583 / 1000
+read and process images 584 / 1000
+read and process images 585 / 1000
+read and process images 586 / 1000
+read and process images 587 / 1000
+read and process images 588 / 1000
+read and process images 589 / 1000
+read and process images 590 / 1000
+read and process images 591 / 1000
+read and process images 592 / 1000
+read and process images 593 / 1000
+read and process images 594 / 1000
+read and process images 595 / 1000
+read and process images 596 / 1000
+read and process images 597 / 1000
+read and process images 598 / 1000
+read and process images 599 / 1000
+read and process images 600 / 1000
+read and process images 601 / 1000
+read and process images 602 / 1000
+read and process images 603 / 1000
+read and process images 604 / 1000
+read and process images 605 / 1000
+read and process images 606 / 1000
+read and process images 607 / 1000
+read and process images 608 / 1000
+read and process images 609 / 1000
+read and process images 610 / 1000
+read and process images 611 / 1000
+read and process images 612 / 1000
+read and process images 613 / 1000
+read and process images 614 / 1000
+read and process images 615 / 1000
+read and process images 616 / 1000
+read and process images 617 / 1000
+read and process images 618 / 1000
+read and process images 619 / 1000
+read and process images 620 / 1000
+read and process images 621 / 1000
+read and process images 622 / 1000
+read and process images 623 / 1000
+read and process images 624 / 1000
+read and process images 625 / 1000
+read and process images 626 / 1000
+read and process images 627 / 1000
+read and process images 628 / 1000
+read and process images 629 / 1000
+read and process images 630 / 1000
+read and process images 631 / 1000
+read and process images 632 / 1000
+read and process images 633 / 1000
+read and process images 634 / 1000
+read and process images 635 / 1000
+read and process images 636 / 1000
+read and process images 637 / 1000
+read and process images 638 / 1000
+read and process images 639 / 1000
+read and process images 640 / 1000
+read and process images 641 / 1000
+read and process images 642 / 1000
+read and process images 643 / 1000
+read and process images 644 / 1000
+read and process images 645 / 1000
+read and process images 646 / 1000
+read and process images 647 / 1000
+read and process images 648 / 1000
+read and process images 649 / 1000
+read and process images 650 / 1000
+read and process images 651 / 1000
+read and process images 652 / 1000
+read and process images 653 / 1000
+read and process images 654 / 1000
+read and process images 655 / 1000
+read and process images 656 / 1000
+read and process images 657 / 1000
+read and process images 658 / 1000
+read and process images 659 / 1000
+read and process images 660 / 1000
+read and process images 661 / 1000
+read and process images 662 / 1000
+read and process images 663 / 1000
+read and process images 664 / 1000
+read and process images 665 / 1000
+read and process images 666 / 1000
+read and process images 667 / 1000
+read and process images 668 / 1000
+read and process images 669 / 1000
+read and process images 670 / 1000
+read and process images 671 / 1000
+read and process images 672 / 1000
+read and process images 673 / 1000
+read and process images 674 / 1000
+read and process images 675 / 1000
+read and process images 676 / 1000
+read and process images 677 / 1000
+read and process images 678 / 1000
+read and process images 679 / 1000
+read and process images 680 / 1000
+read and process images 681 / 1000
+read and process images 682 / 1000
+read and process images 683 / 1000
+read and process images 684 / 1000
+read and process images 685 / 1000
+read and process images 686 / 1000
+read and process images 687 / 1000
+read and process images 688 / 1000
+read and process images 689 / 1000
+read and process images 690 / 1000
+read and process images 691 / 1000
+read and process images 692 / 1000
+read and process images 693 / 1000
+read and process images 694 / 1000
+read and process images 695 / 1000
+read and process images 696 / 1000
+read and process images 697 / 1000
+read and process images 698 / 1000
+read and process images 699 / 1000
+read and process images 700 / 1000
+read and process images 701 / 1000
+read and process images 702 / 1000
+read and process images 703 / 1000
+read and process images 704 / 1000
+read and process images 705 / 1000
+read and process images 706 / 1000
+read and process images 707 / 1000
+read and process images 708 / 1000
+read and process images 709 / 1000
+read and process images 710 / 1000
+read and process images 711 / 1000
+read and process images 712 / 1000
+read and process images 713 / 1000
+read and process images 714 / 1000
+read and process images 715 / 1000
+read and process images 716 / 1000
+read and process images 717 / 1000
+read and process images 718 / 1000
+read and process images 719 / 1000
+read and process images 720 / 1000
+read and process images 721 / 1000
+read and process images 722 / 1000
+read and process images 723 / 1000
+read and process images 724 / 1000
+read and process images 725 / 1000
+read and process images 726 / 1000
+read and process images 727 / 1000
+read and process images 728 / 1000
+read and process images 729 / 1000
+read and process images 730 / 1000
+read and process images 731 / 1000
+read and process images 732 / 1000
+read and process images 733 / 1000
+read and process images 734 / 1000
+read and process images 735 / 1000
+read and process images 736 / 1000
+read and process images 737 / 1000
+read and process images 738 / 1000
+read and process images 739 / 1000
+read and process images 740 / 1000
+read and process images 741 / 1000
+read and process images 742 / 1000
+read and process images 743 / 1000
+read and process images 744 / 1000
+read and process images 745 / 1000
+read and process images 746 / 1000
+read and process images 747 / 1000
+read and process images 748 / 1000
+read and process images 749 / 1000
+read and process images 750 / 1000
+read and process images 751 / 1000
+read and process images 752 / 1000
+read and process images 753 / 1000
+read and process images 754 / 1000
+read and process images 755 / 1000
+read and process images 756 / 1000
+read and process images 757 / 1000
+read and process images 758 / 1000
+read and process images 759 / 1000
+read and process images 760 / 1000
+read and process images 761 / 1000
+read and process images 762 / 1000
+read and process images 763 / 1000
+read and process images 764 / 1000
+read and process images 765 / 1000
+read and process images 766 / 1000
+read and process images 767 / 1000
+read and process images 768 / 1000
+read and process images 769 / 1000
+read and process images 770 / 1000
+read and process images 771 / 1000
+read and process images 772 / 1000
+read and process images 773 / 1000
+read and process images 774 / 1000
+read and process images 775 / 1000
+read and process images 776 / 1000
+read and process images 777 / 1000
+read and process images 778 / 1000
+read and process images 779 / 1000
+read and process images 780 / 1000
+read and process images 781 / 1000
+read and process images 782 / 1000
+read and process images 783 / 1000
+read and process images 784 / 1000
+read and process images 785 / 1000
+read and process images 786 / 1000
+read and process images 787 / 1000
+read and process images 788 / 1000
+read and process images 789 / 1000
+read and process images 790 / 1000
+read and process images 791 / 1000
+read and process images 792 / 1000
+read and process images 793 / 1000
+read and process images 794 / 1000
+read and process images 795 / 1000
+read and process images 796 / 1000
+read and process images 797 / 1000
+read and process images 798 / 1000
+read and process images 799 / 1000
+read and process images 800 / 1000
+read and process images 801 / 1000
+read and process images 802 / 1000
+read and process images 803 / 1000
+read and process images 804 / 1000
+read and process images 805 / 1000
+read and process images 806 / 1000
+read and process images 807 / 1000
+read and process images 808 / 1000
+read and process images 809 / 1000
+read and process images 810 / 1000
+read and process images 811 / 1000
+read and process images 812 / 1000
+read and process images 813 / 1000
+read and process images 814 / 1000
+read and process images 815 / 1000
+read and process images 816 / 1000
+read and process images 817 / 1000
+read and process images 818 / 1000
+read and process images 819 / 1000
+read and process images 820 / 1000
+read and process images 821 / 1000
+read and process images 822 / 1000
+read and process images 823 / 1000
+read and process images 824 / 1000
+read and process images 825 / 1000
+read and process images 826 / 1000
+read and process images 827 / 1000
+read and process images 828 / 1000
+read and process images 829 / 1000
+read and process images 830 / 1000
+read and process images 831 / 1000
+read and process images 832 / 1000
+read and process images 833 / 1000
+read and process images 834 / 1000
+read and process images 835 / 1000
+read and process images 836 / 1000
+read and process images 837 / 1000
+read and process images 838 / 1000
+read and process images 839 / 1000
+read and process images 840 / 1000
+read and process images 841 / 1000
+read and process images 842 / 1000
+read and process images 843 / 1000
+read and process images 844 / 1000
+read and process images 845 / 1000
+read and process images 846 / 1000
+read and process images 847 / 1000
+read and process images 848 / 1000
+read and process images 849 / 1000
+read and process images 850 / 1000
+read and process images 851 / 1000
+read and process images 852 / 1000
+read and process images 853 / 1000
+read and process images 854 / 1000
+read and process images 855 / 1000
+read and process images 856 / 1000
+read and process images 857 / 1000
+read and process images 858 / 1000
+read and process images 859 / 1000
+read and process images 860 / 1000
+read and process images 861 / 1000
+read and process images 862 / 1000
+read and process images 863 / 1000
+read and process images 864 / 1000
+read and process images 865 / 1000
+read and process images 866 / 1000
+read and process images 867 / 1000
+read and process images 868 / 1000
+read and process images 869 / 1000
+read and process images 870 / 1000
+read and process images 871 / 1000
+read and process images 872 / 1000
+read and process images 873 / 1000
+read and process images 874 / 1000
+read and process images 875 / 1000
+read and process images 876 / 1000
+read and process images 877 / 1000
+read and process images 878 / 1000
+read and process images 879 / 1000
+read and process images 880 / 1000
+read and process images 881 / 1000
+read and process images 882 / 1000
+read and process images 883 / 1000
+read and process images 884 / 1000
+read and process images 885 / 1000
+read and process images 886 / 1000
+read and process images 887 / 1000
+read and process images 888 / 1000
+read and process images 889 / 1000
+read and process images 890 / 1000
+read and process images 891 / 1000
+read and process images 892 / 1000
+read and process images 893 / 1000
+read and process images 894 / 1000
+read and process images 895 / 1000
+read and process images 896 / 1000
+read and process images 897 / 1000
+read and process images 898 / 1000
+read and process images 899 / 1000
+read and process images 900 / 1000
+read and process images 901 / 1000
+read and process images 902 / 1000
+read and process images 903 / 1000
+read and process images 904 / 1000
+read and process images 905 / 1000
+read and process images 906 / 1000
+read and process images 907 / 1000
+read and process images 908 / 1000
+read and process images 909 / 1000
+read and process images 910 / 1000
+read and process images 911 / 1000
+read and process images 912 / 1000
+read and process images 913 / 1000
+read and process images 914 / 1000
+read and process images 915 / 1000
+read and process images 916 / 1000
+read and process images 917 / 1000
+read and process images 918 / 1000
+read and process images 919 / 1000
+read and process images 920 / 1000
+read and process images 921 / 1000
+read and process images 922 / 1000
+read and process images 923 / 1000
+read and process images 924 / 1000
+read and process images 925 / 1000
+read and process images 926 / 1000
+read and process images 927 / 1000
+read and process images 928 / 1000
+read and process images 929 / 1000
+read and process images 930 / 1000
+read and process images 931 / 1000
+read and process images 932 / 1000
+read and process images 933 / 1000
+read and process images 934 / 1000
+read and process images 935 / 1000
+read and process images 936 / 1000
+read and process images 937 / 1000
+read and process images 938 / 1000
+read and process images 939 / 1000
+read and process images 940 / 1000
+read and process images 941 / 1000
+read and process images 942 / 1000
+read and process images 943 / 1000
+read and process images 944 / 1000
+read and process images 945 / 1000
+read and process images 946 / 1000
+read and process images 947 / 1000
+read and process images 948 / 1000
+read and process images 949 / 1000
+read and process images 950 / 1000
+read and process images 951 / 1000
+read and process images 952 / 1000
+read and process images 953 / 1000
+read and process images 954 / 1000
+read and process images 955 / 1000
+read and process images 956 / 1000
+read and process images 957 / 1000
+read and process images 958 / 1000
+read and process images 959 / 1000
+read and process images 960 / 1000
+read and process images 961 / 1000
+read and process images 962 / 1000
+read and process images 963 / 1000
+read and process images 964 / 1000
+read and process images 965 / 1000
+read and process images 966 / 1000
+read and process images 967 / 1000
+read and process images 968 / 1000
+read and process images 969 / 1000
+read and process images 970 / 1000
+read and process images 971 / 1000
+read and process images 972 / 1000
+read and process images 973 / 1000
+read and process images 974 / 1000
+read and process images 975 / 1000
+read and process images 976 / 1000
+read and process images 977 / 1000
+read and process images 978 / 1000
+read and process images 979 / 1000
+read and process images 980 / 1000
+read and process images 981 / 1000
+read and process images 982 / 1000
+read and process images 983 / 1000
+read and process images 984 / 1000
+read and process images 985 / 1000
+read and process images 986 / 1000
+read and process images 987 / 1000
+read and process images 988 / 1000
+read and process images 989 / 1000
+read and process images 990 / 1000
+read and process images 991 / 1000
+read and process images 992 / 1000
+read and process images 993 / 1000
+read and process images 994 / 1000
+read and process images 995 / 1000
+read and process images 996 / 1000
+read and process images 997 / 1000
+read and process images 998 / 1000
+read and process images 999 / 1000
+read and process images 1000 / 1000
+
+ans = 
+
+  CUDADevice with properties:
+
+                      Name: 'Tesla K80'
+                     Index: 1
+         ComputeCapability: '3.7'
+            SupportsDouble: 1
+             DriverVersion: 8
+            ToolkitVersion: 8
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 1.1996e+10
+           AvailableMemory: 1.1860e+10
+       MultiprocessorCount: 13
+              ClockRateKHz: 823500
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 0
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+            DeviceSelected: 1
+
+Iteration 1 / 200
+training: epoch 01: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.011146, min gradient is -0.001020, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000020, min gradient is -0.000025, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000011, min gradient is -0.000010, learning rate is 0.080000
+Net2: layer bn51:max response is 0.999996, min response is -0.999966.
+max gradient is -7.892826, min gradient is -8.000001, learning rate is 0.001000
+Net2: layer deconv3:max response is 6.515273, min response is -5.492165.
+max gradient is 7.819491, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 7.418792, min response is -1.313687.
+max gradient is 0.324939, min gradient is -3.162772, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.070493, min gradient is -2.093452, learning rate is 0.000500
+Net2: layer bn49:max response is 3.179626, min response is -0.654977.
+max gradient is 0.333483, min gradient is -0.550154, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 3.556736, min gradient is -3.512069, learning rate is 0.000500
+max inferred z is 4.05, min inferred z is -3.58, and std is 1.00
+ 4.22 s (23.7 data/s) [100/100]
+training: epoch 01: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.080767, min gradient is -0.099035, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000139, min gradient is -0.000223, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000145, min gradient is -0.000166, learning rate is 0.080000
+Net2: layer bn51:max response is 0.999989, min response is -0.999989.
+max gradient is -7.312490, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 6.064851, min response is -6.077151.
+max gradient is 8.000000, min gradient is -5.939635, learning rate is 0.000500
+Net2: layer bn50:max response is 7.402971, min response is -1.420956.
+max gradient is 3.595104, min gradient is -4.641454, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.327343, min gradient is -2.831558, learning rate is 0.000500
+Net2: layer bn49:max response is 3.117982, min response is -0.603871.
+max gradient is 0.561555, min gradient is -0.605358, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 4.811420, min gradient is -4.626367, learning rate is 0.000500
+max inferred z is 3.51, min inferred z is -4.17, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 01: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.082501, min gradient is -0.006179, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000254, min gradient is -0.000165, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000114, min gradient is -0.000124, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -5.878676, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 11.223841, min response is -9.049529.
+max gradient is 6.783774, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 8.101148, min response is -1.173334.
+max gradient is 2.697096, min gradient is -2.304091, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 1.829903, min gradient is -1.986267, learning rate is 0.000500
+Net2: layer bn49:max response is 3.240915, min response is -0.719256.
+max gradient is 0.492145, min gradient is -0.403320, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 5.370676, min gradient is -3.407966, learning rate is 0.000500
+max inferred z is 3.17, min inferred z is -3.57, and std is 1.00
+ 3.21 s (31.1 data/s) [100/100]
+training: epoch 01: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.079420, min gradient is -0.075136, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000623, min gradient is -0.000109, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000374, min gradient is -0.000434, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -4.752884, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 17.461290, min response is -13.728907.
+max gradient is 7.354541, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 9.525064, min response is -1.122720.
+max gradient is 1.443212, min gradient is -1.875701, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.915089, min gradient is -0.806886, learning rate is 0.000500
+Net2: layer bn49:max response is 3.699662, min response is -0.670007.
+max gradient is 0.490702, min gradient is -0.301226, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 4.165775, min gradient is -2.932690, learning rate is 0.000500
+max inferred z is 3.53, min inferred z is -3.25, and std is 1.00
+ 3.39 s (29.5 data/s) [100/100]
+training: epoch 01: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.085405, min gradient is -0.061755, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.000958, min gradient is -0.000084, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000594, min gradient is -0.000699, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -3.851213, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 18.281704, min response is -14.107136.
+max gradient is 7.779922, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 10.095030, min response is -1.283430.
+max gradient is 1.109156, min gradient is -1.347211, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.595120, min gradient is -0.436669, learning rate is 0.000500
+Net2: layer bn49:max response is 3.990147, min response is -0.740946.
+max gradient is 0.414421, min gradient is -0.227616, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 3.571225, min gradient is -2.368484, learning rate is 0.000500
+max inferred z is 3.72, min inferred z is -3.41, and std is 1.00
+ 3.41 s (29.4 data/s) [100/100]
+training: epoch 01: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.091721, min gradient is -0.050109, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.001467, min gradient is -0.000153, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.000883, min gradient is -0.001043, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -3.881795, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 22.419935, min response is -17.306002.
+max gradient is 6.876823, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 12.040045, min response is -1.311623.
+max gradient is 1.176120, min gradient is -1.095420, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.420557, min gradient is -0.298613, learning rate is 0.000500
+Net2: layer bn49:max response is 4.009986, min response is -0.724782.
+max gradient is 0.460613, min gradient is -0.155250, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 4.088119, min gradient is -1.947833, learning rate is 0.000500
+max inferred z is 3.39, min inferred z is -3.60, and std is 1.00
+ 3.37 s (29.6 data/s) [100/100]
+training: epoch 01: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.098579, min gradient is -0.045651, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.002043, min gradient is -0.000093, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.001269, min gradient is -0.001472, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -4.617903, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 26.925154, min response is -20.573530.
+max gradient is 5.849396, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 13.469819, min response is -1.476795.
+max gradient is 0.815323, min gradient is -0.951059, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.321235, min gradient is -0.238038, learning rate is 0.000500
+Net2: layer bn49:max response is 4.510824, min response is -0.795342.
+max gradient is 0.338302, min gradient is -0.122405, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 2.945816, min gradient is -2.110017, learning rate is 0.000500
+max inferred z is 3.44, min inferred z is -3.42, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 01: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.121788, min gradient is -0.040776, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.002717, min gradient is -0.000074, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.001784, min gradient is -0.002061, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -5.606739, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 30.331314, min response is -22.309109.
+max gradient is 5.492553, min gradient is -8.000001, learning rate is 0.000500
+Net2: layer bn50:max response is 15.369539, min response is -1.683678.
+max gradient is 0.671545, min gradient is -0.588638, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.236940, min gradient is -0.230837, learning rate is 0.000500
+Net2: layer bn49:max response is 5.245650, min response is -0.959338.
+max gradient is 0.262496, min gradient is -0.099794, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 2.346752, min gradient is -0.916788, learning rate is 0.000500
+max inferred z is 4.18, min inferred z is -3.47, and std is 1.00
+ 3.39 s (29.5 data/s) [100/100]
+training: epoch 01: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.167553, min gradient is -0.040096, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.003686, min gradient is -0.000056, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.002666, min gradient is -0.003005, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -7.493515, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 38.243832, min response is -27.621420.
+max gradient is 7.425423, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 19.133739, min response is -2.096968.
+max gradient is 0.618045, min gradient is -0.531877, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.240924, min gradient is -0.192994, learning rate is 0.000500
+Net2: layer bn49:max response is 4.674065, min response is -0.926742.
+max gradient is 0.209138, min gradient is -0.101876, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 1.689260, min gradient is -1.092385, learning rate is 0.000500
+max inferred z is 3.77, min inferred z is -3.43, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 01: batch  10/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.212913, min gradient is -0.033676, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.005245, min gradient is -0.000096, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.003543, min gradient is -0.004485, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -5.853178, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 30.283077, min response is -21.819731.
+max gradient is 7.632416, min gradient is -8.000000, learning rate is 0.000500
+Net2: layer bn50:max response is 16.121653, min response is -1.696935.
+max gradient is 0.702374, min gradient is -0.627126, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.251498, min gradient is -0.230290, learning rate is 0.000500
+Net2: layer bn49:max response is 5.012753, min response is -1.057236.
+max gradient is 0.250208, min gradient is -0.072272, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 1.434473, min gradient is -0.846356, learning rate is 0.000500
+max inferred z is 4.24, min inferred z is -3.56, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+Loss: 2.1935
+Iteration 2 / 200
+training: epoch 02: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.282545, min gradient is -0.037700, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.007405, min gradient is -0.000062, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.005825, min gradient is -0.006933, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -5.801156, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 37.737663, min response is -27.291904.
+max gradient is 6.369743, min gradient is -6.980925, learning rate is 0.000500
+Net2: layer bn50:max response is 19.741554, min response is -2.068726.
+max gradient is 0.422303, min gradient is -0.446752, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.193201, min gradient is -0.193153, learning rate is 0.000500
+Net2: layer bn49:max response is 4.567456, min response is -0.843575.
+max gradient is 0.212628, min gradient is -0.081622, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 1.248461, min gradient is -0.776874, learning rate is 0.000500
+max inferred z is 3.54, min inferred z is -3.50, and std is 1.00
+ 3.42 s (29.2 data/s) [100/100]
+training: epoch 02: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.433130, min gradient is -0.029011, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.011078, min gradient is -0.000066, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.009169, min gradient is -0.011751, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -7.722521, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 45.497673, min response is -33.794647.
+max gradient is 5.733928, min gradient is -7.618768, learning rate is 0.000500
+Net2: layer bn50:max response is 23.152756, min response is -2.570379.
+max gradient is 0.501195, min gradient is -0.472862, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.174055, min gradient is -0.197991, learning rate is 0.000500
+Net2: layer bn49:max response is 6.047533, min response is -0.910960.
+max gradient is 0.172192, min gradient is -0.069629, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 0.830518, min gradient is -0.873504, learning rate is 0.000500
+max inferred z is 4.02, min inferred z is -3.35, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 02: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.658619, min gradient is -0.030395, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.017475, min gradient is -0.000092, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.016537, min gradient is -0.021373, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -7.135424, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 45.178146, min response is -33.552082.
+max gradient is 5.547945, min gradient is -5.396626, learning rate is 0.000500
+Net2: layer bn50:max response is 23.183109, min response is -2.692580.
+max gradient is 0.410420, min gradient is -0.347794, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.156371, min gradient is -0.160899, learning rate is 0.000500
+Net2: layer bn49:max response is 5.384698, min response is -1.160534.
+max gradient is 0.178084, min gradient is -0.061897, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 1.059512, min gradient is -0.615052, learning rate is 0.000500
+max inferred z is 3.64, min inferred z is -3.90, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 02: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 1.190121, min gradient is -0.032180, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.033768, min gradient is -0.000099, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.029824, min gradient is -0.044440, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -6.272457, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 43.494671, min response is -32.000126.
+max gradient is 4.507315, min gradient is -3.303683, learning rate is 0.000500
+Net2: layer bn50:max response is 22.557636, min response is -2.438713.
+max gradient is 0.373765, min gradient is -0.308918, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.159475, min gradient is -0.162131, learning rate is 0.000500
+Net2: layer bn49:max response is 5.565375, min response is -0.952016.
+max gradient is 0.143226, min gradient is -0.047022, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 0.870840, min gradient is -0.628449, learning rate is 0.000500
+max inferred z is 3.44, min inferred z is -3.21, and std is 1.00
+ 3.41 s (29.4 data/s) [100/100]
+training: epoch 02: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 2.648784, min gradient is -0.029709, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.075796, min gradient is -0.000204, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.065536, min gradient is -0.102815, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -5.341558, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 41.454407, min response is -30.550148.
+max gradient is 2.318606, min gradient is -3.116925, learning rate is 0.000500
+Net2: layer bn50:max response is 22.759941, min response is -2.591051.
+max gradient is 0.240078, min gradient is -0.241862, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.146025, min gradient is -0.124895, learning rate is 0.000500
+Net2: layer bn49:max response is 5.032832, min response is -1.149541.
+max gradient is 0.162892, min gradient is -0.050754, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 0.689262, min gradient is -0.591549, learning rate is 0.000500
+max inferred z is 3.89, min inferred z is -3.93, and std is 1.00
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 02: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -0.033947, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.234193, min gradient is -0.000384, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.182440, min gradient is -0.313575, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -4.736242, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 45.235897, min response is -33.621647.
+max gradient is 2.503313, min gradient is -2.569568, learning rate is 0.000500
+Net2: layer bn50:max response is 25.241047, min response is -2.790794.
+max gradient is 0.182428, min gradient is -0.155359, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.141458, min gradient is -0.112033, learning rate is 0.000500
+Net2: layer bn49:max response is 6.923618, min response is -1.101538.
+max gradient is 0.154380, min gradient is -0.046151, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 1.091195, min gradient is -0.444691, learning rate is 0.000500
+max inferred z is 3.52, min inferred z is -3.65, and std is 1.00
+ 3.44 s (29.0 data/s) [100/100]
+training: epoch 02: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -0.008990, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 1.113711, min gradient is -0.000349, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 0.765698, min gradient is -1.500435, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -4.522892, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 37.707726, min response is -28.215019.
+max gradient is 2.170701, min gradient is -3.497841, learning rate is 0.000500
+Net2: layer bn50:max response is 21.430780, min response is -2.317278.
+max gradient is 0.157976, min gradient is -0.122813, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.143993, min gradient is -0.124410, learning rate is 0.000500
+Net2: layer bn49:max response is 6.186320, min response is -1.126226.
+max gradient is 0.127573, min gradient is -0.038206, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 0.583285, min gradient is -0.493595, learning rate is 0.000500
+max inferred z is 3.74, min inferred z is -3.47, and std is 1.00
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 02: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -0.000865, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 6.468264, min gradient is -0.000792, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 3.839960, min gradient is -8.000000, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is -3.439236, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv3:max response is 41.850246, min response is -31.430170.
+max gradient is 2.079585, min gradient is -3.854068, learning rate is 0.000500
+Net2: layer bn50:max response is 23.262558, min response is -2.651353.
+max gradient is 0.151027, min gradient is -0.207484, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.133891, min gradient is -0.116934, learning rate is 0.000500
+Net2: layer bn49:max response is 5.088271, min response is -1.147851.
+max gradient is 0.113256, min gradient is -0.035151, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 0.508683, min gradient is -0.413651, learning rate is 0.000500
+max inferred z is 3.85, min inferred z is -3.67, and std is 1.00
+ 3.42 s (29.3 data/s) [100/100]
+training: epoch 02: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -0.000286, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -0.002155, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 3.622232, min gradient is -8.000000, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is 8.000000, min gradient is -2.373408, learning rate is 0.001000
+Net2: layer deconv3:max response is 39.347904, min response is -29.229397.
+max gradient is 8.000000, min gradient is -1.969182, learning rate is 0.000500
+Net2: layer bn50:max response is 22.768019, min response is -2.390889.
+max gradient is 2.014338, min gradient is -2.788625, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 0.782624, min gradient is -0.919175, learning rate is 0.000500
+Net2: layer bn49:max response is 5.582692, min response is -1.319208.
+max gradient is 0.142185, min gradient is -0.473056, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 2.384670, min gradient is -2.486148, learning rate is 0.000500
+max inferred z is 3.94, min inferred z is -3.93, and std is 1.00
+ 3.39 s (29.5 data/s) [100/100]
+training: epoch 02: batch  10/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.957092, learning rate is 0.080000
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -1.699874, learning rate is 0.080000
+Net1: layer conv1:max response is , min response is .
+max gradient is 7.595567, min gradient is -8.000000, learning rate is 0.080000
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is 8.000000, min gradient is 2.729342, learning rate is 0.001000
+Net2: layer deconv3:max response is 32.088127, min response is -20.776428.
+max gradient is 8.000000, min gradient is -5.425377, learning rate is 0.000500
+Net2: layer bn50:max response is 19.390741, min response is -2.283186.
+max gradient is 7.978321, min gradient is -8.000000, learning rate is 0.001000
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.116895, learning rate is 0.000500
+Net2: layer bn49:max response is 5.167264, min response is -0.969575.
+max gradient is 2.361291, min gradient is -3.875415, learning rate is 0.001000
+Net2: layer deconv1:max response is , min response is .
+max gradient is 6.195169, min gradient is -8.000000, learning rate is 0.000500
+max inferred z is 3.45, min inferred z is -3.83, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+Loss: 2.4977
+Iteration 3 / 200
+training: epoch 03: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.004654, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.292381, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -1.688962, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is 8.000000, min gradient is 5.607874, learning rate is 0.000971
+Net2: layer deconv3:max response is 23.021769, min response is -10.677493.
+max gradient is 8.000000, min gradient is -7.224464, learning rate is 0.000486
+Net2: layer bn50:max response is 16.883163, min response is -1.357005.
+max gradient is 7.028918, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 7.845639, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.858929, min response is -1.221774.
+max gradient is 6.189302, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.485393, learning rate is 0.000486
+max inferred z is 3.85, min inferred z is -4.19, and std is 0.98
+ 3.40 s (29.5 data/s) [100/100]
+training: epoch 03: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 0.564073, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.021426, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 6.904535, min gradient is -8.000000, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -0.999933.
+max gradient is 8.000000, min gradient is 6.941996, learning rate is 0.000971
+Net2: layer deconv3:max response is 16.380674, min response is -5.152754.
+max gradient is 8.000000, min gradient is -6.522527, learning rate is 0.000486
+Net2: layer bn50:max response is 19.577967, min response is -1.779058.
+max gradient is 7.355795, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.827302, learning rate is 0.000486
+Net2: layer bn49:max response is 4.467966, min response is -1.065733.
+max gradient is 6.562566, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.027141, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.78, min inferred z is -3.76, and std is 0.98
+ 3.38 s (29.6 data/s) [100/100]
+training: epoch 03: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 3.797835, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 0.900607, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 1.398102, min gradient is -8.000000, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -0.685641.
+max gradient is 8.000000, min gradient is 7.184574, learning rate is 0.000971
+Net2: layer deconv3:max response is 9.061703, min response is -0.839683.
+max gradient is 8.000000, min gradient is -2.658855, learning rate is 0.000486
+Net2: layer bn50:max response is 16.596071, min response is -1.509830.
+max gradient is 7.578197, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.264730, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.704023, min response is -1.005805.
+max gradient is 4.343409, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 5.652652, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.66, min inferred z is -3.68, and std is 0.98
+ 3.38 s (29.6 data/s) [100/100]
+training: epoch 03: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.961665, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.324492, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.816482, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999988, min response is -0.687928.
+max gradient is 8.000000, min gradient is 6.271276, learning rate is 0.000971
+Net2: layer deconv3:max response is 6.027220, min response is -0.844011.
+max gradient is 8.000000, min gradient is -3.844110, learning rate is 0.000486
+Net2: layer bn50:max response is 14.296503, min response is -1.747677.
+max gradient is 5.435610, min gradient is -6.759480, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 1.869509, min gradient is -3.294556, learning rate is 0.000486
+Net2: layer bn49:max response is 4.860648, min response is -0.944976.
+max gradient is 4.078644, min gradient is -4.328246, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.579033, learning rate is 0.000486
+max inferred z is 3.70, min inferred z is -3.41, and std is 0.98
+ 3.39 s (29.5 data/s) [100/100]
+training: epoch 03: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.313505, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -0.099164, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.999852, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999999, min response is -0.693620.
+max gradient is 8.000000, min gradient is 7.063250, learning rate is 0.000971
+Net2: layer deconv3:max response is 7.081423, min response is -0.854899.
+max gradient is 5.187087, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 13.939017, min response is -1.963918.
+max gradient is 4.083010, min gradient is -3.992187, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 1.294104, min gradient is -2.528560, learning rate is 0.000486
+Net2: layer bn49:max response is 4.665146, min response is -0.844443.
+max gradient is 2.448860, min gradient is -3.100931, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.158773, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.50, min inferred z is -3.49, and std is 0.98
+ 3.39 s (29.5 data/s) [100/100]
+training: epoch 03: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.907618, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.256341, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.274543, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -0.679506.
+max gradient is 8.000000, min gradient is 6.734795, learning rate is 0.000971
+Net2: layer deconv3:max response is 8.169582, min response is -0.828196.
+max gradient is 4.511948, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 17.062599, min response is -2.568646.
+max gradient is 3.499195, min gradient is -4.594050, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.044012, min gradient is -3.184762, learning rate is 0.000486
+Net2: layer bn49:max response is 4.369070, min response is -0.851281.
+max gradient is 4.738868, min gradient is -5.721387, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 5.000182, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.28, min inferred z is -3.87, and std is 0.98
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 03: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 7.183136, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 5.853819, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 5.517465, min gradient is -8.000000, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999979, min response is -0.707035.
+max gradient is 8.000000, min gradient is 7.469718, learning rate is 0.000971
+Net2: layer deconv3:max response is 5.724741, min response is -0.881229.
+max gradient is 8.000000, min gradient is -4.575438, learning rate is 0.000486
+Net2: layer bn50:max response is 11.301234, min response is -1.989662.
+max gradient is 5.708401, min gradient is -6.574715, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 4.514697, min gradient is -4.336720, learning rate is 0.000486
+Net2: layer bn49:max response is 4.308949, min response is -0.858734.
+max gradient is 5.747438, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 6.704918, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 4.04, min inferred z is -3.20, and std is 0.98
+ 3.38 s (29.5 data/s) [100/100]
+training: epoch 03: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.845355, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.575402, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 5.310831, min gradient is -8.000000, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999997, min response is -0.739122.
+max gradient is 8.000000, min gradient is 7.149656, learning rate is 0.000971
+Net2: layer deconv3:max response is 6.698818, min response is -0.948541.
+max gradient is 8.000000, min gradient is -6.287636, learning rate is 0.000486
+Net2: layer bn50:max response is 12.400633, min response is -2.278885.
+max gradient is 5.762269, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.936297, min gradient is -4.761635, learning rate is 0.000486
+Net2: layer bn49:max response is 4.463005, min response is -0.798777.
+max gradient is 6.245325, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 5.242421, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.83, min inferred z is -3.25, and std is 0.98
+ 3.41 s (29.4 data/s) [100/100]
+training: epoch 03: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.880209, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.571573, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.040593, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999999, min response is -0.774644.
+max gradient is -6.022959, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv3:max response is 7.268588, min response is -1.031838.
+max gradient is 7.467530, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 11.311855, min response is -2.280284.
+max gradient is 8.000000, min gradient is -6.776650, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 4.617103, min gradient is -6.680784, learning rate is 0.000486
+Net2: layer bn49:max response is 4.786237, min response is -0.922575.
+max gradient is 4.656211, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.626363, learning rate is 0.000486
+max inferred z is 3.83, min inferred z is -4.18, and std is 0.98
+ 3.39 s (29.5 data/s) [100/100]
+training: epoch 03: batch  10/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 5.287127, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 5.825006, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 6.892463, min gradient is -8.000000, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -0.915107.
+max gradient is 8.000000, min gradient is 7.559998, learning rate is 0.000971
+Net2: layer deconv3:max response is 9.194120, min response is -1.558071.
+max gradient is 4.648681, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 10.466370, min response is -2.052470.
+max gradient is 8.000000, min gradient is -7.892322, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.523460, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.651453, min response is -0.798623.
+max gradient is 4.116846, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.997107, learning rate is 0.000486
+max inferred z is 3.51, min inferred z is -3.24, and std is 0.98
+ 3.40 s (29.4 data/s) [100/100]
+Loss: 5.8649
+Iteration 4 / 200
+training: epoch 04: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 7.547069, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 2.943376, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.689813, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -0.998867.
+max gradient is 8.000000, min gradient is 7.852369, learning rate is 0.000971
+Net2: layer deconv3:max response is 15.215420, min response is -3.737794.
+max gradient is 6.189113, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 15.516530, min response is -2.697798.
+max gradient is 5.590289, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 4.896248, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.629764, min response is -0.815210.
+max gradient is 4.932647, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 5.350616, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.42, min inferred z is -3.59, and std is 1.01
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 04: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.969023, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 5.042214, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.689765, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -0.999822.
+max gradient is 8.000000, min gradient is 7.623939, learning rate is 0.000971
+Net2: layer deconv3:max response is 11.719334, min response is -4.662061.
+max gradient is 7.087331, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 11.215647, min response is -2.287136.
+max gradient is 8.000000, min gradient is -6.009813, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 4.820453, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.774603, min response is -0.906975.
+max gradient is 6.100090, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 5.656985, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.40, min inferred z is -3.66, and std is 1.01
+ 3.43 s (29.2 data/s) [100/100]
+training: epoch 04: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 5.599514, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 7.510784, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.525611, learning rate is 0.075470
+Net2: layer bn51:max response is 1.000000, min response is -0.999905.
+max gradient is 8.000000, min gradient is 7.477186, learning rate is 0.000971
+Net2: layer deconv3:max response is 8.361620, min response is -4.975248.
+max gradient is 8.000000, min gradient is -6.410666, learning rate is 0.000486
+Net2: layer bn50:max response is 9.454431, min response is -2.233292.
+max gradient is 8.000000, min gradient is -4.673578, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 4.278909, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.771356, min response is -0.850588.
+max gradient is 8.000000, min gradient is -2.639264, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.877785, learning rate is 0.000486
+max inferred z is 3.63, min inferred z is -3.61, and std is 1.01
+ 3.43 s (29.2 data/s) [100/100]
+training: epoch 04: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 1.777498, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 2.806335, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.651964, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999998, min response is -0.999928.
+max gradient is 8.000000, min gradient is 7.736516, learning rate is 0.000971
+Net2: layer deconv3:max response is 6.851347, min response is -5.117093.
+max gradient is 8.000000, min gradient is -4.250557, learning rate is 0.000486
+Net2: layer bn50:max response is 9.209292, min response is -2.459408.
+max gradient is 8.000000, min gradient is -3.202393, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.464431, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 5.030980, min response is -0.974769.
+max gradient is 8.000000, min gradient is -3.168553, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.756754, learning rate is 0.000486
+max inferred z is 3.68, min inferred z is -3.85, and std is 1.01
+ 3.40 s (29.5 data/s) [100/100]
+training: epoch 04: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 2.191340, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 1.411652, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.411147, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999997, min response is -0.998586.
+max gradient is 8.000000, min gradient is 7.949294, learning rate is 0.000971
+Net2: layer deconv3:max response is 6.735421, min response is -3.626799.
+max gradient is 8.000000, min gradient is -4.924229, learning rate is 0.000486
+Net2: layer bn50:max response is 6.765410, min response is -2.141263.
+max gradient is 8.000000, min gradient is -4.267224, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.230064, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.881993, min response is -0.948114.
+max gradient is 8.000000, min gradient is -3.405704, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.958416, learning rate is 0.000486
+max inferred z is 3.50, min inferred z is -3.42, and std is 1.01
+ 3.42 s (29.3 data/s) [100/100]
+training: epoch 04: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 6.939692, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 6.036336, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 2.146045, min gradient is -8.000000, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999938, min response is -0.999569.
+max gradient is 8.000000, min gradient is 7.772621, learning rate is 0.000971
+Net2: layer deconv3:max response is 5.186980, min response is -4.221161.
+max gradient is 8.000000, min gradient is -6.762158, learning rate is 0.000486
+Net2: layer bn50:max response is 7.699334, min response is -2.700467.
+max gradient is 6.717656, min gradient is -8.000000, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.941101, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 5.017449, min response is -0.905695.
+max gradient is 8.000000, min gradient is -3.110293, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.603041, learning rate is 0.000486
+max inferred z is 3.79, min inferred z is -3.36, and std is 1.01
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 04: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 6.175363, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.757407, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.378931, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999981, min response is -0.999144.
+max gradient is 8.000000, min gradient is 7.152493, learning rate is 0.000971
+Net2: layer deconv3:max response is 5.788960, min response is -3.877879.
+max gradient is 6.651916, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 9.138060, min response is -2.122871.
+max gradient is 8.000000, min gradient is -3.701550, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.755482, learning rate is 0.000486
+Net2: layer bn49:max response is 4.686562, min response is -0.902365.
+max gradient is 8.000000, min gradient is -2.030820, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 4.835390, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.53, min inferred z is -3.71, and std is 1.01
+ 3.39 s (29.5 data/s) [100/100]
+training: epoch 04: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 5.704303, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.818092, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.618150, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999959, min response is -0.999828.
+max gradient is 8.000000, min gradient is 7.525766, learning rate is 0.000971
+Net2: layer deconv3:max response is 5.394068, min response is -4.679074.
+max gradient is 8.000000, min gradient is -7.228713, learning rate is 0.000486
+Net2: layer bn50:max response is 7.545417, min response is -2.671548.
+max gradient is 8.000000, min gradient is -2.887346, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.910327, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.633645, min response is -0.886744.
+max gradient is 8.000000, min gradient is -1.449782, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.832834, learning rate is 0.000486
+max inferred z is 3.30, min inferred z is -3.23, and std is 1.01
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 04: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 7.957969, min gradient is -8.000000, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.956717, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.919244, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999988, min response is -0.999868.
+max gradient is 8.000000, min gradient is 6.924365, learning rate is 0.000971
+Net2: layer deconv3:max response is 6.027243, min response is -4.813174.
+max gradient is 5.451808, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn50:max response is 7.666910, min response is -2.339154.
+max gradient is 8.000000, min gradient is -3.945367, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 6.673457, min gradient is -8.000000, learning rate is 0.000486
+Net2: layer bn49:max response is 4.441581, min response is -0.900031.
+max gradient is 8.000000, min gradient is -1.852362, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.528941, learning rate is 0.000486
+max inferred z is 3.59, min inferred z is -3.31, and std is 1.01
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 04: batch  10/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.524280, learning rate is 0.075470
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.177170, learning rate is 0.075470
+Net1: layer conv1:max response is , min response is .
+max gradient is 2.929348, min gradient is -8.000000, learning rate is 0.075470
+Net2: layer bn51:max response is 0.999997, min response is -0.999957.
+max gradient is 8.000000, min gradient is 5.808301, learning rate is 0.000971
+Net2: layer deconv3:max response is 6.743062, min response is -5.371760.
+max gradient is 4.975397, min gradient is -8.000001, learning rate is 0.000486
+Net2: layer bn50:max response is 9.088730, min response is -2.111996.
+max gradient is 8.000000, min gradient is -3.601144, learning rate is 0.000971
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.209911, learning rate is 0.000486
+Net2: layer bn49:max response is 4.901730, min response is -0.999924.
+max gradient is 8.000000, min gradient is -4.375414, learning rate is 0.000971
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.967148, min gradient is -8.000000, learning rate is 0.000486
+max inferred z is 3.71, min inferred z is -3.76, and std is 1.01
+ 3.43 s (29.2 data/s) [100/100]
+Loss: 5.7996
+Iteration 5 / 200
+training: epoch 05: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.479299, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 5.183135, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.446180, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999997.
+max gradient is 8.000000, min gradient is 7.107079, learning rate is 0.000943
+Net2: layer deconv3:max response is 8.615087, min response is -6.649500.
+max gradient is 7.490746, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 11.940145, min response is -3.110123.
+max gradient is 8.000000, min gradient is -2.457836, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.800667, learning rate is 0.000472
+Net2: layer bn49:max response is 6.108859, min response is -1.320623.
+max gradient is 5.800082, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.654369, learning rate is 0.000472
+max inferred z is 3.86, min inferred z is -3.54, and std is 1.01
+ 3.44 s (29.1 data/s) [100/100]
+training: epoch 05: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.857238, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 6.439799, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.940654, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999964.
+max gradient is 8.000000, min gradient is 7.228103, learning rate is 0.000943
+Net2: layer deconv3:max response is 8.871644, min response is -5.468486.
+max gradient is 8.000000, min gradient is -5.094441, learning rate is 0.000472
+Net2: layer bn50:max response is 9.793500, min response is -2.447491.
+max gradient is 8.000000, min gradient is -1.724879, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.576691, learning rate is 0.000472
+Net2: layer bn49:max response is 4.481833, min response is -1.005814.
+max gradient is 3.830042, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.505799, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 3.39, min inferred z is -3.89, and std is 1.01
+ 3.42 s (29.2 data/s) [100/100]
+training: epoch 05: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.990044, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 7.934042, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 6.752466, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999990.
+max gradient is 8.000000, min gradient is 7.249972, learning rate is 0.000943
+Net2: layer deconv3:max response is 9.737556, min response is -6.121614.
+max gradient is 8.000000, min gradient is -3.816522, learning rate is 0.000472
+Net2: layer bn50:max response is 12.537082, min response is -2.490223.
+max gradient is 8.000000, min gradient is -4.105295, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.406156, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.109704, min response is -1.160110.
+max gradient is 8.000000, min gradient is -5.569395, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.011263, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 3.41, min inferred z is -3.70, and std is 1.01
+ 3.44 s (29.0 data/s) [100/100]
+training: epoch 05: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.454718, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 7.904540, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 5.371084, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999997.
+max gradient is 8.000000, min gradient is 7.691320, learning rate is 0.000943
+Net2: layer deconv3:max response is 9.118465, min response is -6.698860.
+max gradient is 8.000000, min gradient is -3.640678, learning rate is 0.000472
+Net2: layer bn50:max response is 15.642699, min response is -2.667966.
+max gradient is 6.989946, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.696171, min gradient is -8.000001, learning rate is 0.000472
+Net2: layer bn49:max response is 5.672801, min response is -1.046524.
+max gradient is 8.000000, min gradient is -3.932287, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.129072, learning rate is 0.000472
+max inferred z is 3.53, min inferred z is -3.32, and std is 1.01
+ 3.43 s (29.2 data/s) [100/100]
+training: epoch 05: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.007355, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 4.924913, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000001, min gradient is -5.180570, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999999, min response is -0.999989.
+max gradient is 8.000000, min gradient is 7.926644, learning rate is 0.000943
+Net2: layer deconv3:max response is 7.211154, min response is -6.050018.
+max gradient is 8.000000, min gradient is -4.869859, learning rate is 0.000472
+Net2: layer bn50:max response is 12.241145, min response is -2.485755.
+max gradient is 4.220056, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.362440, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.246455, min response is -1.299582.
+max gradient is 8.000000, min gradient is -3.870134, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.408356, learning rate is 0.000472
+max inferred z is 3.57, min inferred z is -3.96, and std is 1.01
+ 3.44 s (29.1 data/s) [100/100]
+training: epoch 05: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.930697, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 5.937597, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.113200, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999998, min response is -0.999987.
+max gradient is 8.000000, min gradient is 7.788284, learning rate is 0.000943
+Net2: layer deconv3:max response is 6.862363, min response is -5.977454.
+max gradient is 8.000000, min gradient is -7.864996, learning rate is 0.000472
+Net2: layer bn50:max response is 12.416576, min response is -2.861034.
+max gradient is 4.003194, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.493836, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.818423, min response is -1.145791.
+max gradient is 8.000000, min gradient is -3.652978, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.089735, learning rate is 0.000472
+max inferred z is 3.34, min inferred z is -3.78, and std is 1.01
+ 3.43 s (29.1 data/s) [100/100]
+training: epoch 05: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.819833, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.786242, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 3.398577, min gradient is -8.000001, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999974, min response is -0.999986.
+max gradient is 8.000000, min gradient is 7.671706, learning rate is 0.000943
+Net2: layer deconv3:max response is 5.623712, min response is -5.945022.
+max gradient is 6.032432, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 13.250050, min response is -3.262778.
+max gradient is 4.382058, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.779111, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.911711, min response is -1.129983.
+max gradient is 8.000000, min gradient is -4.542468, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.893148, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 3.74, min inferred z is -3.98, and std is 1.01
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 05: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.347044, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.793034, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.835116, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999998, min response is -0.999992.
+max gradient is 8.000000, min gradient is 7.394237, learning rate is 0.000943
+Net2: layer deconv3:max response is 7.007333, min response is -6.185583.
+max gradient is 4.216427, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 12.848958, min response is -3.105449.
+max gradient is 3.636721, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.520293, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 6.062659, min response is -1.425994.
+max gradient is 8.000000, min gradient is -3.317727, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.198472, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 4.22, min inferred z is -4.51, and std is 1.01
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 05: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.353622, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.568682, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 4.325400, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999986, min response is -0.999995.
+max gradient is 8.000000, min gradient is 7.175466, learning rate is 0.000943
+Net2: layer deconv3:max response is 5.917160, min response is -6.459960.
+max gradient is 3.884662, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 13.229390, min response is -3.129992.
+max gradient is 3.751157, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.254370, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 6.238710, min response is -1.218621.
+max gradient is 7.543073, min gradient is -4.097900, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.732553, learning rate is 0.000472
+max inferred z is 4.81, min inferred z is -3.63, and std is 1.01
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 05: batch  10/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.773159, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.411302, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 7.740913, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999976, min response is -0.999992.
+max gradient is 8.000000, min gradient is 7.039832, learning rate is 0.000943
+Net2: layer deconv3:max response is 5.664057, min response is -6.206930.
+max gradient is 3.412983, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 12.315911, min response is -3.024117.
+max gradient is 4.118390, min gradient is -8.000001, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.261460, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 6.788983, min response is -1.127279.
+max gradient is 8.000000, min gradient is -2.963243, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 6.201263, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 3.46, min inferred z is -3.07, and std is 1.01
+ 3.39 s (29.5 data/s) [100/100]
+Loss: 3.6787
+Iteration 6 / 200
+training: epoch 06: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.575797, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 7.250406, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 5.607545, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999919, min response is -0.999967.
+max gradient is 8.000000, min gradient is 6.971861, learning rate is 0.000943
+Net2: layer deconv3:max response is 5.055324, min response is -5.512375.
+max gradient is 3.515896, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 9.645405, min response is -2.333764.
+max gradient is 3.217718, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.623617, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.928814, min response is -1.069689.
+max gradient is 8.000000, min gradient is -2.978971, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.998652, learning rate is 0.000472
+max inferred z is 4.00, min inferred z is -3.57, and std is 0.99
+ 3.41 s (29.4 data/s) [100/100]
+training: epoch 06: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.649898, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 7.705913, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.239098, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999993, min response is -0.999967.
+max gradient is 8.000000, min gradient is 6.755263, learning rate is 0.000943
+Net2: layer deconv3:max response is 6.303638, min response is -5.508561.
+max gradient is 4.744040, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 10.495659, min response is -2.311791.
+max gradient is 4.438484, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.533610, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.902519, min response is -1.207021.
+max gradient is 7.625924, min gradient is -3.794500, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.391957, learning rate is 0.000472
+max inferred z is 3.48, min inferred z is -3.71, and std is 0.99
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 06: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.246531, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.318208, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 6.385240, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999988, min response is -0.999980.
+max gradient is 8.000000, min gradient is 6.414484, learning rate is 0.000943
+Net2: layer deconv3:max response is 6.004209, min response is -5.763062.
+max gradient is 5.333130, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 9.569575, min response is -2.438659.
+max gradient is 8.000000, min gradient is -6.185846, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.479865, min gradient is -5.997553, learning rate is 0.000472
+Net2: layer bn49:max response is 6.587629, min response is -1.122822.
+max gradient is 8.000000, min gradient is -5.623050, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.138470, learning rate is 0.000472
+max inferred z is 3.84, min inferred z is -3.34, and std is 0.99
+ 3.42 s (29.3 data/s) [100/100]
+training: epoch 06: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.572949, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.196557, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 6.078743, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999988, min response is -1.000000.
+max gradient is 8.000000, min gradient is 5.371292, learning rate is 0.000943
+Net2: layer deconv3:max response is 6.012086, min response is -7.625452.
+max gradient is 5.788957, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 12.529338, min response is -2.758475.
+max gradient is 8.000000, min gradient is -5.638227, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 7.684388, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 6.091519, min response is -1.235847.
+max gradient is 7.164214, min gradient is -8.000001, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.994289, learning rate is 0.000472
+max inferred z is 3.61, min inferred z is -3.89, and std is 0.99
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 06: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 6.778164, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.224370, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.687758, learning rate is 0.071196
+Net2: layer bn51:max response is 0.999998, min response is -0.999988.
+max gradient is 8.000000, min gradient is 6.360846, learning rate is 0.000943
+Net2: layer deconv3:max response is 6.873615, min response is -6.000559.
+max gradient is 6.905797, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 9.853676, min response is -2.149772.
+max gradient is 8.000001, min gradient is -5.965673, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.691331, learning rate is 0.000472
+Net2: layer bn49:max response is 5.395555, min response is -1.185815.
+max gradient is 6.724381, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.868721, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 4.01, min inferred z is -4.12, and std is 0.99
+ 3.42 s (29.2 data/s) [100/100]
+training: epoch 06: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 6.169841, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.969798, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 6.321798, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999997.
+max gradient is 8.000000, min gradient is 6.821656, learning rate is 0.000943
+Net2: layer deconv3:max response is 7.978413, min response is -6.799635.
+max gradient is 6.837656, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 10.156748, min response is -2.367430.
+max gradient is 8.000000, min gradient is -6.349718, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.137608, learning rate is 0.000472
+Net2: layer bn49:max response is 6.068509, min response is -1.224683.
+max gradient is 5.024899, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.757927, learning rate is 0.000472
+max inferred z is 3.30, min inferred z is -3.12, and std is 0.99
+ 3.43 s (29.2 data/s) [100/100]
+training: epoch 06: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.610902, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 7.576355, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 7.424421, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999983.
+max gradient is 8.000000, min gradient is 6.960122, learning rate is 0.000943
+Net2: layer deconv3:max response is 7.671851, min response is -5.846403.
+max gradient is 6.984678, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 9.279591, min response is -2.137347.
+max gradient is 2.064652, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 7.819641, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.409067, min response is -1.082150.
+max gradient is 8.000000, min gradient is -7.435729, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.629750, learning rate is 0.000472
+max inferred z is 3.43, min inferred z is -3.43, and std is 0.99
+ 3.41 s (29.4 data/s) [100/100]
+training: epoch 06: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 7.595361, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.668848, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.846103, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999956.
+max gradient is 8.000000, min gradient is 7.204337, learning rate is 0.000943
+Net2: layer deconv3:max response is 9.354077, min response is -5.362070.
+max gradient is 7.832276, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn50:max response is 9.356697, min response is -1.785242.
+max gradient is 5.197880, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 6.478949, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.329768, min response is -1.267155.
+max gradient is 8.000000, min gradient is -4.481763, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.214945, learning rate is 0.000472
+max inferred z is 3.88, min inferred z is -3.49, and std is 0.99
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 06: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 6.399386, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 4.761088, min gradient is -8.000001, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.557495, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999990.
+max gradient is 8.000000, min gradient is 7.570474, learning rate is 0.000943
+Net2: layer deconv3:max response is 11.022805, min response is -6.092631.
+max gradient is 8.000000, min gradient is -5.154069, learning rate is 0.000472
+Net2: layer bn50:max response is 11.784185, min response is -1.987634.
+max gradient is 7.649430, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.094045, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.602983, min response is -1.228570.
+max gradient is 8.000000, min gradient is -4.527529, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.688584, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 3.24, min inferred z is -3.28, and std is 0.99
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 06: batch  10/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 2.952775, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv2:max response is , min response is .
+max gradient is 4.209023, min gradient is -8.000000, learning rate is 0.071196
+Net1: layer conv1:max response is , min response is .
+max gradient is 3.724178, min gradient is -8.000000, learning rate is 0.071196
+Net2: layer bn51:max response is 1.000000, min response is -0.999999.
+max gradient is 8.000000, min gradient is 7.738623, learning rate is 0.000943
+Net2: layer deconv3:max response is 8.240103, min response is -7.560977.
+max gradient is 8.000000, min gradient is -4.513180, learning rate is 0.000472
+Net2: layer bn50:max response is 11.040231, min response is -2.272135.
+max gradient is 7.439680, min gradient is -8.000000, learning rate is 0.000943
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.372678, min gradient is -8.000000, learning rate is 0.000472
+Net2: layer bn49:max response is 5.824689, min response is -1.090905.
+max gradient is 8.000000, min gradient is -4.486927, learning rate is 0.000943
+Net2: layer deconv1:max response is , min response is .
+max gradient is 5.637669, min gradient is -8.000000, learning rate is 0.000472
+max inferred z is 3.68, min inferred z is -3.59, and std is 0.99
+ 3.42 s (29.3 data/s) [100/100]
+Loss: 3.5747
+Iteration 7 / 200
+training: epoch 07: batch   1/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 3.443882, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 5.531452, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 7.965429, min gradient is -8.000000, learning rate is 0.067165
+Net2: layer bn51:max response is 0.999998, min response is -0.999995.
+max gradient is 8.000000, min gradient is 7.847859, learning rate is 0.000916
+Net2: layer deconv3:max response is 6.921283, min response is -6.413182.
+max gradient is 8.000000, min gradient is -6.059076, learning rate is 0.000458
+Net2: layer bn50:max response is 10.641175, min response is -2.150740.
+max gradient is 5.957956, min gradient is -8.000000, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 2.991116, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn49:max response is 5.613276, min response is -1.094175.
+max gradient is 8.000000, min gradient is -3.892671, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.926645, learning rate is 0.000458
+max inferred z is 3.64, min inferred z is -3.56, and std is 1.00
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 07: batch   2/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 4.362133, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 5.175154, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.444517, learning rate is 0.067165
+Net2: layer bn51:max response is 0.999998, min response is -0.999943.
+max gradient is 8.000000, min gradient is 7.840985, learning rate is 0.000916
+Net2: layer deconv3:max response is 6.811858, min response is -5.229939.
+max gradient is 6.857605, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn50:max response is 10.985676, min response is -1.900431.
+max gradient is 4.754519, min gradient is -8.000000, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 3.530558, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn49:max response is 5.701876, min response is -1.153695.
+max gradient is 8.000000, min gradient is -4.069048, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.024835, learning rate is 0.000458
+max inferred z is 3.64, min inferred z is -3.66, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 07: batch   3/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 6.547165, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 6.433255, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.304727, learning rate is 0.067165
+Net2: layer bn51:max response is 0.999995, min response is -0.999988.
+max gradient is 8.000000, min gradient is 7.491462, learning rate is 0.000916
+Net2: layer deconv3:max response is 6.402856, min response is -6.019870.
+max gradient is 6.012084, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn50:max response is 11.912182, min response is -2.151705.
+max gradient is 8.000001, min gradient is -5.984156, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 6.112075, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn49:max response is 5.575435, min response is -1.271552.
+max gradient is 8.000000, min gradient is -4.596107, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.401159, learning rate is 0.000458
+max inferred z is 4.16, min inferred z is -3.40, and std is 1.00
+ 3.41 s (29.4 data/s) [100/100]
+training: epoch 07: batch   4/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -1.420471, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -2.244877, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 5.665868, min gradient is -8.000000, learning rate is 0.067165
+Net2: layer bn51:max response is 0.999989, min response is -0.999993.
+max gradient is -7.470754, min gradient is -8.000000, learning rate is 0.000916
+Net2: layer deconv3:max response is 6.035727, min response is -6.283679.
+max gradient is 6.273133, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn50:max response is 13.248988, min response is -2.298243.
+max gradient is 8.000000, min gradient is -1.915344, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 5.752608, min gradient is -5.694429, learning rate is 0.000458
+Net2: layer bn49:max response is 6.233808, min response is -1.278190.
+max gradient is 6.656053, min gradient is -2.566306, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.576478, learning rate is 0.000458
+max inferred z is 3.08, min inferred z is -3.33, and std is 1.00
+ 3.33 s (30.0 data/s) [100/100]
+training: epoch 07: batch   5/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.064538, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.611318, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.235416, learning rate is 0.067165
+Net2: layer bn51:max response is 0.999990, min response is -0.999995.
+max gradient is 8.000000, min gradient is 7.406687, learning rate is 0.000916
+Net2: layer deconv3:max response is 6.086937, min response is -6.474247.
+max gradient is 7.427781, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn50:max response is 12.805836, min response is -2.239411.
+max gradient is 8.000000, min gradient is -2.641001, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.783010, learning rate is 0.000458
+Net2: layer bn49:max response is 5.692251, min response is -1.303705.
+max gradient is 8.000000, min gradient is -5.147787, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.186363, min gradient is -8.000000, learning rate is 0.000458
+max inferred z is 3.72, min inferred z is -3.78, and std is 1.00
+ 3.42 s (29.2 data/s) [100/100]
+training: epoch 07: batch   6/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 7.639254, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.344929, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 5.271362, min gradient is -8.000000, learning rate is 0.067165
+Net2: layer bn51:max response is 0.999999, min response is -0.999997.
+max gradient is 8.000000, min gradient is 7.346984, learning rate is 0.000916
+Net2: layer deconv3:max response is 7.448045, min response is -6.769172.
+max gradient is 6.265813, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn50:max response is 13.995184, min response is -2.613570.
+max gradient is 8.000000, min gradient is -4.630663, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.719491, learning rate is 0.000458
+Net2: layer bn49:max response is 7.146836, min response is -1.202868.
+max gradient is 8.000000, min gradient is -7.987015, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.927705, learning rate is 0.000458
+max inferred z is 3.10, min inferred z is -3.35, and std is 1.00
+ 3.40 s (29.4 data/s) [100/100]
+training: epoch 07: batch   7/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 3.544142, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.165938, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 3.295069, min gradient is -8.000000, learning rate is 0.067165
+Net2: layer bn51:max response is 1.000000, min response is -0.999998.
+max gradient is 8.000000, min gradient is 7.474869, learning rate is 0.000916
+Net2: layer deconv3:max response is 10.574125, min response is -6.856405.
+max gradient is 6.566971, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn50:max response is 13.817547, min response is -2.300312.
+max gradient is 8.000000, min gradient is -5.888380, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.730784, learning rate is 0.000458
+Net2: layer bn49:max response is 6.182324, min response is -1.251516.
+max gradient is 8.000000, min gradient is -7.688135, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.206513, learning rate is 0.000458
+max inferred z is 4.03, min inferred z is -3.68, and std is 1.00
+ 3.42 s (29.2 data/s) [100/100]
+training: epoch 07: batch   8/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 3.139880, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.388917, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 6.209079, min gradient is -8.000000, learning rate is 0.067165
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is 8.000000, min gradient is 7.618392, learning rate is 0.000916
+Net2: layer deconv3:max response is 14.475674, min response is -8.766003.
+max gradient is 8.000000, min gradient is -5.037683, learning rate is 0.000458
+Net2: layer bn50:max response is 16.822371, min response is -2.838375.
+max gradient is 8.000000, min gradient is -3.247927, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.342975, learning rate is 0.000458
+Net2: layer bn49:max response is 6.367423, min response is -1.163177.
+max gradient is 8.000000, min gradient is -4.693967, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 7.981887, min gradient is -8.000000, learning rate is 0.000458
+max inferred z is 3.26, min inferred z is -4.06, and std is 1.00
+ 3.43 s (29.2 data/s) [100/100]
+training: epoch 07: batch   9/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 4.877096, min gradient is -8.000000, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.758520, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -7.730047, learning rate is 0.067165
+Net2: layer bn51:max response is 1.000000, min response is -0.999998.
+max gradient is 8.000000, min gradient is 7.712063, learning rate is 0.000916
+Net2: layer deconv3:max response is 12.201907, min response is -6.841570.
+max gradient is 8.000000, min gradient is -4.201980, learning rate is 0.000458
+Net2: layer bn50:max response is 10.433102, min response is -1.738485.
+max gradient is 8.000000, min gradient is -6.695907, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -5.661123, learning rate is 0.000458
+Net2: layer bn49:max response is 6.481305, min response is -1.297415.
+max gradient is 8.000000, min gradient is -2.471801, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 6.845108, min gradient is -8.000000, learning rate is 0.000458
+max inferred z is 3.60, min inferred z is -3.58, and std is 1.00
+ 3.41 s (29.3 data/s) [100/100]
+training: epoch 07: batch  10/ 10: 
+Net1: layer conv3:max response is , min response is .
+max gradient is 8.000000, min gradient is -4.433161, learning rate is 0.067165
+Net1: layer conv2:max response is , min response is .
+max gradient is 8.000000, min gradient is -3.159250, learning rate is 0.067165
+Net1: layer conv1:max response is , min response is .
+max gradient is 7.122881, min gradient is -8.000000, learning rate is 0.067165
+Net2: layer bn51:max response is 1.000000, min response is -1.000000.
+max gradient is 8.000000, min gradient is 7.768245, learning rate is 0.000916
+Net2: layer deconv3:max response is 12.108888, min response is -7.925521.
+max gradient is 8.000000, min gradient is -5.122296, learning rate is 0.000458
+Net2: layer bn50:max response is 13.005317, min response is -1.967890.
+max gradient is 4.128398, min gradient is -8.000000, learning rate is 0.000916
+Net2: layer deconv2:max response is , min response is .
+max gradient is 6.960151, min gradient is -8.000000, learning rate is 0.000458
+Net2: layer bn49:max response is 5.863394, min response is -1.429489.
+max gradient is 8.000000, min gradient is -2.668097, learning rate is 0.000916
+Net2: layer deconv1:max response is , min response is .
+max gradient is 8.000000, min gradient is -6.190105, learning rate is 0.000458
+max inferred z is 4.37, min inferred z is -3.75, and std is 1.00
+ 3.43 s (29.2 data/s) [100/100]
+Loss: 4.1205
+Iteration 8 / 200
+training: epoch 08: batch   1/ 10: 
+slurmstepd: *** JOB 12668006 ON comet-30-08 CANCELLED AT 2017-11-16T22:34:02 DUE TO TIME LIMIT ***
