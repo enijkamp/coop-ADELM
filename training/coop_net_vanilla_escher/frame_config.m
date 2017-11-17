@@ -1,4 +1,4 @@
-function config = frame_config(category, learn_scheme, exp_type)
+function config = frame_config(category, learn_scheme, exp_type, exp_id)
 
 % we only support gpu
 config.gpus = [1];
@@ -110,9 +110,9 @@ addpath(genpath('./core/') )
 
 
 % result file: no need to change
-config.working_folder = ['./working/', config.categoryName, '_', config.model_type, '_', config.learn_scheme, '/'];
-config.Synfolder = ['./synthesiedImage/', config.categoryName, '_', config.model_type, '_', config.learn_scheme, '/'];
-config.figure_folder = ['./figure/', config.categoryName, '_', config.model_type, '_', config.learn_scheme, '/'];
+config.working_folder = ['./working/', config.categoryName, '_', config.model_type, '_', config.learn_scheme, '_', exp_id, '/'];
+config.Synfolder = ['./synthesiedImage/', config.categoryName, '_', config.model_type, '_', config.learn_scheme, '_', exp_id, '/'];
+config.figure_folder = ['./figure/', config.categoryName, '_', config.model_type, '_', config.learn_scheme, '_', exp_id, '/'];
 
 
 % create directory

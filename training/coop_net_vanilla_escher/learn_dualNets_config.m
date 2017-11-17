@@ -85,6 +85,7 @@ clear img;
 
 %% Step 2 create imdb
 [imdb, getBatch, net1] = create_imdb(config, net1);
+imwrite(mat2canvas(imdb.images.data, config, 5), [config.Synfolder, 'data', '.png']);
 
 %% Step 4: training
 [net1, net2, config] = train_model_dual(config, net1, net2, imdb, getBatch, 1);

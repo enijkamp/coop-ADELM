@@ -3,3 +3,5 @@ export LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LIBRARY_PATH
 
 sudo CPATH=/home/enijkamp/cudnn-3.0/include/ LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LIBRARY_PATH /usr/local/MATLAB/R2017a/bin/matlab
+
+sudo CPATH=/home/enijkamp/cudnn-3.0/include/ LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH LIBRARY_PATH=/home/enijkamp/cudnn-7.0/lib64:$LIBRARY_PATH /usr/local/MATLAB/R2017a/bin/matlab -softwareopengl
