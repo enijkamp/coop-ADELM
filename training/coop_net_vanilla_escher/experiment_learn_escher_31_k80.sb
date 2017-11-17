@@ -1,11 +1,11 @@
 #!/bin/bash
 #SBATCH --job-name="escher31"
-#SBATCH --output="experiment_learn_escher_31.%j.%N.out"
+#SBATCH --output="experiment_learn_escher_31_k80.%j.%N.out"
 #SBATCH --partition=gpu-shared
 #SBATCH --ntasks-per-node=6
 #SBATCH --export=ALL
 #SBATCH --gres=gpu:k80:1
-#SBATCH -t 00:05:00
+#SBATCH -t 10:00:00
 #SBATCH -A cla173
 
 #ibrun in verbose mode will give binding detail
@@ -14,4 +14,4 @@ export CPATH=/home/enijkamp/cudnn-3.0/include/
 export LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LIBRARY_PATH
 
-~/matlab2017a/bin/matlab -nodisplay -nosplash -r "experiment_learn_escher_31()"
+~/matlab2017a/bin/matlab -nodisplay -nosplash -r "experiment_learn_escher_31_k80()"

@@ -1,14 +1,14 @@
-function [] = experiment_learn_escher_31()
+function [] = experiment_learn_escher_31_p100()
 
 % (31): (30) more samples
 %
 % result: ?
 
-exp_id = 31;
+exp_id = 32;
 
 %% prep
 restoredefaultpath();
-%Setup();
+Setup();
 rng(123);
 parallel.gpu.rng(0, 'Philox4x32-10');
 
@@ -17,7 +17,7 @@ disp(gpuDevice());
 disp(parallel.internal.gpu.CUDADriverVersion);
 disp(getenv('LD_LIBRARY_PATH'));
 dev = gpuDevice();
-%assert(strcmp(dev.Name, 'TITAN X (Pascal)'));
+assert(strcmp(dev.Name, 'Tesla P100-PCIE-16GB'));
 assert(dev.ToolkitVersion == 8);
 assert(contains(getenv('LD_LIBRARY_PATH'), 'cudnn-3.0'));
 
