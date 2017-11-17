@@ -8,6 +8,7 @@ exp_id = 31;
 
 %% prep
 restoredefaultpath();
+Setup();
 rng(123);
 parallel.gpu.rng(0, 'Philox4x32-10');
 
