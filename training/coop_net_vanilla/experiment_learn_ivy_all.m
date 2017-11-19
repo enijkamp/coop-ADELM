@@ -40,7 +40,7 @@ config.s = 0.3;
 config.real_ref = 1;
 config.cap2 = 8;
 
-% ?
+% interpolation
 config.interp_type = 'both';
 config.n_pairs = 8;
 config.n_parsamp = 8;
