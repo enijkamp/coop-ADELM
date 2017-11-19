@@ -89,10 +89,10 @@ config.cap2 = 8;
 
 
 %% net 1 (descriptor) decay
-config.learningRate1 = logspace(-2, -4, config.nIteration = 200;)*100;
+config.learningRate1 = logspace(-2, -4, config.nIteration)*100;
 
 %% net 2 (generator) decay
-config.learningRate2 = logspace(-2, -3, config.nIteration = 200;)*100;
+config.learningRate2 = logspace(-2, -3, config.nIteration)*100;
 
 
 %% gammas
