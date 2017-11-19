@@ -51,7 +51,7 @@ assert(contains(getenv('LD_LIBRARY_PATH'), 'cudnn-3.0'));
 
 Deltas1 = [0.004];
 Gammas1 = [0.004];
-Gammas2 = [0.0002 0.0004 0.0006];
+Gammas2 = [0.0003 0.0004 0.0006];
 
 num = 0;
 for Delta1 = Deltas1
