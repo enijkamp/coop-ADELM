@@ -10,7 +10,7 @@ exp_id = 8;
 
 % continue (6) epochs to 400
 %
-% result: ?
+% result: stop, loss highly fluctuating
 
 %% prep
 restoredefaultpath();

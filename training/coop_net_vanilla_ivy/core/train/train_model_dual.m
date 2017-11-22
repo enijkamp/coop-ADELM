@@ -28,7 +28,7 @@ opts.numEpochs = config.nIteration;
 net1 = initialize_momentum(net1);
 net2 = initialize_momentum(net2);
 
-interval = 20; %ceil(opts.numEpochs / 50);
+interval = 10; %ceil(opts.numEpochs / 50);
 SSD = zeros(opts.numEpochs, 1);
 
 mean_img1 = net1.normalization.averageImage;

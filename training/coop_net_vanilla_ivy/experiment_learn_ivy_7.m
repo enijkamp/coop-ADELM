@@ -10,7 +10,7 @@ exp_id = 7;
 
 % continue (6) epochs to 200
 %
-% result: ?
+% result: stop, loss highly fluctuating
 
 %% prep
 restoredefaultpath();
@@ -51,7 +51,7 @@ assert(contains(getenv('LD_LIBRARY_PATH'), 'cudnn-3.0'));
 
 Deltas1 = [0.004];
 Gammas1 = [0.004];
-Gammas2 = [0.0003 0.0004 0.0006];
+Gammas2 = [0.0003];
 
 num = 0;
 for Delta1 = Deltas1

@@ -2,7 +2,7 @@ function [] = experiment_learn_ivy_1()
 
 % (1)
 %
-% result: ?
+% result: good
 
 exp_id = 1;
 
