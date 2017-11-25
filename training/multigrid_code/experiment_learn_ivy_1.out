@@ -57901,4 +57901,7 @@ figure's PaperPosition property, use the 'print' command with either the  '-best
 fit' or 'Fill page' options on the 'Print Preview' window.] 
 [> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('validate', '/usr/local/MATLAB/R2017a/toolbox/matlab/graphics/private/validate.m', 203)" style="font-weight:bold">validate</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2017a/toolbox/matlab/graphics/private/validate.m',203,0)">line 203</a>)
   In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('print', '/usr/local/MATLAB/R2017a/toolbox/matlab/graphics/print.m', 67)" style="font-weight:bold">print</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2017a/toolbox/matlab/graphics/print.m',67,0)">line 67</a>)
-  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('saveas', '/usr/loc
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('saveas', '/usr/local/MATLAB/R2017a/toolbox/matlab/general/saveas.m', 168)" style="font-weight:bold">saveas</a> (<a href="matlab: opentoline('/usr/local/MATLAB/R2017a/toolbox/matlab/general/saveas.m',168,0)">line 168</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('experiment_diag_ivy_3', '/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_ivy/experiment_diag_ivy_3.m', 68)" style="font-weight:bold">experiment_diag_ivy_3</a> (<a href="matlab: opentoline('/home/enijkamp/Dropbox/coop ADELM/training/coop_net_vanilla_ivy/experiment_diag_ivy_3.m',68,0)">line 68</a>)] 
+done
+experiment_learn_ivy_4

@@ -12,11 +12,6 @@ function config = gen_ADELM_config(in_file_str,out_file_str,net_file)
         config.net_file = net_file;
     end
     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TODO remove
-    config.ELM_str = 'abc';
-    in_file_str = '';
-    out_file_str = '';
-    
     %number of CPU-cores
     config.no_workers = 2;
     

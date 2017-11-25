@@ -59,6 +59,7 @@ config.matconvv_path = '../../matconvnet-1.0-beta16-gpu/';
 
 config.force_learn = true;
 config.batch_size = 100;
+config.raw_images = false;
 
 switch exp_type
     case 'texture'

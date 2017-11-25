@@ -10,7 +10,7 @@ exp_id = 3;
 
 % (1) lower gamma
 %
-% result: 3
+% result: ?
 %
 
 %% prep

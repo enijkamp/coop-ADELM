@@ -2,6 +2,7 @@ nets/digits/nets.mat
 maps/ivy/all/4_1/ELM_4_1_2_cont_exp.mat
 main/interpolation/digits_des_net.mat
 figure/
+minima/
 synthesiedImage/
 working/
 ims_gen/
