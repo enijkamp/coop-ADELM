@@ -10,7 +10,8 @@ img_name = 'ivy';
 img_size = 'all';
 patch_size = 64;
 
-% cudnn-3.0 1 minutes / 5.29 seconds.
+% cudnn-3.0    ->  2 minutes / 0.54 seconds.
+% no cudnn-3.0 -> 11 minutes / 15.82 seconds.
 
 % matconvnet
 use_gpu = 1;

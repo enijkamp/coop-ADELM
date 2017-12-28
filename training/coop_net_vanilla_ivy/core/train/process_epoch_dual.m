@@ -1,4 +1,4 @@
-function  [net1, net2, config, syn_mats, z_mats] = process_epoch_dual(opts, config, getBatch, epoch, subset, imdb, net1, net2)
+function  [net1, net2, config, syn_mats, gen_mats, z_mats, net1_mean_grads] = process_epoch_dual(opts, config, getBatch, epoch, subset, imdb, net1, net2)
 % -------------------------------------------------------------------------
 
 % move CNN to GPU as needed
@@ -16,9 +16,14 @@ res_syn = [];
 res2 = [];
 training = true;
 
+train_order = randperm(size(imdb.images.data,4));
+
 num_cell = ceil(numel(subset) / opts.batchSize) * numel(opts.gpus);
 syn_mats = cell(1, num_cell);
+gen_mats = cell(1, num_cell);
 z_mats = cell(1, num_cell);
+
+net1_mean_grads = [];
 
 for t=1:opts.batchSize:numel(subset)
     fprintf('training: epoch %02d: batch %3d/%3d: \n', epoch, ...
@@ -31,7 +36,9 @@ for t=1:opts.batchSize:numel(subset)
         % get this image batch and prefetch the next
         batchStart = t + (labindex-1) + (s-1) * numlabs ;
         batchEnd = min(t+opts.batchSize-1, numel(subset)) ;
-        batch = subset(batchStart : opts.numSubBatches * numlabs : batchEnd) ;
+        % override with Mitch code
+        %batch = subset(batchStart : opts.numSubBatches * numlabs : batchEnd) ;
+        batch = train_order(batchStart : batchEnd) ;
         im = getBatch(imdb, batch) ;
         
         if opts.prefetch
@@ -48,9 +55,12 @@ for t=1:opts.batchSize:numel(subset)
         im = gpuArray(im);
         
         cell_idx = (ceil(t / opts.batchSize) - 1) * numlabs + labindex;
-        % Step 1: Inference Network 2 -- generate Z
+
+        %% Step 1: Inference Network 2 -- generate Z
+        % G0: generate Xi
         z_mats{cell_idx} = randn([config.z_sz, num_syn], 'single');
         z = gpuArray(z_mats{cell_idx});
+        % D1: generate Yi
         syn_mat = vl_gan(net2, z, [], [],...
             'accumulate', s ~= 1, ...
             'disableDropout', ~training, ...
@@ -58,13 +68,28 @@ for t=1:opts.batchSize:numel(subset)
             'backPropDepth', opts.backPropDepth, ...
             'sync', opts.sync, ...
             'cudnn', opts.cudnn) ;
-        syn_mat = syn_mat(end).x;        
+        syn_mat = syn_mat(end).x;     
+   
+%% added
+%% TODO Mitch diff:
+        if ~config.normalize_images
+            syn_mat = floor(128*(syn_mat+1)) - repmat(config.mean_im, 1, 1, 1, config.num_syn);
+        end
+        gen_mats{cell_idx} = gather(syn_mat);
         
-        % Step 2: Inference Network 1 -- generate synthesized images           
+        %% Step 2: Inference Network 1 -- update synthesis by descriptor net   
+        % D1: generate y wave i
         syn_mat = langevin_dynamics_fast(config, net1, syn_mat);
         syn_mats{cell_idx} = gather(syn_mat);
         
-        % Step 3: Learning Net1
+        % G1: Y wave - syn_mat
+        % Xj - z
+        % run langevin IG steps to update z
+        if config.infer_z
+            z = langevin_dynamics_z(config, net2, z, syn_mat);
+        end
+        
+        %% Step 3: Learning Net1
         numImages = size(im, 4);
         dydz1 = gpuArray(ones(config.dydz_sz1, 'single'));
         dydz1 = repmat(dydz1, 1, 1, 1, numImages);
@@ -77,6 +102,7 @@ for t=1:opts.batchSize:numel(subset)
             'sync', opts.sync, ...
             'cudnn', opts.cudnn);
         
+        
         res_syn = vl_simplenn(net1, syn_mat, dydz_syn, res_syn, ...
             'accumulate', s ~= 1, ...
             'disableDropout', ~training, ...
@@ -84,8 +110,13 @@ for t=1:opts.batchSize:numel(subset)
             'backPropDepth', opts.backPropDepth, ...
             'sync', opts.sync, ...
             'cudnn', opts.cudnn);
+%% added     
+%% TODO Mitch diff:
+        if ~config.normalize_images
+            syn_mat = max(min(syn_mat+repmat(config.mean_im, 1, 1, 1, config.num_syn),255.99),0.01)/128 - 1;
+        end
         
-        % Step 4: Learning Net2
+        %% Step 4: Learning Net2
         res2 = vl_gan(net2, z, syn_mat, res2, ...
             'accumulate', s ~= 1, ...
             'disableDropout', ~training, ...
@@ -97,7 +128,7 @@ for t=1:opts.batchSize:numel(subset)
         numDone = numDone + numel(batch) ;
     end
     
-    net1 = accumulate_gradients1(opts, config.Gammas1(epoch), batchSize, net1, res1, res_syn, config);
+    [net1, net1_mean_grads(end+1)] = accumulate_gradients1(opts, config.Gammas1(epoch), batchSize, net1, res1, res_syn, config);
     net2 = accumulate_gradients2(opts, config.Gammas2(epoch), batchSize, net2, res2, config);
     
     fprintf('max inferred z is %.2f, min inferred z is %.2f, and std is %.2f\n', max(z(:)), min(z(:)), config.real_ref)
@@ -116,6 +147,9 @@ config.real_ref = real_ref;
 
 net1 = vl_simplenn_move(net1, 'cpu') ;
 net2 = vl_simplenn_move(net2, 'cpu') ;
+
+net1_mean_grads = mean(net1_mean_grads);
+
 end
 
 
@@ -141,7 +175,11 @@ for l = layer_sets
         
         if isfield(net.layers{l}, 'weights')
             % gradient descent
-            gradient_dzdw = (1 / batchSize) * (1 / config.s / config.s)* res(l).dzdw{j};
+
+%% added
+%% TODO Mitch diff:
+            gradient_dzdw = (1 / config.s / config.s)* res(l).dzdw{j}; % CPU
+            % gradient_dzdw = (1 / batchSize) * (1 / config.s / config.s)*res(l).dzdw{j}; % vanilla
             
             max_val = max(abs(gradient_dzdw(:)));
             
@@ -167,14 +205,14 @@ for l = layer_sets
 end
 end
 
-function [net, loss] = accumulate_gradients1(opts, lr, batchSize, net, res, res_syn, config, mmap)
+function [net, mean_gradients] = accumulate_gradients1(opts, lr, batchSize, net, res, res_syn, config, mmap)
 % -------------------------------------------------------------------------
 layer_sets = config.layer_sets1;
 num_syn = config.nTileRow * config.nTileCol;
 % opts.momentum = 0;
 % opts.weightDecay = 0;
 
-loss = [];
+mean_gradients = [];
 for l = layer_sets
     for j=1:numel(res(l).dzdw)
         thisDecay = opts.weightDecay * net.layers{l}.weightDecay(j) ;
@@ -200,8 +238,8 @@ for l = layer_sets
         end
         
         if isfield(net.layers{l}, 'weights')
-            gradient_dzdw = ((1 / batchSize) * res(l).dzdw{j} -  ...
-                (1 / num_syn) * res_syn(l).dzdw{j}) / net.numFilters(l);
+            gradient_dzdw = ((1 / batchSize) * res(l).dzdw{j} - (1 / num_syn) * res_syn(l).dzdw{j}) / net.numFilters(l);
+
             if max(abs(gradient_dzdw(:))) > config.cap1 %10
                 gradient_dzdw = gradient_dzdw / max(abs(gradient_dzdw(:))) * config.cap1;
             end
@@ -211,19 +249,21 @@ for l = layer_sets
                 - thisDecay * net.layers{l}.weights{j} ...
                 + gradient_dzdw;
             
-            loss = [loss, gather(mean(abs(gradient_dzdw(:))))];
+            mean_gradients = [mean_gradients, gather(mean(abs(gradient_dzdw(:))))];
             
             net.layers{l}.weights{j} = net.layers{l}.weights{j} + thisLR *net.layers{l}.momentum{j};
             
             if j == 1
-                res_l = min(l+1, length(res));
+%% added
+                % res_l = min(l+1, length(res));
+                res_l = min(l+2, length(res));
                 fprintf('Net1: layer %s:max response is %f, min response is %f.\n', net.layers{l}.name, max(res(res_l).x(:)), min(res(res_l).x(:)));
                 fprintf('max gradient is %f, min gradient is %f, learning rate is %f\n', max(gradient_dzdw(:)), min(gradient_dzdw(:)), thisLR);
             end
         end
     end
 end
-loss = mean(loss);
+mean_gradients = mean(mean_gradients);
 end
 
 function mmap = map_gradients(fname, net, res, numGpus)

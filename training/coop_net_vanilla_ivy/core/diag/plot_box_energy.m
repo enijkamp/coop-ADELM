@@ -1,4 +1,4 @@
-function plot_box_energy( out_dir, neg, config, des_net, multi_grid )
+function plot_box_energy( dirs, out_dir, neg, config, des_net, multi_grid )
 
 %% (1) all exps
 
@@ -13,9 +13,8 @@ exps{end+1} = { '../ims_syn/ivy/all_4_1/', '../ims_syn/ivy/all_4_1/*.png', 'all_
 exps{end+1} = { '../ims_gen/ivy/all_4_1/', '../ims_gen/ivy/all_4_1/*.png', 'all_4_1 2' };
 
 % new - ivy
-dirs = dir('figure/ivy*');
 for i = 1:length(dirs)
-    exp_path = [ 'figure/' dirs(i).name ];
+    exp_path = [ dirs(i).folder '/' dirs(i).name ];
     if ~isempty(dir([exp_path '/net1*.png'])) && ~isempty(dir([exp_path '/net2*.png']))
         name_parts = strsplit(dirs(i).name,'_');
         name = [name_parts{end-1} '_' name_parts{end}];
@@ -53,7 +52,7 @@ set(boxes(1:2:end), 'Color', [0 0 0]);
 indices = [];
 for i = 1:length(exps)
     exp_path = exps{i};
-    if any(contains(exp_path(1), neg))
+    if any(contains(exp_path{1}, neg))
         indices(end+1) = i;
     end
 end
@@ -82,9 +81,8 @@ exps{end+1} = { '../ims_syn/ivy/all_4_1/', '../ims_syn/ivy/all_4_1/*.png', 'all_
 exps{end+1} = { '../ims_gen/ivy/all_4_1/', '../ims_gen/ivy/all_4_1/*.png', 'all_4_1 2' };
 
 % new - ivy
-dirs = dir('figure/ivy*');
 for i = 1:length(dirs)
-    exp_path = [ 'figure/' dirs(i).name ];
+    exp_path = [ dirs(i).folder '/' dirs(i).name ];
     if ~any(contains(exp_path, neg))
         if ~isempty(dir([exp_path '/net1*.png'])) && ~isempty(dir([exp_path '/net2*.png']))
             name_parts = strsplit(dirs(i).name,'_');

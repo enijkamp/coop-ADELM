@@ -28,12 +28,16 @@ function [ config ] = load_images( config )
             imdb(:,:,:,i) = imread([config.inPath,config.file_str,files(i).name]);
         end
 
-        if strcmp(config.file_str(1:3),'ivy')
-            config.mean_im = single(sum(imdb,4)/size(imdb,4));
-        elseif strcmp(config.file_str,'escher/')
-            config.mean_im = single(128*ones(config.im_size,config.im_size,3));
-        end
         if config.substract_mean
+            if strcmp(config.file_str(1:3),'ivy')
+                config.mean_im = single(sum(imdb,4)/size(imdb,4));
+            elseif strcmp(config.file_str,'escher/')
+                config.mean_im = single(128*ones(config.im_size,config.im_size,3));
+            end
+            config.imdb = single(imdb - repmat(config.mean_im,1,1,1,size(imdb,4))); 
+        elseif config.random_mean
+            rng(123);
+            config.mean_im = single(256*randn(config.im_size,config.im_size,3));
             config.imdb = single(imdb - repmat(config.mean_im,1,1,1,size(imdb,4))); 
         else
             config.mean_im = zeros(config.im_size,config.im_size,3);

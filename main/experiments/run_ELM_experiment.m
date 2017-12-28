@@ -1,4 +1,7 @@
-function alpha_seq=run_ELM_experiment(config,num_exps,alpha_init)
+function alpha_seq=run_ELM_experiment(config,num_exps,alpha_init,i_init)
+    if nargin < 4
+        i_init = 1;
+    end
     nsteps = config.nsteps;
     max_AD_checks = config.max_AD_checks;
     AD_reps = config.AD_reps;
@@ -11,9 +14,10 @@ function alpha_seq=run_ELM_experiment(config,num_exps,alpha_init)
     tic;
     [min_out,max_out] = find_AD_extrema(config,alpha_init);    
     toc;
+    disp(['min_out.alpha=' num2str(min_out.alpha) ' max_out.alpha=' num2str(max_out.alpha)]);
     %alpha_seq = linspace(min_out.alpha,max_out.alpha,num_exps);
     alpha_seq = exp(linspace(log(min_out.alpha),log(max_out.alpha),num_exps));
-    for i = 1:num_exps
+    for i = i_init:num_exps
         disp(['### (1) exp ' num2str(i) ' -> burn-in ###']);
         tic;
         config.alpha = alpha_seq(i);

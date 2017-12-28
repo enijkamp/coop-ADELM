@@ -11,24 +11,22 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     use_gpu = config.use_gpu;
     
     if use_gpu
-        disp(gpuDevice());
-        disp(parallel.internal.gpu.CUDADriverVersion);
-        disp(getenv('LD_LIBRARY_PATH'));
-    end
-    
-    if use_gpu
-        %parallel.gpu.rng(0, 'Philox4x32-10');
+        parallel.gpu.rng(0, 'Philox4x32-10');
     end
     
     % generator net2
     if nargin < 3 || isempty(net2)
-        net2 = frame_gan_params();
+        rng(123);
+        net2 = mnist_frame_gan_params();
     end
 
     % descriptor net1
     if nargin < 2 || isempty(net1)
-        [~,net1] = train_coop_config;
-        net1 = add_bottom_filters(net1, 1:3,config);
+        %[~,net1] = train_coop_config;
+        net1 = [];
+        net1.layers = {};
+        rng(123);
+        net1 = mnist_add_bottom_filters(net1, 1:3, config);
         net1.mean_im = config.mean_im;
     end
  
@@ -85,13 +83,22 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     net1.numFilters = zeros(1, length(net1.layers));
     for l = 1:length(net1.layers)
         if isfield(net1.layers{l}, 'weights')
-           sz = size(res(l+1).x);
+          sz = size(res(l+1).x);
           net1.numFilters(l) = sz(1) * sz(2);
         end
     end
     net1.dydz_sz = config.dydz_sz1;
 
     config.layer_sets1 = numel(net1.layers):-1:1;
+    
+    %% print networks
+    print_nets(net1, net2, config.im_size, config.z_sz);
+    
+    %% print data
+    config.nTileRow = uint32(sqrt(config.num_syn));
+    config.nTileCol = uint32(sqrt(config.num_syn));
+    [I_imdb, ~] = convert_syns_mat(config, net1.mean_im, config.imdb);
+    imwrite(I_imdb, [config.trained_folder, 'data', '.png']);
 
     clear res;
     clear img;
@@ -140,9 +147,11 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     
     save([config.trained_folder,'config.mat'],'config');
     
-    loss1 = zeros(config.nIteration, 1);
-    loss2 = zeros(config.nIteration, 1);
+    loss1 = [];
+    loss2 = [];
     
+    rng(123);
+    h = figure;
     for epoch=1:config.nIteration
 
         [net1_out,net2_out,gen_mats,syn_mats,z,loss2(epoch)] = process_epoch_dual(opts,epoch,net1,net2,config);     
@@ -150,11 +159,28 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
         if ~fix_des, net1 = net1_out; end
         if ~fix_gen, net2 = net2_out; end
         
+        % loss
         % loss 1: l2 distance synthesis and revision (revision should be small)
         % loss 2: mean of gradients of descriptor (if training equals synthesis, then gradient should be 0)
         loss1(epoch) = compute_loss(opts, syn_mats, net2_out, z, config);
         save([config.trained_folder,'loss.mat'],'loss1','loss2');
         fprintf('loss1 = %.4f.\nloss2 = %.4f.\n', loss1(epoch), loss2(epoch));
+        clf(h);
+        hold on;
+        plot(loss1);
+        plot(loss2);
+        hold off;
+        drawnow;
+        
+        % synthesis
+        if mod(epoch - 1, 10) == 0 || epoch == config.nIteration
+            gen_mats = generate_imgs(opts, net2, z);
+            gen_mats = floor(128*(gen_mats+1)) - repmat(config.mean_im, 1, 1, 1, config.num_syn);
+            config.nTileRow = uint32(sqrt(config.num_syn));
+            config.nTileCol = uint32(sqrt(config.num_syn));
+            draw_figures(config, config.syn_im_folder, syn_mats, epoch, config.mean_im, 'net1');
+            draw_figures(config, config.gen_im_folder, gen_mats, epoch, config.mean_im, 'net2');
+        end
     end
     
     learningTime = toc(learningTime);
@@ -165,6 +191,59 @@ function [net1,net2,gen_mats,syn_mats] = learn_dual_net(config,net1,net2,fix_des
     mins = floor(learningTime / 60);
     secds = mod(learningTime, 60);
     fprintf('total learning time is %d hours / %d minutes / %.2f seconds.\n', hrs, mins, secds);
+end
+
+function imgs = generate_imgs(opts, net_cpu, z)
+net = vl_simplenn_move(net_cpu, 'gpu') ;
+res = vl_gan(net, gpuArray(z), [], [], ...
+    'accumulate', false, ...
+    'disableDropout', true, ...
+    'conserveMemory', opts.conserveMemory, ...
+    'backPropDepth', opts.backPropDepth, ...
+    'sync', opts.sync, ...
+    'cudnn', opts.cudnn) ;
+imgs = gather(res(end).x);
+end
+
+function [] = draw_figures(config, out_dir, syn_mat, iter, mean_img, prefix)
+[I_syn, ~] = convert_syns_mat(config, mean_img, syn_mat);
+imwrite(I_syn, [out_dir, prefix, num2str(iter, '_%04d'), '.png']);
+end
+
+function [I_syn, syn_mat] = convert_syns_mat(config, mean_img, syn_mat)
+space = 5;
+color = 0;
+for i = 1:size(syn_mat, 4)
+    syn_mat(:,:,:,i) = uint8(syn_mat(:,:,:,i) + mean_img);
+end
+I_syn = mat2canvas(syn_mat, config, space);
+for row = 1:config.nTileRow-1
+    I_syn(row * config.sx + (row-1) * space + 1:row * config.sx + (row-1) * space + space, :, :) = color;
+end
+for col = 1:config.nTileCol-1
+    I_syn(:, col * config.sy + (col-1) * space + 1:col * config.sy + (col-1) * space + space, :) = color;
+end
+I_syn = uint8(I_syn);
+syn_mat = uint8(syn_mat);
+end
+
+function I_syn = mat2canvas(syn_mat, config, space)
+sx = config.sx;
+sy = config.sy;
+dim3 = size(syn_mat, 3);
+num_syn = size(syn_mat, 4);
+I_syn = zeros(config.nTileRow * config.sy + space * (config.nTileRow-1), ...
+    config.nTileCol * config.sx + space * (config.nTileCol-1), dim3, 'single');
+k = 1;
+for j = 1:config.nTileRow
+    for i = 1:config.nTileCol
+        I_syn( 1+(j-1)*sy + (j-1) * space : sy+(j-1)*sy + (j-1) * space, 1+(i-1)*sx + (i-1)*space : sx+(i-1)*sx + (i-1) * space, :) = syn_mat(:,:,:,k);
+        k = k+1;
+        if k > num_syn
+            return;
+        end
+    end
+end
 end
 
 function loss = compute_loss(opts, syn_mat, net2_cpu, z, config)

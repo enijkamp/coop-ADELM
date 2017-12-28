@@ -107,3 +107,9 @@ end
 mean_im = single(sum(imdb,4)/size(imdb,4));
 imdb = single(imdb - repmat(mean_im,1,1,1,size(imdb,4)));
 end
+
+
+function root = setup_path()
+root = '../../';
+addpath([root 'training/coop_net_code_gpu']);
+end

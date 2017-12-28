@@ -1,7 +1,5 @@
 function [net1, net2, config] = learn_dualNets_config(category, exp_type, config)
 
-rng(1);
-
 learningTime = tic;
 
 fprintf('Learning category: %s\n', category);
@@ -10,9 +8,11 @@ fprintf('Learning category: %s\n', category);
 %% Setup Network 2
 switch exp_type
     case 'texture'
+        rng(123);
         net2 = frame_gan();
         config.z_sz = [7, 7, size(net2.layers{1}.weights{1}, 4)];
     case 'object'
+        rng(123);
         net2 = frame_gan_object();
         config.z_sz = [1, 1, size(net2.layers{1}.weights{1}, 4)];
 end
@@ -56,8 +56,10 @@ clear z;
 %% Setup Network 1
 switch exp_type
     case 'texture'
+        rng(123);
         net1 = convNet_texture();
     case 'object'
+        rng(123);
         net1 = convNet_object(config);
 end
 
@@ -84,9 +86,22 @@ clear res;
 clear img;
 
 %% Step 2 create imdb
+
+%% TODO cleanup
 [imdb, getBatch, net1] = create_imdb(config, net1);
-[I_imdb, ~] = convert_syns_mat(config, [], imdb.images.data);
+config.mean_im = net1.normalization.averageImage;
+[I_imdb, ~] = convert_syns_mat(config, net1.normalization.averageImage, imdb.images.data);
+%figure; imshow(I_imdb, []);
 imwrite(I_imdb, [config.Synfolder, 'data', '.png']);
+
+if config.subtract_mean || config.random_mean
+    net2.normalization.averageImage = net1.normalization.averageImage;
+end
+
+config.num_syn = config.nTileRow * config.nTileCol;
+
+% net structures
+print_nets(net1, net2, config.dydz_sz2, config.z_sz);
 
 %% Step 4: training
 [net1, net2, config] = train_model_dual(config, net1, net2, imdb, getBatch, 1);

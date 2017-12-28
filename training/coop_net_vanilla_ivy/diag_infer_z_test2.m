@@ -1,4 +1,6 @@
-function [] = diag_infer_z_train()
+function [] = diag_infer_z_test2()
+
+% langevin to sample images
 
 %% prep
 

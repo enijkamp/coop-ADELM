@@ -13,7 +13,7 @@ function config = gen_ADELM_config(in_file_str,out_file_str,net_file)
     end
     
     %number of CPU-cores
-    config.no_workers = 2;
+    config.no_workers = 1;
     
     %name of file for results
     config.map_str = 'ELM.mat'; 
@@ -99,14 +99,20 @@ function config = gen_ADELM_config(in_file_str,out_file_str,net_file)
         config.mean_im = config.des_net.mean_im;
         config.z_sz = [1,1,8];
         config.im_sz = [64,64,1];
-    end
-    %ivy nets
-    if strcmp(config.ELM_str(1:3),'ivy')
+    elseif strcmp(config.ELM_str(1:4),'ivy3')
         net_wkspc = load([config.net_path,config.ELM_str,config.net_file]);
         config.des_net = net_wkspc.net1;
         config.gen_net = net_wkspc.net2;
-        config.mean_im = config.des_net.mean_im;
-        config.z_sz = [1,1,30];
+        config.mean_im = config.des_net.normalization.averageImage;
+        config.z_sz = [1,1,20];
+        config.im_sz = [64,64,3];
+    elseif strcmp(config.ELM_str(1:3),'ivy')
+        net_wkspc = load([config.net_path,config.ELM_str,config.net_file]);
+        config.des_net = net_wkspc.net1;
+        config.gen_net = net_wkspc.net2;
+        %config.mean_im = config.des_net.mean_im;
+        config.mean_im = config.des_net.normalization.averageImage;
+        config.z_sz = [1,1,20];
         config.im_sz = [64,64,3];
     end
 end

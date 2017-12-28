@@ -1,4 +1,6 @@
-function [] = diag_infer_z()
+function [] = diag_infer_z_test1()
+
+% langevin between two 'good' synthesis images
 
 %% prep
 
@@ -40,17 +42,19 @@ config.mean_im = single(zeros(config.im_sz));
 % syn_mat = zeros(size(syn_mat));
 % gen_im = floor((syn_mat+1)*128);
 
+% image 1 from z1
 z = randn(config.z_sz,'single');
 syn_mat = vl_gan_cpu(config.gen_net,z);
 syn_mat = syn_mat(end).x;
 gen_im = floor((syn_mat+1)*128);
 
+% image 2 from z2
 z2 = randn(config.z_sz,'single');
 syn_mat2 = vl_gan_cpu(config.gen_net,z2);
 syn_mat2 = syn_mat2(end).x;
 gen_im2 = floor((syn_mat2+1)*128);
 
-% langevin
+% langevin from z2 to z1
 config_train.Delta2 = 0.05; % 0.01;
 t_max = 1000;
 dists = zeros(t_max, 2);

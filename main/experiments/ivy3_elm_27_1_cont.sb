@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name="ivy3_elm"
+#SBATCH --output="ivy3_elm_27_1_cont.%j.%N.out"
+#SBATCH --partition=compute
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=24
+#SBATCH --export=ALL
+#SBATCH -t 47:59:00
+#SBATCH -A cla173
+
+#ibrun in verbose mode will give binding detail
+
+export CPATH=/home/enijkamp/cudnn-3.0/include/
+export LD_LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/enijkamp/cudnn-3.0/lib64:$LIBRARY_PATH
+
+~/matlab2017a/bin/matlab -nodisplay -nosplash -r "ivy3_elm_27_1_cont(24, 'comet2')"

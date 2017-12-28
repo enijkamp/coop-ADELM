@@ -1,4 +1,4 @@
-function  [net1,net2,gen_mats,syn_mats,z,loss] = process_epoch_dual(opts, epoch, net1, net2, config)
+function  [net1,net2,gen_mats,syn_mats,z,net1_mean_grads] = process_epoch_dual(opts, epoch, net1, net2, config)
 % -------------------------------------------------------------------------
 
 if config.use_gpu
@@ -13,6 +13,8 @@ imdb = config.imdb;
 train_order = randperm(size(imdb,4));
 batchNum = 0;
 epoch_time = tic;
+
+net1_mean_grads = [];
 
 for t = 1:config.batchSize:size(imdb,4)
     batchNum = batchNum+1;
@@ -57,11 +59,10 @@ for t = 1:config.batchSize:size(imdb,4)
     % store synthesis from generator
     if config.use_gpu
         if t == 1
-            if mod(epoch,10) == 0 || epoch == config.nIteration
+            if mod(epoch,5) == 0 || epoch == config.nIteration
                 for i = 1:config.num_syn
                     imwrite((gen_mats(:,:,:,i)+config.mean_im)/256,[config.gen_im_folder,'gen_im',num2str(i),'.png']);
                 end
-                imwrite((gen_mats(:,:,:,1)+config.mean_im)/256,[config.gen_im_folder,'gen_im_epoch',num2str(epoch),'.png']);
             end
         end
     else
@@ -124,7 +125,7 @@ for t = 1:config.batchSize:size(imdb,4)
         'cudnn', opts.cudnn);
 
     % gather and accumulate gradients across labs
-    [net1, ~, loss] = accumulate_gradients1(opts, config.Gamma(epoch), size(im,4), net1, res1, res_syn, config);
+    [net1, ~, net1_mean_grads(end+1)] = accumulate_gradients1(opts, config.Gamma(epoch), size(im,4), net1, res1, res_syn, config);
     
     clear res;
     clear res_syn;
@@ -132,11 +133,10 @@ for t = 1:config.batchSize:size(imdb,4)
     if config.use_gpu
         syn_mats = gather(syn_mats);
         if t == 1
-            if mod(epoch,10) == 0 || epoch == config.nIteration
+            if mod(epoch,5) == 0 || epoch == config.nIteration
                 for k = 1:config.num_syn
                     imwrite((syn_mats(:,:,:,k)+config.mean_im)/256,[config.syn_im_folder,'syn_im',num2str(k),'.png']);
                 end
-                imwrite((syn_mats(:,:,:,1)+config.mean_im)/256,[config.syn_im_folder,'syn_im_epoch',num2str(epoch),'.png']);
             end
         end
     else
@@ -203,6 +203,8 @@ epoch_time = toc(epoch_time) ;
 speed = config.num_syn/epoch_time ;
 
 fprintf(' %.2f s (%.1f data/s)\n', epoch_time, speed) ;
+
+net1_mean_grads = mean(net1_mean_grads);
 
 end
 

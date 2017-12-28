@@ -8,3 +8,7 @@ working/
 ims_gen/
 ims_syn/
 downloads/
+maps/
+trees/
+nets/
+*.out
